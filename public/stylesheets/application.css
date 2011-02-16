@@ -1,3 +1,72 @@
-/*
- * CSS for JZ CRM
- */
+body {
+    font-family: 'Lucida Grande',Geneva,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    background-color: #E5E5E5;
+}
+
+header {
+    background-color: #195D00;
+}
+
+header h1 {
+    font-size: 24px;
+    padding: 10px 0 10px 30px;
+}
+
+header h1 a:link, header h1 a:visited, header h1 a:hover, header h1 a:active {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#tabs {
+    height: 24px;
+}
+
+#wrapper {
+    padding: 12px 23px 0 30px;
+}
+
+.container {
+    width: auto;
+    min-width: 750px;
+}
+
+table.content td.main {
+    width: 70%;
+    background-color: #FFF;
+    -moz-box-shadow: 3px 3px 4px #BBB;
+    -webkit-box-shadow: 3px 3px 4px #BBB;
+    box-shadow: 3px 3px 4px #BBB;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color='#BBBBBB')"; /* IE 8+ */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color='#BBBBBB'); /* IE <= 7 */
+    border-right: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    margin-right: 8px;
+    padding: 0;
+}
+
+table.content td.side {
+    width: 30%;
+    padding: 0;
+}
+
+.content table {
+    width: auto;
+}
+
+.main .title {
+    background: #EDF3FE;
+    margin: 0 0 5px 0;
+    padding: 13px 30px 13px 24px;
+}
+
+.main .title h1 {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.main .inner {
+    padding: 15px 60px 20px 23px;
+}
