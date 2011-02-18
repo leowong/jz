@@ -30,6 +30,10 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 
+group :development do
+  gem 'capistrano'
+end
+
 group :production do
   gem 'pg'
 end
