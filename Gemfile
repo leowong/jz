@@ -29,3 +29,7 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :production do
+  gem 'pg'
+end
