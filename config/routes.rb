@@ -1,4 +1,6 @@
 Jzcrm::Application.routes.draw do
+  resources :orders
+
   resources :contacts
 
   resources :products
