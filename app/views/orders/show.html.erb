@@ -1,5 +1,5 @@
 <div class="title">
-  <h1>Show contact</h1>
+  <h1>Show order</h1>
 </div>
 
 <div class="inner">
@@ -23,4 +23,8 @@
 
   <%= link_to 'Edit', edit_order_path(@order) %> |
   <%= link_to 'Back', orders_path %>
+
+  <div class="add_line_item">
+    <%= render 'line_items/form' %>
+  </div>
 </div>

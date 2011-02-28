@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    @order = Order.new(:contact => @contact)
   end
 
   def new
