@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
   def show
     @contact = Contact.find(params[:id])
     @order = Order.new(:contact => @contact)
+    3.times { @order.line_items.build }
   end
 
   def new

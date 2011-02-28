@@ -22,6 +22,11 @@
     <%= f.label :state %><br />
     <%= f.text_field :state %>
   </div>
+
+  <%= f.fields_for :line_items do |builder| %>
+    <%= render "orders/line_item_fields", :f => builder %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
