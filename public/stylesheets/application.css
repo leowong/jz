@@ -31,8 +31,17 @@ header h1 a:link, header h1 a:visited, header h1 a:hover, header h1 a:active {
     min-width: 750px;
 }
 
+table.content td.main, table.content td.side {
+    vertical-align: top;
+    padding: 0;
+}
+
 table.content td.main {
     width: 70%;
+    padding: 0;
+}
+
+table.content td.main .col {
     background-color: #FFF;
     -moz-box-shadow: 3px 3px 4px #BBB;
     -webkit-box-shadow: 3px 3px 4px #BBB;
@@ -42,7 +51,6 @@ table.content td.main {
     border-right: 1px solid #BBB;
     border-bottom: 1px solid #BBB;
     margin-right: 8px;
-    padding: 0;
 }
 
 table.content td.side {
@@ -62,11 +70,16 @@ table.content td.side {
 
 .main .title h1 {
     color: #000;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 0;
 }
 
 .main .inner {
     padding: 15px 60px 20px 23px;
+}
+
+.side .inner {
+    min-width: 200px;
+    padding: 0 0 0 9px;
 }

@@ -1,19 +1,24 @@
 <div class="title">
-  <h1>Show contact</h1>
+  <h1><%= @contact.name %></h1>
 </div>
 <div class="inner">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <b>Name:</b>
-    <%= @contact.name %>
-  </p>
-
-
-  <%= link_to 'Edit', edit_contact_path(@contact) %> |
-  <%= link_to 'Back', contacts_path %>
+  <% unless @contact.orders.empty? %>
+    <h2>Orders:</h2>
+    <ul>
+      <%= render @contact.orders %>
+    </ul>
+  <% end %>
 
   <div class="add_order">
+    <h2>Add a new order</h2>
     <%= render 'orders/form' %>
   </div>
 </div>
+
+<% content_for :side do %>
+  <div class="inner">
+    <%= link_to 'Edit', edit_contact_path(@contact) %>
+  </div>
+<% end %>

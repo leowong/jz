@@ -13,9 +13,14 @@
       <table class="content">
 	<tr>
 	  <td class="main">
-	    <%= yield %>
+	    <div class="col">
+	      <%= yield %>
+	    </div>
 	  </td>
 	  <td class="side">
+	    <div class="col">
+	      <%= yield :side %>
+	    </div>
 	  </td>
 	</tr>
       </table>
