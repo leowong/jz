@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find_by_number(params[:id])
     @line_item = LineItem.new(:order => @order)
   end
 
@@ -19,6 +19,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     @order.save
+    @order.update_number
     redirect_to @order.contact
   end
 
