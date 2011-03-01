@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.4)
     activesupport (3.0.4)
     arel (2.0.8)
+    awesome_print (0.3.1)
     builder (2.1.2)
     capistrano (2.5.19)
       highline
@@ -39,6 +40,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     highline (1.6.1)
+    hirb (0.3.6)
     i18n (0.5.0)
     mail (2.2.15)
       activesupport (>= 2.3.6)
@@ -80,13 +82,17 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    wirble (0.1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   capistrano
+  hirb
   nested_form
   pg
   rails (= 3.0.4)
   sqlite3
+  wirble

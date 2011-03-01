@@ -32,6 +32,12 @@ gem 'capistrano'
 
 gem "nested_form"
 
+group :development do
+  gem 'wirble'
+  gem 'hirb'
+  gem 'awesome_print'
+end
+
 group :production do
   gem 'pg'
 end
