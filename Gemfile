@@ -31,6 +31,7 @@ gem 'capistrano'
 # end
 
 gem "nested_form"
+gem "state_machine"
 
 group :development do
   gem 'wirble'

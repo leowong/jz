@@ -16,20 +16,23 @@
       <%= render @order.line_items %>
     </ul>
   <% end %>
-
-  <div class="add_line_item">
-    <h2>Add a new line item</h2>
-    <%= render 'line_items/form' %>
-  </div>
 </div>
 
 <% content_for :side do %>
   <div class="inner">
-    <div>
-      <%= link_to 'Edit', edit_order_path(@order) %>
-    </div>
+    <% if @order.state?(:pending) %>
+      <div>
+        <%= link_to 'Edit', edit_order_path(@order) %>
+      </div>
+    <% end %>
     <div>
       <%= link_to @order.contact.name, @order.contact %>
     </div>
+    <% case @order.state %>
+      <% when "pending" then %>
+        <%= button_to 'Process', order_path(@order, :e => "process"), :method => :put %>
+      <% when "processing" then %>
+        <%= button_to 'Complete', order_path(@order, :e => "complete"), :method => :put %>
+    <% end %>
   </div>
 <% end %>

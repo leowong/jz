@@ -14,14 +14,6 @@
   <div>
     <%= f.hidden_field :contact_id %>
   </div>
-  <div class="field">
-    <%= f.label :number %><br />
-    <%= f.text_field :number %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </div>
 
   <%= f.fields_for :line_items do |builder| %>
     <%= render "orders/line_item_fields", :f => builder %>

@@ -20,4 +20,14 @@ class Order < ActiveRecord::Base
     end
     number
   end
+
+  state_machine :state, :initial => :pending do
+    event :process do
+      transition :from => :pending, :to => :processing
+    end
+    
+    event :complete do
+      transition :from => :processing, :to => :completed
+    end
+  end
 end

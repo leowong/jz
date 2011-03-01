@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    @order = Order.find(params[:id])
+    @order = Order.find_by_number(params[:id])
   end
 
   def create
@@ -24,9 +24,12 @@ class OrdersController < ApplicationController
   end
 
   def update
-    @order = Order.find(params[:id])
+    @order = Order.find_by_number(params[:id])
 
-    if @order.update_attributes(params[:order])
+    if params[:e]
+      @order.send(params[:e])
+      redirect_to @order
+    elsif @order.update_attributes(params[:order])
       redirect_to @order, :notice => 'Order was successfully updated.'
     else
       format.html { render :action => "edit" }
@@ -34,7 +37,7 @@ class OrdersController < ApplicationController
   end
 
   def destroy
-    @order = Order.find(params[:id])
+    @order = Order.find_by_number(params[:id])
     @order.destroy
 
     redirect_to orders_url
