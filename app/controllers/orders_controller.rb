@@ -18,12 +18,8 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
-
-    if @order.save
-        redirect_to @order, :notice => 'Order was successfully created.'
-    else
-      render :action => "new"
-    end
+    @order.save
+    redirect_to @order.contact
   end
 
   def update
