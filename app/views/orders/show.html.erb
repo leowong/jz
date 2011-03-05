@@ -11,10 +11,13 @@
   </p>
 
   <% unless @order.line_items.empty? %>
-    <h2>Line items</h2>
-    <ul>
+    <table class="order_details">
       <%= render @order.line_items %>
-    </ul>
+      <tr class="total_line">
+        <td colspan="2">Total</td>
+        <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
+      </tr>
+    </table>
   <% end %>
 </div>
 

@@ -4,17 +4,17 @@
 <div class="inner">
   <p id="notice"><%= notice %></p>
 
-  <% unless @contact.orders.empty? %>
-    <h2>Orders:</h2>
-    <ul>
-      <%= render @contact.orders %>
-    </ul>
-  <% end %>
-
   <div class="add_order">
     <h2>Add a new order</h2>
     <%= render 'orders/form' %>
   </div>
+
+  <% unless @contact.orders.empty? %>
+    <h2>Orders:</h2>
+    <ul>
+      <%= render @contact.orders.order('created_at DESC') %>
+    </ul>
+  <% end %>
 </div>
 
 <% content_for :side do %>

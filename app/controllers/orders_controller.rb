@@ -20,16 +20,18 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     @order.save
     @order.update_number
+    @order.combine_items
     redirect_to @order.contact
   end
 
   def update
     @order = Order.find_by_number(params[:id])
 
-    if params[:e]
+    if params[:e] # TODO: validations
       @order.send(params[:e])
       redirect_to @order
     elsif @order.update_attributes(params[:order])
+      @order.combine_items
       redirect_to @order, :notice => 'Order was successfully updated.'
     else
       format.html { render :action => "edit" }

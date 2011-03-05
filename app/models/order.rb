@@ -21,6 +21,21 @@ class Order < ActiveRecord::Base
     number
   end
 
+  def combine_items
+    sums = line_items.group(:product_id).sum(:quantity)
+
+    sums.each do |product_id, quantity|
+      if quantity > 1
+        line_items.where(:product_id => product_id).delete_all
+        line_items.create(:product_id => product_id, :quantity => quantity)
+      end
+    end
+  end
+
+  def total_price
+    line_items.to_a.sum { |item| item.total_price }
+  end
+
   state_machine :state, :initial => :pending do
     event :process do
       transition :from => :pending, :to => :processing

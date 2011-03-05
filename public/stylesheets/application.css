@@ -1,3 +1,7 @@
+tbody tr:nth-child(even) td, tbody tr.even td {
+    background: none;
+}
+
 body {
     font-family: 'Lucida Grande',Geneva,Verdana,Arial,Helvetica,sans-serif;
     font-size: 12px;
@@ -82,4 +86,12 @@ table.content td.side {
 .side .inner {
     min-width: 200px;
     padding: 0 0 0 9px;
+}
+
+table.order_details tr td.item_price, table.order_details tr.total_line td {
+    text-align: right;
+}
+
+table.order_details tr.total_line .total_cell {
+    font-weight: bold;
 }
