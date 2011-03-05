@@ -1,7 +1,6 @@
 <div class="field">
-  <%= f.label :product_id %>
-  <%= f.text_field :product_id %>
-  <%= f.label :quantity %>
-  <%= f.text_field :quantity %>
-  <%= f.link_to_remove "Remove this line item" %>
+  <%= f.collection_select :product_id, Product.all, :id, :name, :prompt => "Select a product" %>
+  &times;
+  <%= f.text_field :quantity, :size => "2" %>
+  <%= f.link_to_remove "Remove" %>
 </div>
