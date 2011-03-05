@@ -18,9 +18,11 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
-    @order.save
-    @order.update_number
-    @order.combine_items
+    unless @order.line_items.empty?
+      @order.save
+      @order.update_number
+      @order.combine_items
+    end
     redirect_to @order.contact
   end
 
