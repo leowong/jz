@@ -1,0 +1,16 @@
+<% title "Province" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @province.name %>
+</p>
+<p>
+  <strong>Abbreviation:</strong>
+  <%= @province.abbreviation %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_province_path(@province) %> |
+  <%= link_to "Destroy", @province, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", provinces_path %>
+</p>

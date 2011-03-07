@@ -1,0 +1,19 @@
+<% title "Provinces" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Abbreviation</th>
+  </tr>
+  <% for province in @provinces %>
+    <tr>
+      <td><%= province.name %></td>
+      <td><%= province.abbreviation %></td>
+      <td><%= link_to "Show", province %></td>
+      <td><%= link_to "Edit", edit_province_path(province) %></td>
+      <td><%= link_to "Destroy", province, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Province", new_province_path %></p>
