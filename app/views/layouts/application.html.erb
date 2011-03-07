@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jzcrm</title>
+  <title><%= content_for?(:title) ? yield(:title) : "Jzcrm" %></title>
   <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag :defaults, "nested_form" %>
   <%= csrf_meta_tag %>
+  <%= yield(:head) %>
 </head>
 <body>
   <%= render 'layouts/header' %>
@@ -14,6 +15,10 @@
 	<tr>
 	  <td class="main">
 	    <div class="col">
+              <% flash.each do |name, msg| %>
+                <%= content_tag :div, msg, :class => "flash #{name}" %>
+              <% end %>
+              <%= content_tag :h1, yield(:title) if show_title? %>
 	      <%= yield %>
 	    </div>
 	  </td>
