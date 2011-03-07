@@ -37,6 +37,7 @@ group :development do
   gem 'wirble'
   gem 'hirb'
   gem 'awesome_print'
+  gem 'nifty-generators'
 end
 
 group :production do

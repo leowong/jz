@@ -56,6 +56,7 @@ GEM
     net-ssh (2.0.23)
     net-ssh-gateway (1.0.1)
       net-ssh (>= 1.99.1)
+    nifty-generators (0.4.5)
     pg (0.10.0)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -93,6 +94,7 @@ DEPENDENCIES
   capistrano
   hirb
   nested_form
+  nifty-generators
   pg
   rails (= 3.0.4)
   sqlite3
