@@ -1,4 +1,6 @@
 Jzcrm::Application.routes.draw do
+  resources :addresses
+
   resources :cities
 
   resources :provinces

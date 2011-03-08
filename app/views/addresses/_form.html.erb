@@ -1,0 +1,12 @@
+<%= form_for @address do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :province_id %><br />
+    <%= f.text_field :province_id %>
+  </p>
+  <p>
+    <%= f.label :city_id %><br />
+    <%= f.text_field :city_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

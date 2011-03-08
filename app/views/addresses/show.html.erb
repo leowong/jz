@@ -1,0 +1,16 @@
+<% title "Address" %>
+
+<p>
+  <strong>Province:</strong>
+  <%= @address.province_id %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @address.city_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_address_path(@address) %> |
+  <%= link_to "Destroy", @address, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", addresses_path %>
+</p>
