@@ -7,8 +7,8 @@
   </tr>
   <% for address in @addresses %>
     <tr>
-      <td><%= address.province_id %></td>
-      <td><%= address.city_id %></td>
+      <td><%= address.province.name %></td>
+      <td><%= address.city.name %></td>
       <td><%= link_to "Show", address %></td>
       <td><%= link_to "Edit", edit_address_path(address) %></td>
       <td><%= link_to "Destroy", address, :confirm => 'Are you sure?', :method => :delete %></td>

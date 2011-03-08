@@ -2,11 +2,11 @@
   <%= f.error_messages %>
   <p>
     <%= f.label :province_id %><br />
-    <%= f.text_field :province_id %>
+    <%= f.collection_select :province_id, Province.all, :id, :name, :prompt => "Select a province" %>
   </p>
   <p>
     <%= f.label :city_id %><br />
-    <%= f.text_field :city_id %>
+    <%= f.collection_select :city_id, City.all, :id, :name, :prompt => "Select a city" %>
   </p>
   <p><%= f.submit %></p>
 <% end %>
