@@ -1,0 +1,1437 @@
+---
+cities_001:
+  name: "石家庄"
+  id: "1"
+  province_id: "3"
+cities_002:
+  name: "唐山"
+  id: "2"
+  province_id: "3"
+cities_003:
+  name: "秦皇岛"
+  id: "3"
+  province_id: "3"
+cities_004:
+  name: "邯郸"
+  id: "4"
+  province_id: "3"
+cities_005:
+  name: "邢台"
+  id: "5"
+  province_id: "3"
+cities_006:
+  name: "保定"
+  id: "6"
+  province_id: "3"
+cities_007:
+  name: "张家口"
+  id: "7"
+  province_id: "3"
+cities_008:
+  name: "承德"
+  id: "8"
+  province_id: "3"
+cities_009:
+  name: "沧州"
+  id: "9"
+  province_id: "3"
+cities_010:
+  name: "廊坊"
+  id: "10"
+  province_id: "3"
+cities_011:
+  name: "衡水"
+  id: "11"
+  province_id: "3"
+cities_012:
+  name: "太原"
+  id: "12"
+  province_id: "4"
+cities_013:
+  name: "大同"
+  id: "13"
+  province_id: "4"
+cities_014:
+  name: "阳泉"
+  id: "14"
+  province_id: "4"
+cities_015:
+  name: "长治"
+  id: "15"
+  province_id: "4"
+cities_016:
+  name: "晋城"
+  id: "16"
+  province_id: "4"
+cities_017:
+  name: "朔州"
+  id: "17"
+  province_id: "4"
+cities_018:
+  name: "晋中"
+  id: "18"
+  province_id: "4"
+cities_019:
+  name: "运城"
+  id: "19"
+  province_id: "4"
+cities_020:
+  name: "忻州"
+  id: "20"
+  province_id: "4"
+cities_021:
+  name: "临汾"
+  id: "21"
+  province_id: "4"
+cities_022:
+  name: "吕梁"
+  id: "22"
+  province_id: "4"
+cities_023:
+  name: "呼和浩特"
+  id: "23"
+  province_id: "5"
+cities_024:
+  name: "包头"
+  id: "24"
+  province_id: "5"
+cities_025:
+  name: "乌海"
+  id: "25"
+  province_id: "5"
+cities_026:
+  name: "赤峰"
+  id: "26"
+  province_id: "5"
+cities_027:
+  name: "通辽"
+  id: "27"
+  province_id: "5"
+cities_028:
+  name: "鄂尔多斯"
+  id: "28"
+  province_id: "5"
+cities_029:
+  name: "呼伦贝尔"
+  id: "29"
+  province_id: "5"
+cities_030:
+  name: "巴彦淖尔"
+  id: "30"
+  province_id: "5"
+cities_031:
+  name: "乌兰察布市"
+  id: "31"
+  province_id: "5"
+cities_032:
+  name: "兴安盟"
+  id: "32"
+  province_id: "5"
+cities_033:
+  name: "锡林郭勒盟"
+  id: "33"
+  province_id: "5"
+cities_034:
+  name: "乌兰察布盟"
+  id: "34"
+  province_id: "5"
+cities_035:
+  name: "阿拉善盟"
+  id: "35"
+  province_id: "5"
+cities_036:
+  name: "沈阳"
+  id: "36"
+  province_id: "6"
+cities_037:
+  name: "大连"
+  id: "37"
+  province_id: "6"
+cities_038:
+  name: "鞍山"
+  id: "38"
+  province_id: "6"
+cities_039:
+  name: "抚顺"
+  id: "39"
+  province_id: "6"
+cities_040:
+  name: "本溪"
+  id: "40"
+  province_id: "6"
+cities_041:
+  name: "丹东"
+  id: "41"
+  province_id: "6"
+cities_042:
+  name: "锦州"
+  id: "42"
+  province_id: "6"
+cities_043:
+  name: "营口"
+  id: "43"
+  province_id: "6"
+cities_044:
+  name: "阜新"
+  id: "44"
+  province_id: "6"
+cities_045:
+  name: "辽阳"
+  id: "45"
+  province_id: "6"
+cities_046:
+  name: "盘锦"
+  id: "46"
+  province_id: "6"
+cities_047:
+  name: "铁岭"
+  id: "47"
+  province_id: "6"
+cities_048:
+  name: "朝阳"
+  id: "48"
+  province_id: "6"
+cities_049:
+  name: "葫芦岛"
+  id: "49"
+  province_id: "6"
+cities_050:
+  name: "长春"
+  id: "50"
+  province_id: "7"
+cities_051:
+  name: "吉林"
+  id: "51"
+  province_id: "7"
+cities_052:
+  name: "四平"
+  id: "52"
+  province_id: "7"
+cities_053:
+  name: "辽源"
+  id: "53"
+  province_id: "7"
+cities_054:
+  name: "通化"
+  id: "54"
+  province_id: "7"
+cities_055:
+  name: "白山"
+  id: "55"
+  province_id: "7"
+cities_056:
+  name: "松原"
+  id: "56"
+  province_id: "7"
+cities_057:
+  name: "白城"
+  id: "57"
+  province_id: "7"
+cities_058:
+  name: "哈尔滨"
+  id: "58"
+  province_id: "8"
+cities_059:
+  name: "齐齐哈尔"
+  id: "59"
+  province_id: "8"
+cities_060:
+  name: "鸡西"
+  id: "60"
+  province_id: "8"
+cities_061:
+  name: "鹤岗"
+  id: "61"
+  province_id: "8"
+cities_062:
+  name: "双鸭山"
+  id: "62"
+  province_id: "8"
+cities_063:
+  name: "大庆"
+  id: "63"
+  province_id: "8"
+cities_064:
+  name: "伊春"
+  id: "64"
+  province_id: "8"
+cities_065:
+  name: "佳木斯"
+  id: "65"
+  province_id: "8"
+cities_066:
+  name: "七台河"
+  id: "66"
+  province_id: "8"
+cities_067:
+  name: "牡丹江"
+  id: "67"
+  province_id: "8"
+cities_068:
+  name: "黑河"
+  id: "68"
+  province_id: "8"
+cities_069:
+  name: "绥化"
+  id: "69"
+  province_id: "8"
+cities_070:
+  name: "大兴安岭地区"
+  id: "70"
+  province_id: "8"
+cities_071:
+  name: "南京"
+  id: "71"
+  province_id: "10"
+cities_072:
+  name: "无锡"
+  id: "72"
+  province_id: "10"
+cities_073:
+  name: "徐州"
+  id: "73"
+  province_id: "10"
+cities_074:
+  name: "常州"
+  id: "74"
+  province_id: "10"
+cities_075:
+  name: "苏州"
+  id: "75"
+  province_id: "10"
+cities_076:
+  name: "南通"
+  id: "76"
+  province_id: "10"
+cities_077:
+  name: "连云港"
+  id: "77"
+  province_id: "10"
+cities_078:
+  name: "淮安"
+  id: "78"
+  province_id: "10"
+cities_079:
+  name: "盐城"
+  id: "79"
+  province_id: "10"
+cities_080:
+  name: "扬州"
+  id: "80"
+  province_id: "10"
+cities_081:
+  name: "镇江"
+  id: "81"
+  province_id: "10"
+cities_082:
+  name: "泰州"
+  id: "82"
+  province_id: "10"
+cities_083:
+  name: "宿迁"
+  id: "83"
+  province_id: "10"
+cities_084:
+  name: "杭州"
+  id: "84"
+  province_id: "11"
+cities_085:
+  name: "宁波"
+  id: "85"
+  province_id: "11"
+cities_086:
+  name: "温州"
+  id: "86"
+  province_id: "11"
+cities_087:
+  name: "嘉兴"
+  id: "87"
+  province_id: "11"
+cities_088:
+  name: "湖州"
+  id: "88"
+  province_id: "11"
+cities_089:
+  name: "绍兴"
+  id: "89"
+  province_id: "11"
+cities_090:
+  name: "金华"
+  id: "90"
+  province_id: "11"
+cities_091:
+  name: "衢州"
+  id: "91"
+  province_id: "11"
+cities_092:
+  name: "舟山"
+  id: "92"
+  province_id: "11"
+cities_093:
+  name: "台州"
+  id: "93"
+  province_id: "11"
+cities_094:
+  name: "丽水"
+  id: "94"
+  province_id: "11"
+cities_095:
+  name: "合肥"
+  id: "95"
+  province_id: "12"
+cities_096:
+  name: "芜湖"
+  id: "96"
+  province_id: "12"
+cities_097:
+  name: "蚌埠"
+  id: "97"
+  province_id: "12"
+cities_098:
+  name: "淮南"
+  id: "98"
+  province_id: "12"
+cities_099:
+  name: "马鞍山"
+  id: "99"
+  province_id: "12"
+cities_100:
+  name: "淮北"
+  id: "100"
+  province_id: "12"
+cities_101:
+  name: "铜陵"
+  id: "101"
+  province_id: "12"
+cities_102:
+  name: "安庆"
+  id: "102"
+  province_id: "12"
+cities_103:
+  name: "黄山"
+  id: "103"
+  province_id: "12"
+cities_104:
+  name: "滁州"
+  id: "104"
+  province_id: "12"
+cities_105:
+  name: "阜阳"
+  id: "105"
+  province_id: "12"
+cities_106:
+  name: "宿州"
+  id: "106"
+  province_id: "12"
+cities_107:
+  name: "巢湖"
+  id: "107"
+  province_id: "12"
+cities_108:
+  name: "六安"
+  id: "108"
+  province_id: "12"
+cities_109:
+  name: "亳州"
+  id: "109"
+  province_id: "12"
+cities_110:
+  name: "池州"
+  id: "110"
+  province_id: "12"
+cities_111:
+  name: "宣城"
+  id: "111"
+  province_id: "12"
+cities_112:
+  name: "福州"
+  id: "112"
+  province_id: "13"
+cities_113:
+  name: "厦门"
+  id: "113"
+  province_id: "13"
+cities_114:
+  name: "莆田"
+  id: "114"
+  province_id: "13"
+cities_115:
+  name: "三明"
+  id: "115"
+  province_id: "13"
+cities_116:
+  name: "泉州"
+  id: "116"
+  province_id: "13"
+cities_117:
+  name: "漳州"
+  id: "117"
+  province_id: "13"
+cities_118:
+  name: "南平"
+  id: "118"
+  province_id: "13"
+cities_119:
+  name: "龙岩"
+  id: "119"
+  province_id: "13"
+cities_120:
+  name: "宁德"
+  id: "120"
+  province_id: "13"
+cities_121:
+  name: "南昌"
+  id: "121"
+  province_id: "14"
+cities_122:
+  name: "景德镇"
+  id: "122"
+  province_id: "14"
+cities_123:
+  name: "萍乡"
+  id: "123"
+  province_id: "14"
+cities_124:
+  name: "九江"
+  id: "124"
+  province_id: "14"
+cities_125:
+  name: "新余"
+  id: "125"
+  province_id: "14"
+cities_126:
+  name: "鹰潭"
+  id: "126"
+  province_id: "14"
+cities_127:
+  name: "赣州"
+  id: "127"
+  province_id: "14"
+cities_128:
+  name: "吉安"
+  id: "128"
+  province_id: "14"
+cities_129:
+  name: "宜春"
+  id: "129"
+  province_id: "14"
+cities_130:
+  name: "抚州"
+  id: "130"
+  province_id: "14"
+cities_131:
+  name: "上饶"
+  id: "131"
+  province_id: "14"
+cities_132:
+  name: "济南"
+  id: "132"
+  province_id: "15"
+cities_133:
+  name: "青岛"
+  id: "133"
+  province_id: "15"
+cities_134:
+  name: "淄博"
+  id: "134"
+  province_id: "15"
+cities_135:
+  name: "枣庄"
+  id: "135"
+  province_id: "15"
+cities_136:
+  name: "东营"
+  id: "136"
+  province_id: "15"
+cities_137:
+  name: "烟台"
+  id: "137"
+  province_id: "15"
+cities_138:
+  name: "潍坊"
+  id: "138"
+  province_id: "15"
+cities_139:
+  name: "济宁"
+  id: "139"
+  province_id: "15"
+cities_140:
+  name: "泰安"
+  id: "140"
+  province_id: "15"
+cities_141:
+  name: "威海"
+  id: "141"
+  province_id: "15"
+cities_142:
+  name: "日照"
+  id: "142"
+  province_id: "15"
+cities_143:
+  name: "莱芜"
+  id: "143"
+  province_id: "15"
+cities_144:
+  name: "临沂"
+  id: "144"
+  province_id: "15"
+cities_145:
+  name: "德州"
+  id: "145"
+  province_id: "15"
+cities_146:
+  name: "聊城"
+  id: "146"
+  province_id: "15"
+cities_147:
+  name: "滨州"
+  id: "147"
+  province_id: "15"
+cities_148:
+  name: "荷泽"
+  id: "148"
+  province_id: "15"
+cities_149:
+  name: "郑州"
+  id: "149"
+  province_id: "16"
+cities_150:
+  name: "开封"
+  id: "150"
+  province_id: "16"
+cities_151:
+  name: "洛阳"
+  id: "151"
+  province_id: "16"
+cities_152:
+  name: "平顶山"
+  id: "152"
+  province_id: "16"
+cities_153:
+  name: "安阳"
+  id: "153"
+  province_id: "16"
+cities_154:
+  name: "鹤壁"
+  id: "154"
+  province_id: "16"
+cities_155:
+  name: "新乡"
+  id: "155"
+  province_id: "16"
+cities_156:
+  name: "焦作"
+  id: "156"
+  province_id: "16"
+cities_157:
+  name: "濮阳"
+  id: "157"
+  province_id: "16"
+cities_158:
+  name: "许昌"
+  id: "158"
+  province_id: "16"
+cities_159:
+  name: "漯河"
+  id: "159"
+  province_id: "16"
+cities_160:
+  name: "三门峡"
+  id: "160"
+  province_id: "16"
+cities_161:
+  name: "南阳"
+  id: "161"
+  province_id: "16"
+cities_162:
+  name: "商丘"
+  id: "162"
+  province_id: "16"
+cities_163:
+  name: "信阳"
+  id: "163"
+  province_id: "16"
+cities_164:
+  name: "周口"
+  id: "164"
+  province_id: "16"
+cities_165:
+  name: "驻马店"
+  id: "165"
+  province_id: "16"
+cities_166:
+  name: "武汉"
+  id: "166"
+  province_id: "17"
+cities_167:
+  name: "黄石"
+  id: "167"
+  province_id: "17"
+cities_168:
+  name: "十堰"
+  id: "168"
+  province_id: "17"
+cities_169:
+  name: "宜昌"
+  id: "169"
+  province_id: "17"
+cities_170:
+  name: "襄樊"
+  id: "170"
+  province_id: "17"
+cities_171:
+  name: "鄂州"
+  id: "171"
+  province_id: "17"
+cities_172:
+  name: "荆门"
+  id: "172"
+  province_id: "17"
+cities_173:
+  name: "孝感"
+  id: "173"
+  province_id: "17"
+cities_174:
+  name: "荆州"
+  id: "174"
+  province_id: "17"
+cities_175:
+  name: "黄冈"
+  id: "175"
+  province_id: "17"
+cities_176:
+  name: "咸宁"
+  id: "176"
+  province_id: "17"
+cities_177:
+  name: "随州"
+  id: "177"
+  province_id: "17"
+cities_178:
+  name: "恩施土家族苗族自治州"
+  id: "178"
+  province_id: "17"
+cities_179:
+  name: "仙桃市"
+  id: "179"
+  province_id: "17"
+cities_180:
+  name: "潜江市"
+  id: "180"
+  province_id: "17"
+cities_181:
+  name: "天门市"
+  id: "181"
+  province_id: "17"
+cities_182:
+  name: "神农架林区"
+  id: "182"
+  province_id: "17"
+cities_183:
+  name: "长沙"
+  id: "183"
+  province_id: "18"
+cities_184:
+  name: "株洲"
+  id: "184"
+  province_id: "18"
+cities_185:
+  name: "湘潭"
+  id: "185"
+  province_id: "18"
+cities_186:
+  name: "衡阳"
+  id: "186"
+  province_id: "18"
+cities_187:
+  name: "邵阳"
+  id: "187"
+  province_id: "18"
+cities_188:
+  name: "岳阳"
+  id: "188"
+  province_id: "18"
+cities_189:
+  name: "常德"
+  id: "189"
+  province_id: "18"
+cities_190:
+  name: "张家界"
+  id: "190"
+  province_id: "18"
+cities_191:
+  name: "益阳"
+  id: "191"
+  province_id: "18"
+cities_192:
+  name: "郴州"
+  id: "192"
+  province_id: "18"
+cities_193:
+  name: "永州"
+  id: "193"
+  province_id: "18"
+cities_194:
+  name: "怀化"
+  id: "194"
+  province_id: "18"
+cities_195:
+  name: "娄底"
+  id: "195"
+  province_id: "18"
+cities_196:
+  name: "湘西土家族苗族自治州"
+  id: "196"
+  province_id: "18"
+cities_197:
+  name: "广州"
+  id: "197"
+  province_id: "19"
+cities_198:
+  name: "韶关"
+  id: "198"
+  province_id: "19"
+cities_199:
+  name: "深圳"
+  id: "199"
+  province_id: "19"
+cities_200:
+  name: "珠海"
+  id: "200"
+  province_id: "19"
+cities_201:
+  name: "汕头"
+  id: "201"
+  province_id: "19"
+cities_202:
+  name: "佛山"
+  id: "202"
+  province_id: "19"
+cities_203:
+  name: "江门"
+  id: "203"
+  province_id: "19"
+cities_204:
+  name: "湛江"
+  id: "204"
+  province_id: "19"
+cities_205:
+  name: "茂名"
+  id: "205"
+  province_id: "19"
+cities_206:
+  name: "肇庆"
+  id: "206"
+  province_id: "19"
+cities_207:
+  name: "惠州"
+  id: "207"
+  province_id: "19"
+cities_208:
+  name: "梅州"
+  id: "208"
+  province_id: "19"
+cities_209:
+  name: "汕尾"
+  id: "209"
+  province_id: "19"
+cities_210:
+  name: "河源"
+  id: "210"
+  province_id: "19"
+cities_211:
+  name: "阳江"
+  id: "211"
+  province_id: "19"
+cities_212:
+  name: "清远"
+  id: "212"
+  province_id: "19"
+cities_213:
+  name: "东莞"
+  id: "213"
+  province_id: "19"
+cities_214:
+  name: "中山"
+  id: "214"
+  province_id: "19"
+cities_215:
+  name: "潮州"
+  id: "215"
+  province_id: "19"
+cities_216:
+  name: "揭阳"
+  id: "216"
+  province_id: "19"
+cities_217:
+  name: "云浮"
+  id: "217"
+  province_id: "19"
+cities_218:
+  name: "南宁"
+  id: "218"
+  province_id: "20"
+cities_219:
+  name: "柳州"
+  id: "219"
+  province_id: "20"
+cities_220:
+  name: "桂林"
+  id: "220"
+  province_id: "20"
+cities_221:
+  name: "梧州"
+  id: "221"
+  province_id: "20"
+cities_222:
+  name: "北海"
+  id: "222"
+  province_id: "20"
+cities_223:
+  name: "防城港"
+  id: "223"
+  province_id: "20"
+cities_224:
+  name: "钦州"
+  id: "224"
+  province_id: "20"
+cities_225:
+  name: "贵港"
+  id: "225"
+  province_id: "20"
+cities_226:
+  name: "玉林"
+  id: "226"
+  province_id: "20"
+cities_227:
+  name: "百色"
+  id: "227"
+  province_id: "20"
+cities_228:
+  name: "贺州"
+  id: "228"
+  province_id: "20"
+cities_229:
+  name: "河池"
+  id: "229"
+  province_id: "20"
+cities_230:
+  name: "来宾"
+  id: "230"
+  province_id: "20"
+cities_231:
+  name: "崇左"
+  id: "231"
+  province_id: "20"
+cities_232:
+  name: "海口"
+  id: "232"
+  province_id: "21"
+cities_233:
+  name: "三亚"
+  id: "233"
+  province_id: "21"
+cities_234:
+  name: "五指山市"
+  id: "234"
+  province_id: "21"
+cities_235:
+  name: "琼海市"
+  id: "235"
+  province_id: "21"
+cities_236:
+  name: "儋州市"
+  id: "236"
+  province_id: "21"
+cities_237:
+  name: "文昌市"
+  id: "237"
+  province_id: "21"
+cities_238:
+  name: "万宁市"
+  id: "238"
+  province_id: "21"
+cities_239:
+  name: "东方市"
+  id: "239"
+  province_id: "21"
+cities_240:
+  name: "定安县"
+  id: "240"
+  province_id: "21"
+cities_241:
+  name: "屯昌县"
+  id: "241"
+  province_id: "21"
+cities_242:
+  name: "澄迈县"
+  id: "242"
+  province_id: "21"
+cities_243:
+  name: "临高县"
+  id: "243"
+  province_id: "21"
+cities_244:
+  name: "白沙黎族自治县"
+  id: "244"
+  province_id: "21"
+cities_245:
+  name: "昌江黎族自治县"
+  id: "245"
+  province_id: "21"
+cities_246:
+  name: "乐东黎族自治县"
+  id: "246"
+  province_id: "21"
+cities_247:
+  name: "陵水黎族自治县"
+  id: "247"
+  province_id: "21"
+cities_248:
+  name: "保亭黎族苗族自治县"
+  id: "248"
+  province_id: "21"
+cities_249:
+  name: "琼中黎族苗族自治县"
+  id: "249"
+  province_id: "21"
+cities_250:
+  name: "西沙群岛"
+  id: "250"
+  province_id: "21"
+cities_251:
+  name: "南沙群岛"
+  id: "251"
+  province_id: "21"
+cities_252:
+  name: "中沙群岛的岛礁及其海域"
+  id: "252"
+  province_id: "21"
+cities_253:
+  name: "成都"
+  id: "253"
+  province_id: "23"
+cities_254:
+  name: "自贡"
+  id: "254"
+  province_id: "23"
+cities_255:
+  name: "攀枝花"
+  id: "255"
+  province_id: "23"
+cities_256:
+  name: "泸州"
+  id: "256"
+  province_id: "23"
+cities_257:
+  name: "德阳"
+  id: "257"
+  province_id: "23"
+cities_258:
+  name: "绵阳"
+  id: "258"
+  province_id: "23"
+cities_259:
+  name: "广元"
+  id: "259"
+  province_id: "23"
+cities_260:
+  name: "遂宁"
+  id: "260"
+  province_id: "23"
+cities_261:
+  name: "内江"
+  id: "261"
+  province_id: "23"
+cities_262:
+  name: "乐山"
+  id: "262"
+  province_id: "23"
+cities_263:
+  name: "南充"
+  id: "263"
+  province_id: "23"
+cities_264:
+  name: "眉山"
+  id: "264"
+  province_id: "23"
+cities_265:
+  name: "宜宾"
+  id: "265"
+  province_id: "23"
+cities_266:
+  name: "广安"
+  id: "266"
+  province_id: "23"
+cities_267:
+  name: "达州"
+  id: "267"
+  province_id: "23"
+cities_268:
+  name: "雅安"
+  id: "268"
+  province_id: "23"
+cities_269:
+  name: "巴中"
+  id: "269"
+  province_id: "23"
+cities_270:
+  name: "资阳"
+  id: "270"
+  province_id: "23"
+cities_271:
+  name: "阿坝藏族羌族自治州"
+  id: "271"
+  province_id: "23"
+cities_272:
+  name: "甘孜藏族自治州"
+  id: "272"
+  province_id: "23"
+cities_273:
+  name: "凉山彝族自治州"
+  id: "273"
+  province_id: "23"
+cities_274:
+  name: "贵阳"
+  id: "274"
+  province_id: "24"
+cities_275:
+  name: "遵义"
+  id: "275"
+  province_id: "24"
+cities_276:
+  name: "安顺"
+  id: "276"
+  province_id: "24"
+cities_277:
+  name: "铜仁"
+  id: "277"
+  province_id: "24"
+cities_278:
+  name: "黔西南布依族苗族自治州"
+  id: "278"
+  province_id: "24"
+cities_279:
+  name: "毕节地区"
+  id: "279"
+  province_id: "24"
+cities_280:
+  name: "黔东南苗族侗族自治州"
+  id: "280"
+  province_id: "24"
+cities_281:
+  name: "黔南布依族苗族自治州"
+  id: "281"
+  province_id: "24"
+cities_282:
+  name: "昆明"
+  id: "282"
+  province_id: "25"
+cities_283:
+  name: "曲靖"
+  id: "283"
+  province_id: "25"
+cities_284:
+  name: "玉溪"
+  id: "284"
+  province_id: "25"
+cities_285:
+  name: "保山"
+  id: "285"
+  province_id: "25"
+cities_286:
+  name: "昭通"
+  id: "286"
+  province_id: "25"
+cities_287:
+  name: "丽江"
+  id: "287"
+  province_id: "25"
+cities_288:
+  name: "思茅"
+  id: "288"
+  province_id: "25"
+cities_289:
+  name: "临沧"
+  id: "289"
+  province_id: "25"
+cities_290:
+  name: "楚雄彝族自治州"
+  id: "290"
+  province_id: "25"
+cities_291:
+  name: "红河哈尼族彝族自治州"
+  id: "291"
+  province_id: "25"
+cities_292:
+  name: "文山壮族苗族自治州"
+  id: "292"
+  province_id: "25"
+cities_293:
+  name: "西双版纳傣族自治州"
+  id: "293"
+  province_id: "25"
+cities_294:
+  name: "大理白族自治州"
+  id: "294"
+  province_id: "25"
+cities_295:
+  name: "德宏傣族景颇族自治州"
+  id: "295"
+  province_id: "25"
+cities_296:
+  name: "怒江傈僳族自治州"
+  id: "296"
+  province_id: "25"
+cities_297:
+  name: "迪庆藏族自治州"
+  id: "297"
+  province_id: "25"
+cities_298:
+  name: "拉萨"
+  id: "298"
+  province_id: "26"
+cities_299:
+  name: "昌都地区"
+  id: "299"
+  province_id: "26"
+cities_300:
+  name: "山南地区"
+  id: "300"
+  province_id: "26"
+cities_301:
+  name: "日喀则地区"
+  id: "301"
+  province_id: "26"
+cities_302:
+  name: "那曲地区"
+  id: "302"
+  province_id: "26"
+cities_303:
+  name: "阿里地区"
+  id: "303"
+  province_id: "26"
+cities_304:
+  name: "林芝地区"
+  id: "304"
+  province_id: "26"
+cities_305:
+  name: "西安"
+  id: "305"
+  province_id: "27"
+cities_306:
+  name: "铜川"
+  id: "306"
+  province_id: "27"
+cities_307:
+  name: "宝鸡"
+  id: "307"
+  province_id: "27"
+cities_308:
+  name: "咸阳"
+  id: "308"
+  province_id: "27"
+cities_309:
+  name: "渭南"
+  id: "309"
+  province_id: "27"
+cities_310:
+  name: "延安"
+  id: "310"
+  province_id: "27"
+cities_311:
+  name: "汉中"
+  id: "311"
+  province_id: "27"
+cities_312:
+  name: "榆林"
+  id: "312"
+  province_id: "27"
+cities_313:
+  name: "安康"
+  id: "313"
+  province_id: "27"
+cities_314:
+  name: "商洛"
+  id: "314"
+  province_id: "27"
+cities_315:
+  name: "兰州"
+  id: "315"
+  province_id: "28"
+cities_316:
+  name: "嘉峪关"
+  id: "316"
+  province_id: "28"
+cities_317:
+  name: "金昌"
+  id: "317"
+  province_id: "28"
+cities_318:
+  name: "白银"
+  id: "318"
+  province_id: "28"
+cities_319:
+  name: "天水"
+  id: "319"
+  province_id: "28"
+cities_320:
+  name: "武威"
+  id: "320"
+  province_id: "28"
+cities_321:
+  name: "张掖"
+  id: "321"
+  province_id: "28"
+cities_322:
+  name: "平凉"
+  id: "322"
+  province_id: "28"
+cities_323:
+  name: "酒泉"
+  id: "323"
+  province_id: "28"
+cities_324:
+  name: "庆阳"
+  id: "324"
+  province_id: "28"
+cities_325:
+  name: "定西"
+  id: "325"
+  province_id: "28"
+cities_326:
+  name: "陇南地区"
+  id: "326"
+  province_id: "28"
+cities_327:
+  name: "临夏回族自治州"
+  id: "327"
+  province_id: "28"
+cities_328:
+  name: "甘南藏族自治州"
+  id: "328"
+  province_id: "28"
+cities_329:
+  name: "西宁"
+  id: "329"
+  province_id: "29"
+cities_330:
+  name: "海东地区"
+  id: "330"
+  province_id: "29"
+cities_331:
+  name: "海北藏族自治州"
+  id: "331"
+  province_id: "29"
+cities_332:
+  name: "黄南藏族自治州"
+  id: "332"
+  province_id: "29"
+cities_333:
+  name: "海南藏族自治州"
+  id: "333"
+  province_id: "29"
+cities_334:
+  name: "果洛藏族自治州"
+  id: "334"
+  province_id: "29"
+cities_335:
+  name: "玉树藏族自治州"
+  id: "335"
+  province_id: "29"
+cities_336:
+  name: "海西蒙古族藏族自治州"
+  id: "336"
+  province_id: "29"
+cities_337:
+  name: "银川"
+  id: "337"
+  province_id: "30"
+cities_338:
+  name: "石嘴山"
+  id: "338"
+  province_id: "30"
+cities_339:
+  name: "吴忠"
+  id: "339"
+  province_id: "30"
+cities_340:
+  name: "固原"
+  id: "340"
+  province_id: "30"
+cities_341:
+  name: "中卫"
+  id: "341"
+  province_id: "30"
+cities_342:
+  name: "乌鲁木齐"
+  id: "342"
+  province_id: "31"
+cities_343:
+  name: "克拉玛依"
+  id: "343"
+  province_id: "31"
+cities_344:
+  name: "吐鲁番地区"
+  id: "344"
+  province_id: "31"
+cities_345:
+  name: "哈密地区"
+  id: "345"
+  province_id: "31"
+cities_346:
+  name: "昌吉回族自治州"
+  id: "346"
+  province_id: "31"
+cities_347:
+  name: "博尔塔拉蒙古自治州"
+  id: "347"
+  province_id: "31"
+cities_348:
+  name: "巴音郭楞蒙古自治州"
+  id: "348"
+  province_id: "31"
+cities_349:
+  name: "阿克苏地区"
+  id: "349"
+  province_id: "31"
+cities_350:
+  name: "克孜勒苏柯尔克孜自治州"
+  id: "350"
+  province_id: "31"
+cities_351:
+  name: "喀什地区"
+  id: "351"
+  province_id: "31"
+cities_352:
+  name: "和田地区"
+  id: "352"
+  province_id: "31"
+cities_353:
+  name: "伊犁哈萨克自治州"
+  id: "353"
+  province_id: "31"
+cities_354:
+  name: "塔城地区"
+  id: "354"
+  province_id: "31"
+cities_355:
+  name: "阿勒泰地区"
+  id: "355"
+  province_id: "31"
+cities_356:
+  name: "石河子市"
+  id: "356"
+  province_id: "31"
+cities_357:
+  name: "阿拉尔市"
+  id: "357"
+  province_id: "31"
+cities_358:
+  name: "图木舒克市"
+  id: "358"
+  province_id: "31"
+cities_359:
+  name: "五家渠市"
+  id: "359"
+  province_id: "31"

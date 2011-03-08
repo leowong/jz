@@ -1,0 +1,103 @@
+---
+provinces_01:
+  name: "北京"
+  id: "1"
+provinces_02:
+  name: "天津"
+  id: "2"
+provinces_03:
+  name: "河北"
+  id: "3"
+provinces_04:
+  name: "山西"
+  id: "4"
+provinces_05:
+  name: "内蒙古"
+  id: "5"
+provinces_06:
+  name: "辽宁"
+  id: "6"
+provinces_07:
+  name: "吉林"
+  id: "7"
+provinces_08:
+  name: "黑龙江"
+  id: "8"
+provinces_09:
+  name: "上海"
+  id: "9"
+provinces_10:
+  name: "江苏"
+  id: "10"
+provinces_11:
+  name: "浙江"
+  id: "11"
+provinces_12:
+  name: "安徽"
+  id: "12"
+provinces_13:
+  name: "福建"
+  id: "13"
+provinces_14:
+  name: "江西"
+  id: "14"
+provinces_15:
+  name: "山东"
+  id: "15"
+provinces_16:
+  name: "河南"
+  id: "16"
+provinces_17:
+  name: "湖北"
+  id: "17"
+provinces_18:
+  name: "湖南"
+  id: "18"
+provinces_19:
+  name: "广东"
+  id: "19"
+provinces_20:
+  name: "广西"
+  id: "20"
+provinces_21:
+  name: "海南"
+  id: "21"
+provinces_22:
+  name: "重庆"
+  id: "22"
+provinces_23:
+  name: "四川"
+  id: "23"
+provinces_24:
+  name: "贵州"
+  id: "24"
+provinces_25:
+  name: "云南"
+  id: "25"
+provinces_26:
+  name: "西藏"
+  id: "26"
+provinces_27:
+  name: "陕西"
+  id: "27"
+provinces_28:
+  name: "甘肃"
+  id: "28"
+provinces_29:
+  name: "青海"
+  id: "29"
+provinces_30:
+  name: "宁夏"
+  id: "30"
+provinces_31:
+  name: "新疆"
+  id: "31"
+provinces_32:
+  name: "台湾"
+  id: "32"
+provinces_33:
+  name: "香港"
+  id: "33"
+provinces_34:
+  name: "澳门"
+  id: "34"
