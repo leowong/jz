@@ -2,7 +2,12 @@
   <h1><%= @contact.name %></h1>
 </div>
 <div class="inner">
-  <p id="notice"><%= notice %></p>
+  <% unless @contact.addresses.empty? %>
+    <h2>
+      <%= @contact.addresses[0].province.try(:name) %> -
+      <%= @contact.addresses[0].city.try(:name) %>
+    </h2>
+  <% end %>
 
   <% unless @contact.orders.empty? %>
     <h2>Orders:</h2>

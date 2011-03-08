@@ -3,4 +3,6 @@ class Address < ActiveRecord::Base
 
   belongs_to :province
   belongs_to :city
+
+  validates_associated :province, :city
 end

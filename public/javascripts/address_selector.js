@@ -1,12 +1,14 @@
 $(document).ready(function() {
+  var province_select = $('#province_select select');
+  var city_select = $('#city_select select');
+
   var get_cities = function() {
-    var province = $('#address_province_id').val();
+    var province = province_select.val();
     return city_mapper[province];
   }
 
   var update_city = function() {
     var cities = get_cities();
-    var city_select = $('#address_city_id');
 
     if (cities) {
       var selected = city_select.val();
@@ -19,7 +21,7 @@ $(document).ready(function() {
         }
         city_select.append(opt);
       });
-      city_select.removeAttr('disabled').parent().show();
+      city_select.parent().show();
     } else {
       city_select.html('');
       var opt = $(document.createElement('option')).attr('value', '').html('');
@@ -28,11 +30,11 @@ $(document).ready(function() {
     }
   };
 
-  if ($('#address_city_id').val() == "" ) {
-    $('#address_city_id').parent().hide();
+  if (city_select.val() == "" ) {
+    city_select.parent().hide();
   }
 
-  $('#address_province_id').change(function() {
+  province_select.change(function() {
     update_city();
   });
 });

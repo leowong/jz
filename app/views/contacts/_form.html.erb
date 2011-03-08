@@ -15,6 +15,11 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
+  <%= f.fields_for :addresses do |builder| %>
+    <%= render "address_fields", :f => builder %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

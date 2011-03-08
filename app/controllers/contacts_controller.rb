@@ -10,10 +10,12 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @contact.addresses.build()
   end
 
   def edit
     @contact = Contact.find(params[:id])
+    @contact.addresses.build() if @contact.addresses.blank?
   end
 
   def create
