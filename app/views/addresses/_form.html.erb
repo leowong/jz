@@ -1,12 +1,14 @@
+<% javascript "address_selector", "city_mapper" %>
+
 <%= form_for @address do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :province_id %><br />
-    <%= f.collection_select :province_id, Province.all, :id, :name, :prompt => "Select a province" %>
+    <%= f.collection_select :province_id, Province.all, :id, :name, :include_blank => true %>
   </p>
   <p>
     <%= f.label :city_id %><br />
-    <%= f.collection_select :city_id, City.all, :id, :name, :prompt => "Select a city" %>
+    <%= f.collection_select :city_id, @address.province.try(:cities) || [], :id, :name, :include_blank => true %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

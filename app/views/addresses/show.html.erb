@@ -2,11 +2,11 @@
 
 <p>
   <strong>Province:</strong>
-  <%= @address.province.name %>
+  <%= @address.province.try(:name) %>
 </p>
 <p>
   <strong>City:</strong>
-  <%= @address.city.name %>
+  <%= @address.city.try(:name) %>
 </p>
 
 <p>

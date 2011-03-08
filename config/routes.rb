@@ -1,4 +1,6 @@
 Jzcrm::Application.routes.draw do
+  get "javascripts/city_mapper"
+
   resources :addresses
 
   resources :cities
