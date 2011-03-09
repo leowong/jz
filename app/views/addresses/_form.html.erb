@@ -1,4 +1,9 @@
-<% javascript "address_selector", "city_mapper" %>
+<% javascript "address_selector" %>
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    var city_mapper = <%= raw @cities.to_json %>
+  <% end %>
+<% end %>
 
 <%= form_for @address do |f| %>
   <%= f.error_messages %>
