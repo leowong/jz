@@ -26,7 +26,7 @@ header #user_nav {
     position: absolute;
     top: 0px;
     right: 0px;
-    padding: 7px 20px;
+    padding: 7px 25px;
     font-size: 10px;
 }
 
@@ -34,8 +34,50 @@ header #user_nav, header #user_nav a:link, header #user_nav a:visited {
     color: #D1EEFF;
 }
 
+/* tabs */
+
 #tabs {
     height: 24px;
+    margin: 0 25px 0 30px;
+    padding: 0;
+}
+
+#tabs ul {
+    margin: 0;
+    padding: 0;
+}
+
+#tabs li {
+    display: inline;
+    list-style-type: none;
+    border: none;
+}
+
+#tabs a:link, #tabs a:visited {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: #217A00;
+    color: #D1EEFF;
+    padding: 5px 9px 7px;
+    margin: 0 1px;
+}
+
+#tabs a:hover {
+    color: #FFF;
+    background: #054700;
+}
+
+#tabs a:link.current, #tabs a:visited.current {
+    color: #000;
+    font-weight: bold;
+    margin: 0 1px;
+    padding-bottom: 9px;
+    background: #e5e5e5;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd', endColorstr='#e5e5e5'); /* IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#e5e5e5)); /* webkit */
+    background: -moz-linear-gradient(top,  #fdfdfd,  #e5e5e5); /* firefox 3.6+ */
 }
 
 #wrapper {
