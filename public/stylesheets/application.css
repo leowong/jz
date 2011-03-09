@@ -22,6 +22,18 @@ header h1 a:link, header h1 a:visited, header h1 a:hover, header h1 a:active {
     text-decoration: none;
 }
 
+header #user_nav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 7px 20px;
+    font-size: 10px;
+}
+
+header #user_nav, header #user_nav a:link, header #user_nav a:visited {
+    color: #D1EEFF;
+}
+
 #tabs {
     height: 24px;
 }
@@ -95,6 +107,24 @@ table.order_details tr td.item_price, table.order_details tr.total_line td {
 table.order_details tr.total_line .total_cell {
     font-weight: bold;
 }
+
+/* sessions */
+
+body.session {
+    background-color: #F3F1EC;
+}
+
+body.session .container {
+    margin: 0 auto;
+    width: 480px;
+    min-width: 480px;
+}
+
+body.session .container table.content {
+    margin: 60px 0 15px 0;
+}
+
+/* form error messages */
 
 .fieldWithErrors {
   display: inline;

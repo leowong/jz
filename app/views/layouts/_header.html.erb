@@ -1,5 +1,14 @@
 <header>
   <h1><%= link_to "JZ CRM", root_url %></h1>
+
+  <% if logged_in? %>
+    <div id="user_nav">
+      <%= current_user.username %> |
+      <%= link_to "Profile", edit_user_path(current_user) %> |
+      <%= link_to "Sign out", logout_path %>
+    </div>
+  <% end %>
+
   <div id="tabs">
   </div>
 </header>
