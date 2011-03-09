@@ -30,7 +30,7 @@ $(document).ready(function() {
     }
   };
 
-  if (city_select.val() == "" ) {
+  if (province_select.val() == "" && city_select.val() == "") {
     city_select.parent().hide();
   }
 
