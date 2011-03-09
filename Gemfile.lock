@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.5)
     arel (2.0.9)
     awesome_print (0.3.2)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capistrano (2.5.19)
       highline
@@ -91,6 +92,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt-ruby
   capistrano
   hirb
   nested_form

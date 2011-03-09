@@ -32,6 +32,7 @@ gem 'capistrano'
 
 gem "nested_form"
 gem "state_machine"
+gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development do
   gem 'wirble'
