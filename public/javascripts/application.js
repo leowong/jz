@@ -1,2 +1,15 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+$(document).ready(function() {
+  var timer = undefined;
+
+  $("#contacts_search input").keyup(function() {
+    if (timer != undefined) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(search, 250);
+    return false;
+  });
+
+  var search = function () {
+    $.get($("#contacts_search").attr("action"), $("#contacts_search").serialize(), null, "script"); 
+  };
+});

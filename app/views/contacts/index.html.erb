@@ -3,27 +3,9 @@
 </div>
 
 <div class="inner">
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Province</th>
-      <th>City</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-
-    <% @contacts.each do |contact| %>
-    <tr>
-      <td><%= contact.name %></td>
-      <td><%= contact.addresses[0].try(:province).try(:name) %></td>
-      <td><%= contact.addresses[0].try(:city).try(:name) %></td>
-      <td><%= link_to 'Show', contact %></td>
-      <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-      <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-    <% end %>
-  </table>
+  <div id="contacts">
+    <%= render 'contacts' %>
+  </div>
 
   <br />
 
@@ -32,7 +14,7 @@
 
 <% content_for :side do %>
   <div class="inner">
-    <%= form_tag contacts_path, :method => 'get' do %>
+    <%= form_tag contacts_path, :method => 'get', :id => 'contacts_search' do %>
       <div>
         <%= label_tag :q, "Enter name, province or city:" %><br />
         <%= text_field_tag :q, params[:q], :autocomplete => "off", :size => "54" %>
