@@ -1,6 +1,10 @@
 class ContactsController < ApplicationController
   def index
-    @contacts = Contact.all
+    if params[:q].blank?
+      @contacts = Contact.all
+    else
+      @contacts = Contact.searching(params[:q])
+    end
   end
 
   def show

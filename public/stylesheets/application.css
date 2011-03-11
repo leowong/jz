@@ -2,6 +2,10 @@ tbody tr:nth-child(even) td, tbody tr.even td {
     background: none;
 }
 
+input {
+    padding: 3px;
+}
+
 body {
     font-family: 'Lucida Grande',Geneva,Verdana,Arial,Helvetica,sans-serif;
     font-size: 12px;
@@ -198,4 +202,11 @@ body.session .container table.content {
 
 .error_messages ul {
   margin: 0;
+}
+
+/* search */
+
+input#q {
+    font-size: 14px;
+    width: 358px;
 }
