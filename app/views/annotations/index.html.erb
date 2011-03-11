@@ -1,0 +1,23 @@
+<% title "Annotations" %>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Annotatable</th>
+    <th>Annotatable Type</th>
+    <th>Type</th>
+  </tr>
+  <% for annotation in @annotations %>
+    <tr>
+      <td><%= annotation.content %></td>
+      <td><%= annotation.annotatable_id %></td>
+      <td><%= annotation.annotatable_type %></td>
+      <td><%= annotation.type %></td>
+      <td><%= link_to "Show", annotation %></td>
+      <td><%= link_to "Edit", edit_annotation_path(annotation) %></td>
+      <td><%= link_to "Destroy", annotation, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Annotation", new_annotation_path %></p>

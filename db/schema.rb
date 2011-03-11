@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110309184921) do
+ActiveRecord::Schema.define(:version => 20110311184039) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "province_id"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(:version => 20110309184921) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "contact_id"
+  end
+
+  create_table "annotations", :force => true do |t|
+    t.text     "content"
+    t.integer  "annotatable_id"
+    t.string   "annotatable_type"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "cities", :force => true do |t|
@@ -39,6 +48,14 @@ ActiveRecord::Schema.define(:version => 20110309184921) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "quantity",   :default => 1
+  end
+
+  create_table "notes", :force => true do |t|
+    t.text     "content"
+    t.integer  "notable_id"
+    t.string   "notable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "orders", :force => true do |t|
