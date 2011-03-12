@@ -1,0 +1,21 @@
+<% title "Activities" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Subject</th>
+    <th>Subject Type</th>
+  </tr>
+  <% for activity in @activities %>
+    <tr>
+      <td><%= activity.user_id %></td>
+      <td><%= activity.subject_id %></td>
+      <td><%= activity.subject_type %></td>
+      <td><%= link_to "Show", activity %></td>
+      <td><%= link_to "Edit", edit_activity_path(activity) %></td>
+      <td><%= link_to "Destroy", activity, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Activity", new_activity_path %></p>
