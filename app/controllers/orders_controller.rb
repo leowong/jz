@@ -25,6 +25,7 @@ class OrdersController < ApplicationController
       @order.save
       @order.update_number
       @order.combine_items
+      Activity.add(current_user, @order.contact, @order)
     end
     redirect_to @order.contact
   end

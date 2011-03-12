@@ -15,16 +15,9 @@
   </div>
 
   <% unless @contact.activities.empty? %>
-    <div>
+    <div id="messages">
       <%= render @contact.activities.order('created_at DESC') %>
     </div>
-  <% end %>
-
-  <% unless @contact.orders.empty? %>
-    <h2>Orders:</h2>
-    <ul>
-      <%= render @contact.orders.order('created_at DESC') %>
-    </ul>
   <% end %>
 </div>
 
