@@ -146,7 +146,11 @@ table.content td.side {
     padding: 0 0 0 9px;
 }
 
-table.order_details tr td.item_price, table.order_details tr.total_line td {
+table.order_details {
+    padding: 10px;
+}
+
+table.order_details tr td.item_quantity, table.order_details tr td.item_price, table.order_details tr.total_line td {
     text-align: right;
 }
 
@@ -229,6 +233,42 @@ input#q {
 .message {
     line-height: 18px;
     border-top: 1px solid #EDEDED;
-    padding: 15px 0 5px 0;
+    padding: 15px 0 15px 0;
     clear: both;
+}
+
+.message.first {
+    border-top: none;
+}
+
+.message .avatar {
+    width: 48px !important;
+    float: left;
+}
+
+.message .content {
+    margin-left: 63px;
+}
+
+.message .timestamp {
+    float: right;
+    color: #C0C0C0;
+}
+
+.message .content .header {
+    font-weight: bold;
+}
+
+.message .content .meta {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.message .content .header a {
+    color: #000;
+    text-decoration: none;
+}
+
+.message .content .header a:hover {
+    text-decoration: underline;
 }

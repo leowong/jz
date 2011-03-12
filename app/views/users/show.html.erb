@@ -1,5 +1,9 @@
 <% title @user.username %>
 
 <div class="inner">
-  Your dashboard.
+  <% unless @activities.empty? %>
+    <div id="messages">
+      <%= render @activities %>
+    </div>
+  <% end %>
 </div>

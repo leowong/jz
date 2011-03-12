@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = params[:id] ? User.find(params[:id]) : current_user
+    @activities = Activity.order('created_at DESC')
   end
 
   def create

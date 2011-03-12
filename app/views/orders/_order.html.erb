@@ -1,3 +1,19 @@
-<%= div_for order, :class => "message" do %>
-  <%= link_to order.number, order %>
+<%= div_for order do %>
+  <div class="avatar">
+    <%= image_tag 'order.png' %>
+  </div>
+  <div class="content">
+    <div class="timestamp">
+      <%= order.created_at.to_s(:db) %>
+    </div>
+    <div class="header">
+      <%= link_to order.contact.name + " (##{order.number})", order %>
+    </div>
+    <div class="meta">
+      Created by someone
+    </div>
+    <div class="body">
+      Total <%= number_to_currency(order.total_price) %>
+    </div>
+  </div>
 <% end %>

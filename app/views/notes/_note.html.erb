@@ -1,4 +1,27 @@
-<%= div_for note, :class => "message" do %>
-  <%= note.content %>
+<%= div_for note do %>
+  <div class="avatar">
+    <%= image_tag 'note.png' %>
+  </div>
+  <div class="content">
+    <div class="timestamp">
+      <%= note.created_at.to_s(:db) %>
+    </div>
+    <div class="header">
+      <%= link_to note.annotatable do %>
+        <% case note.annotatable.class.to_s %>
+        <% when 'Contact' %>
+          <%= note.annotatable.name %>
+        <% else %>
+          ...
+        <% end %>
+      <% end %>
+    </div>
+    <div class="meta">
+      Created by someone
+    </div>
+    <div class="body">
+      <%= note.content %>
+    </div>
+  </div>
 <% end %>
 
