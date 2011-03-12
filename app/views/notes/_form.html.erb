@@ -1,0 +1,14 @@
+<%= form_for @note do |f| %>
+  <%= f.error_messages %>
+  <div>
+    <%= f.hidden_field :annotatable_id %>
+    <%= f.hidden_field :annotatable_type %>
+    <%= f.hidden_field :type %>
+  </div>
+  <div>
+    <%= f.text_area :content, :size => "16x60" %>
+  </div>
+  <div>
+    <%= f.submit "Add this note" %>
+  </div>
+<% end %>

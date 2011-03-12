@@ -9,6 +9,17 @@
     </h2>
   <% end %>
 
+  <div class="add_note">
+    <h2>Add a new note</h2>
+    <%= render 'notes/form' %>
+  </div>
+
+  <% unless @contact.notes.empty? %>
+    <div>
+      <%= render @contact.notes.order('created_at DESC') %>
+    </div>
+  <% end %>
+
   <% unless @contact.orders.empty? %>
     <h2>Orders:</h2>
     <ul>

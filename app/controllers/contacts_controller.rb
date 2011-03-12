@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    @note = @contact.notes.build()
     @order = Order.new(:contact => @contact)
   end
 
