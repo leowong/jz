@@ -4,6 +4,7 @@ class Contact < ActiveRecord::Base
   has_many :provinces, :through => :addresses
   has_many :cities, :through => :addresses
   has_many :notes, :as => :annotatable
+  has_many :activities, :as => :topic
 
   accepts_nested_attributes_for :addresses,
                                 :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } },
