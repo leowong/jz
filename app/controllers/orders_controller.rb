@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find_by_number(params[:id])
+    @note = @order.notes.build()
     @line_item = LineItem.new(:order => @order)
   end
 
