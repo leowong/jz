@@ -4,7 +4,7 @@
   </div>
   <div class="content">
     <div class="timestamp">
-      <%= order.created_at.to_s(:db) %>
+      <%= order.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
     </div>
     <div class="header">
       <%= link_to order.contact.name + " (##{order.number})", order %>
