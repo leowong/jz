@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  before_filter :login_required
+
   def index
     if params[:q].blank?
       @contacts = Contact.all
