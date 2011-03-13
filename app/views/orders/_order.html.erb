@@ -10,7 +10,7 @@
       <%= link_to order.contact.name + " (##{order.number})", order %>
     </div>
     <div class="meta">
-      Created by someone
+      Created by <%= link_to activity.user.username, activity.user %>
     </div>
     <div class="body">
       Total <%= number_to_currency(order.total_price) %>

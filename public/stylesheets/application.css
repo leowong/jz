@@ -264,6 +264,15 @@ input#q {
     margin-bottom: 5px;
 }
 
+.message .content .meta a {
+    color: #777;
+    text-decoration: none;
+}
+
+.message .content .meta a:hover {
+    text-decoration: underline;
+}
+
 .message .content .header a {
     color: #000;
     text-decoration: none;

@@ -1,6 +1,7 @@
 class Activity < ActiveRecord::Base
   attr_accessible :user_id, :topic_id, :topic_type, :subject_id, :subject_type
 
+  belongs_to :user
   belongs_to :topic, :polymorphic => true
   belongs_to :subject, :polymorphic => true
 
