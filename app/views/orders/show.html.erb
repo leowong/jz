@@ -25,9 +25,9 @@
     <%= render 'notes/form' %>
   </div>
 
-  <% unless @order.notes.empty? %>
-    <div>
-      <%= render @order.notes.order('created_at DESC') %>
+  <% unless @order.activities.empty? %>
+    <div id="messages">
+      <%= render @order.activities.order('created_at DESC') %>
     </div>
   <% end %>
 </div>

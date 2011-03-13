@@ -7,14 +7,7 @@
       <%= note.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
     </div>
     <div class="header">
-      <%= link_to note.annotatable do %>
-        <% case note.annotatable.class.to_s %>
-        <% when 'Contact' %>
-          <%= note.annotatable.name %>
-        <% else %>
-          ...
-        <% end %>
-      <% end %>
+      <%= link_to note.to_header, note.annotatable %>
     </div>
     <div class="meta">
       Created by someone
