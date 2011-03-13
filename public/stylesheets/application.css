@@ -103,7 +103,24 @@ table.content td.main {
     padding: 0;
 }
 
-table.content td.main .col {
+table.content td.main .col .flash_messages {
+    padding-right: 8px;
+    margin-bottom: 12px;
+}
+
+table.content td.main .col .flash_messages #hide_notice {
+    float: right;
+    padding: 2px 0.8em 0 0;
+    color: #06C;
+}
+
+table.content td.main .col .flash_messages #hide_notice:hover {
+    color: #09F;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+table.content td.main .col .row {
     background-color: #FFF;
     -moz-box-shadow: 3px 3px 4px #BBB;
     -webkit-box-shadow: 3px 3px 4px #BBB;

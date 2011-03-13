@@ -13,3 +13,9 @@ $(document).ready(function() {
     $.get($("#contacts_search").attr("action"), $("#contacts_search").serialize(), null, "script"); 
   };
 });
+
+$(document).ready(function() {
+  $("#hide_notice").click(function() {
+    $(".flash_messages").hide();
+  });
+});

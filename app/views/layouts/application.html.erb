@@ -15,13 +15,24 @@
 	<tr>
 	  <td class="main">
 	    <div class="col">
-              <% flash.each do |name, msg| %>
-                <%= content_tag :div, msg, :class => "flash #{name}" %>
+              <% unless flash.empty? %>
+                <div class="flash_messages">
+                  <div id="hide_notice">
+                    x
+                  </div>
+                  <div>
+                    <% flash.each do |name, msg| %>
+                      <%= content_tag :div, msg, :class => "flash #{name}" %>
+                    <% end %>
+                  </div>
+                </div>
               <% end %>
-              <div class="title">
-                <%= content_tag :h1, yield(:title) if show_title? %>
+              <div class="row">
+                <div class="title">
+                  <%= content_tag :h1, yield(:title) if show_title? %>
+                </div>
+	        <%= yield %>
               </div>
-	      <%= yield %>
 	    </div>
 	  </td>
 	  <td class="side">
