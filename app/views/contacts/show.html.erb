@@ -14,9 +14,9 @@
     <%= render 'notes/form' %>
   </div>
 
-  <% unless @contact.activities.empty? %>
+  <% unless Activity.aggregate_for(@contact).empty? %>
     <div id="messages">
-      <%= render @contact.activities.order('created_at DESC') %>
+      <%= render Activity.aggregate_for(@contact).order('created_at DESC') %>
     </div>
   <% end %>
 </div>
