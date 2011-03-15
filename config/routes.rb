@@ -9,6 +9,7 @@ Jzcrm::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'login' => 'sessions#new', :as => :login
 
+  resources :tasks
   resources :activities
   resources :notes
   resources :sessions
