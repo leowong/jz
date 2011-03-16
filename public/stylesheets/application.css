@@ -298,3 +298,9 @@ input#q {
 .message .content .header a:hover {
     text-decoration: underline;
 }
+
+/* tasks */
+
+#upcoming_tasks .busy {
+    text-decoration: line-through;
+}

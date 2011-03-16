@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.scoped
   end
 
   def show
@@ -26,10 +26,16 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    if @task.update_attributes(params[:task])
-      redirect_to @task, :notice  => "Successfully updated task."
-    else
-      render :action => 'edit'
+
+    respond_to do |format|
+      if @task.update_attributes(params[:task])
+        @task.toggle_completed if params[:task].blank?
+        format.html { redirect_to @task, :notice  => "Successfully updated task." }
+        format.js
+      else
+        format.html { render :action => 'edit' }
+        format.js
+      end
     end
   end
 

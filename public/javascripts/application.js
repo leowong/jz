@@ -19,3 +19,15 @@ $(document).ready(function() {
     $(".flash_messages").hide();
   });
 });
+
+$(function() {
+  $(".task").live("click", function() {
+    $(this).next("span.task_name").addClass("busy");
+    $.ajax({
+      url: "/tasks/" + this.getAttribute("data-id"),
+      type: 'PUT',
+      dataType: 'script'
+    });
+    return false;
+  });
+});

@@ -1,33 +1,20 @@
 <% title "Tasks" %>
+<% javascript "jquery-ui" %>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Assigned To</th>
-    <th>Completed By</th>
-    <th>Name</th>
-    <th>Subject</th>
-    <th>Subject Type</th>
-    <th>Due At</th>
-    <th>Completed At</th>
-    <th>Deleted At</th>
-  </tr>
-  <% for task in @tasks %>
-    <tr>
-      <td><%= task.user_id %></td>
-      <td><%= task.assigned_to %></td>
-      <td><%= task.completed_by %></td>
-      <td><%= task.name %></td>
-      <td><%= task.subject_id %></td>
-      <td><%= task.subject_type %></td>
-      <td><%= task.due_at %></td>
-      <td><%= task.completed_at %></td>
-      <td><%= task.deleted_at %></td>
-      <td><%= link_to "Show", task %></td>
-      <td><%= link_to "Edit", edit_task_path(task) %></td>
-      <td><%= link_to "Destroy", task, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="inner">
+  <strong>Upcoming</strong>
+  <div id="upcoming_tasks">
+    <% for task in @tasks.upcoming.order('updated_at') %>
+      <%= render task %>
+    <% end %>
+  </div>
+  <strong>Completed</strong>
+  <div id="completed_tasks">
+    <% for task in @tasks.completed.order('completed_at DESC') %>
+      <%= render task %>
+    <% end %>
+  </div>
 
-<p><%= link_to "New Task", new_task_path %></p>
+  <br />
+  <p><%= link_to "New Task", new_task_path %></p>
+</div>

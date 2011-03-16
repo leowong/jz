@@ -1,0 +1,7 @@
+$("#task_<%= @task.id %>").remove();
+<% if @task.completed? %>
+  $("#completed_tasks").prepend("<%= escape_javascript(render(@task)) %>");
+<% else %>
+  $("#upcoming_tasks").append("<%= escape_javascript(render(@task)) %>");
+<% end %>
+$("#task_<%= @task.id %>").effect("highlight", {} , 3000);
