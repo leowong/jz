@@ -1,6 +1,5 @@
-<div class="title">
-  <h1><%= @contact.name %></h1>
-</div>
+<% title @contact.name %>
+
 <div class="inner">
   <% unless @contact.addresses.empty? %>
     <h2>

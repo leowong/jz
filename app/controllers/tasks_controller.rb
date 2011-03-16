@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_filter :login_required
+  
   def index
     @tasks = Task.scoped
   end

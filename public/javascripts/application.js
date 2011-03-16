@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   var timer = undefined;
 
   $("#contacts_search input").keyup(function() {
@@ -14,7 +14,7 @@ $(document).ready(function() {
   };
 });
 
-$(document).ready(function() {
+$(function() {
   $("#hide_notice").click(function() {
     $(".flash_messages").hide();
   });
