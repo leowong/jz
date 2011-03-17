@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :username, :email, :password, :password_confirmation
 
+  cattr_accessor :current_user
+
   attr_accessor :password
   before_save :prepare_password
 
@@ -23,6 +25,10 @@ class User < ActiveRecord::Base
 
   def encrypt_password(pass)
     BCrypt::Engine.hash_secret(pass, password_salt)
+  end
+
+  def name
+    self == User.current_user ? "Me" : username
   end
 
   private

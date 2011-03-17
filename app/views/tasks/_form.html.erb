@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :assigned_to %><br />
-    <%= f.collection_select :assigned_to, User.all, :id, :username %>
+    <%= f.collection_select :assigned_to, User.all, :id, :name %>
   </p>
   <p><%= f.submit %></p>
 <% end %>
