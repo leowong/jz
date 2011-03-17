@@ -3,6 +3,7 @@ class TasksController < ApplicationController
   
   def index
     @tasks = Task.scoped
+    @task = Task.new
   end
 
   def show
@@ -16,7 +17,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(params[:task])
     if @task.save
-      redirect_to @task, :notice => "Successfully created task."
+      redirect_to tasks_path, :notice => "Successfully created task."
     else
       render :action => 'new'
     end
@@ -32,7 +33,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.update_attributes(params[:task])
         @task.toggle_completed if params[:task].blank?
-        format.html { redirect_to @task, :notice  => "Successfully updated task." }
+        format.html { redirect_to tasks_path, :notice  => "Successfully updated task." }
         format.js
       else
         format.html { render :action => 'edit' }

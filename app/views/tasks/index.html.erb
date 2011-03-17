@@ -18,3 +18,12 @@
   <br />
   <p><%= link_to "New Task", new_task_path %></p>
 </div>
+
+<% content_for :side do %>
+  <div class="inner">
+    <div class="add_task">
+      <h2>Add a new task</h2>
+      <%= render 'tasks/form' %>
+    </div>
+  </div>
+<% end %>
