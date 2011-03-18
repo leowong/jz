@@ -4,6 +4,8 @@ class Task < ActiveRecord::Base
   scope :upcoming, where("completed_at IS NULL")
   scope :completed, where("completed_at IS NOT NULL")
 
+  validates_presence_of :name, :due_at, :assigned_to
+
   def toggle_completed
     if completed?
       update_attribute(:completed_at, nil)
