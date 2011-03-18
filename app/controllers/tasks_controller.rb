@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_filter :login_required
   
   def index
-    @tasks = Task.scoped
+    @tasks = current_user.assigned_tasks
     @task = Task.new
   end
 
