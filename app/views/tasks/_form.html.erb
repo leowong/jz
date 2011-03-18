@@ -1,3 +1,6 @@
+<% stylesheet "jquery-ui/smoothness", :media => "screen" %>
+<% javascript "jquery.ui.datepicker-zh-CN" %>
+
 <%= form_for @task do |f| %>
   <%= f.error_messages %>
   <p>
@@ -5,7 +8,7 @@
   </p>
   <p>
     <%= f.label :due_at %><br />
-    <%= f.datetime_select :due_at, :prompt => true %>
+    <%= f.text_field :due_at %>
   </p>
   <p>
     <%= f.label :assigned_to %><br />
