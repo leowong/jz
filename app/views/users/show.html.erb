@@ -7,3 +7,17 @@
     </div>
   <% end %>
 </div>
+
+<% content_for :side do %>
+  <% javascript 'jquery-ui' %>
+  <div class="inner">
+    <h2>Tasks</h2>
+    <div id="upcoming_tasks">
+      <% for task in current_user.assigned_tasks.upcoming.order('updated_at') %>
+        <%= render task %>
+      <% end %>
+    </div>
+    <div id="completed_tasks" style="display:none">
+    </div>
+  </div>
+<% end %>

@@ -29,10 +29,10 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
+    @task.toggle_completed and return if params[:task].blank?
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        @task.toggle_completed if params[:task].blank?
         format.html { redirect_to tasks_path, :notice  => "Successfully updated task." }
         format.js
       else

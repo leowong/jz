@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
     self == User.current_user ? "Me" : username
   end
 
+  def assigned_tasks
+    Task.where(:assigned_to => id)
+  end
+
   private
 
   def prepare_password
