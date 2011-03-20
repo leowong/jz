@@ -1,0 +1,21 @@
+<% title "Billboards" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>User</th>
+  </tr>
+  <% for billboard in @billboards %>
+    <tr>
+      <td><%= billboard.title %></td>
+      <td><%= billboard.content %></td>
+      <td><%= billboard.user_id %></td>
+      <td><%= link_to "Show", billboard %></td>
+      <td><%= link_to "Edit", edit_billboard_path(billboard) %></td>
+      <td><%= link_to "Destroy", billboard, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Billboard", new_billboard_path %></p>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110320192330) do
+ActiveRecord::Schema.define(:version => 20110320202248) do
 
   create_table "activities", :force => true do |t|
     t.integer   "user_id"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20110320192330) do
     t.string    "type"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+  end
+
+  create_table "billboards", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "cities", :force => true do |t|

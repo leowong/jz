@@ -1,0 +1,20 @@
+<% title "Billboard" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @billboard.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @billboard.content %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @billboard.user_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_billboard_path(@billboard) %> |
+  <%= link_to "Destroy", @billboard, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", billboards_path %>
+</p>
