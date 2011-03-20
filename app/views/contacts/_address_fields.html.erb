@@ -5,11 +5,10 @@
   <% end %>
 <% end %>
 
-<div id="province_select">
-  <%= f.label :province_id %><br />
-  <%= f.collection_select :province_id, Province.all, :id, :name, :include_blank => true %>
-</div>
-<div id="city_select">
-  <%= f.label :city_id %><br />
-  <%= f.collection_select :city_id, @contact.addresses[0].province.try(:cities) || [], :id, :name, :include_blank => true %>
-</div>
+<tr>
+  <td><%= f.label :province_id, "Province & City" %></td>
+  <td>
+    <span id="province_select"><%= f.collection_select :province_id, Province.all, :id, :name, :include_blank => true %></span>
+    <span id="city_select"><%= f.collection_select :city_id, @contact.addresses[0].province.try(:cities) || [], :id, :name, :include_blank => true %></span>
+  </td>
+</tr>

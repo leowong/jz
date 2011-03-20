@@ -6,6 +6,12 @@ input {
     padding: 3px;
 }
 
+select {
+    background-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+}
+
 body {
     font-family: 'Lucida Grande',Geneva,Verdana,Arial,Helvetica,sans-serif;
     font-size: 12px;
@@ -321,4 +327,10 @@ input#q {
 
 #upcoming_tasks .busy {
     text-decoration: line-through;
+}
+
+/* form */
+
+form table tr td.label {
+    text-align: right;
 }

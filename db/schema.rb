@@ -10,70 +10,76 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110315121025) do
+ActiveRecord::Schema.define(:version => 20110320151826) do
 
   create_table "activities", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "subject_id"
-    t.string   "subject_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "topic_id"
-    t.string   "topic_type"
+    t.integer   "user_id"
+    t.integer   "subject_id"
+    t.string    "subject_type"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "topic_id"
+    t.string    "topic_type"
   end
 
   create_table "addresses", :force => true do |t|
-    t.integer  "province_id"
-    t.integer  "city_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "contact_id"
+    t.integer   "province_id"
+    t.integer   "city_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "contact_id"
   end
 
   create_table "annotations", :force => true do |t|
-    t.text     "content"
-    t.integer  "annotatable_id"
-    t.string   "annotatable_type"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text      "content"
+    t.integer   "annotatable_id"
+    t.string    "annotatable_type"
+    t.string    "type"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "cities", :force => true do |t|
-    t.string   "name"
-    t.integer  "province_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.integer   "province_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "type1"
+    t.integer  "type2"
+    t.integer  "type3"
+    t.boolean  "sex"
+    t.integer  "age_range"
+    t.string   "mobile"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "company"
+    t.string   "position"
+    t.integer  "source_id"
+    t.integer  "interest"
+    t.text     "background_info"
   end
 
   create_table "line_items", :force => true do |t|
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "quantity",   :default => 1
-  end
-
-  create_table "notes", :force => true do |t|
-    t.text     "content"
-    t.integer  "notable_id"
-    t.string   "notable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "order_id"
+    t.integer   "product_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "quantity",   :default => 1
   end
 
   create_table "orders", :force => true do |t|
-    t.integer  "contact_id"
-    t.string   "number"
-    t.string   "state"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "contact_id"
+    t.string    "number"
+    t.string    "state"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "products", :force => true do |t|
@@ -84,10 +90,10 @@ ActiveRecord::Schema.define(:version => 20110315121025) do
   end
 
   create_table "provinces", :force => true do |t|
-    t.string   "name"
-    t.string   "abbreviation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "abbreviation"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "sessions", :force => true do |t|
@@ -101,26 +107,26 @@ ActiveRecord::Schema.define(:version => 20110315121025) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "tasks", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "assigned_to"
-    t.integer  "completed_by"
-    t.string   "name"
-    t.integer  "subject_id"
-    t.string   "subject_type"
-    t.datetime "due_at"
-    t.datetime "completed_at"
-    t.datetime "deleted_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "user_id"
+    t.integer   "assigned_to"
+    t.integer   "completed_by"
+    t.string    "name"
+    t.integer   "subject_id"
+    t.string    "subject_type"
+    t.timestamp "due_at"
+    t.timestamp "completed_at"
+    t.timestamp "deleted_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "username"
+    t.string    "email"
+    t.string    "password_hash"
+    t.string    "password_salt"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end
