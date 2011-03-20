@@ -1,20 +1,27 @@
-<% title "Billboard" %>
+<% title "Billboard", false %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @billboard.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%= @billboard.content %>
-</p>
-<p>
-  <strong>User:</strong>
-  <%= @billboard.user_id %>
-</p>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to "Edit", edit_billboard_path(@billboard) %></li>
+      <li><%= link_to "Destroy", @billboard, :confirm => 'Are you sure?', :method => :delete %></li>
+      <li><%= link_to "View All", billboards_path %></li>
+    </ul>
+  </div>
+  <h1><%= link_to "Billboard", billboards_path %></h1>
+<% end %>
 
-<p>
-  <%= link_to "Edit", edit_billboard_path(@billboard) %> |
-  <%= link_to "Destroy", @billboard, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", billboards_path %>
-</p>
+<div class="inner">
+  <div class="billboard">
+    <div class="title">
+      <%= @billboard.title %>
+    </div>
+    <div class="meta">
+      Posted by <%= link_to @billboard.user.username, @billboard.user %>,
+      at <%= @billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+    </div>
+    <div class="content">
+      <%= @billboard.content %>
+    </div>
+  </div>
+</div>

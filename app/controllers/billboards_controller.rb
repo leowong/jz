@@ -1,6 +1,8 @@
 class BillboardsController < ApplicationController
+  before_filter :login_required
+
   def index
-    @billboards = Billboard.all
+    @billboards = Billboard.order("created_at DESC")
   end
 
   def show
@@ -12,7 +14,7 @@ class BillboardsController < ApplicationController
   end
 
   def create
-    @billboard = Billboard.new(params[:billboard])
+    @billboard = Billboard.new(params[:billboard].merge(:user_id => current_user.id))
     if @billboard.save
       redirect_to @billboard, :notice => "Successfully created billboard."
     else
@@ -26,6 +28,7 @@ class BillboardsController < ApplicationController
 
   def update
     @billboard = Billboard.find(params[:id])
+    params[:billboard].delete(:user_id) if params[:billboard] and params[:billboard][:user_id]
     if @billboard.update_attributes(params[:billboard])
       redirect_to @billboard, :notice  => "Successfully updated billboard."
     else

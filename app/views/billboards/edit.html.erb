@@ -1,8 +1,10 @@
 <% title "Edit Billboard" %>
 
-<%= render 'form' %>
+<div class="inner">
+  <%= render 'form' %>
 
-<p>
-  <%= link_to "Show", @billboard %> |
-  <%= link_to "View All", billboards_path %>
-</p>
+  <p>
+    <%= link_to "Show", @billboard %> |
+    <%= link_to "View All", billboards_path %>
+  </p>
+</div>

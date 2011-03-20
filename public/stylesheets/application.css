@@ -334,3 +334,40 @@ input#q {
 form table tr td.label {
     text-align: right;
 }
+
+/* billboard */
+
+.inner .listing .billboard {
+    border-top: 1px solid #EDEDED;
+}
+
+.inner .listing .billboard.first  {
+    border-top: none;
+}
+
+.inner .listing .billboard .title {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 18px;
+    background: none;
+    margin: 0;
+    padding: 15px 0 10px 0;
+}
+
+.inner .listing .billboard .meta {
+    font-size: 10px;
+    padding: 5px 0 10px 0;
+}
+
+.inner .billboard .title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 25px;
+    background: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.inner .billboard .content {
+    padding: 22px 0 10px;
+}
