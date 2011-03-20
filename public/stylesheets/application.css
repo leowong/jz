@@ -90,6 +90,10 @@ header #user_nav, header #user_nav a:link, header #user_nav a:visited {
     background: -moz-linear-gradient(top,  #fdfdfd,  #e5e5e5); /* firefox 3.6+ */
 }
 
+#tabs a:link.highlight, #tabs a:visited.highlight {
+    color: orange;
+}
+
 /* header */
 
 .title .buttons {
