@@ -1,0 +1,20 @@
+<% title "Listing users" %>
+
+<div class="inner">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Phone</th>
+    </tr>
+    <% for user in @users %>
+      <tr>
+        <td><%= link_to user.username, user %></td>
+        <td><%= mail_to user.email %></td>
+        <td><%= user.mobile %></td>
+        <td><%= user.phone %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
