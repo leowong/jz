@@ -1,5 +1,16 @@
-<% title "Tasks" %>
+<% title "Tasks", false %>
 <% javascript "jquery-ui" %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to_unless params[:collection].nil?, "assigned to me", tasks_path %></li>
+      <li>|</li>
+      <li><%= link_to_unless params[:collection] == "assigned", "assigned by me", tasks_path(:collection => "assigned") %></li>
+    </ul>
+  </div>
+  <h1><%= link_to "Tasks", tasks_path %></h1>
+<% end %>
 
 <div class="inner">
   <strong>Upcoming</strong>

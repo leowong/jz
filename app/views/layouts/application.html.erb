@@ -29,7 +29,11 @@
               <% end %>
               <div class="row">
                 <div class="title">
-                  <%= content_tag :h1, yield(:title) if show_title? %>
+                  <% if show_title? %>
+                    <%= content_tag :h1, yield(:title) %>
+                  <% else %>
+                    <%= yield(:header) %>
+                  <% end %>
                 </div>
 	        <%= yield %>
               </div>

@@ -1,6 +1,8 @@
 class Task < ActiveRecord::Base
   attr_accessible :user_id, :assigned_to, :completed_by, :name, :subject_id, :subject_type, :due_at, :completed_at, :deleted_at
 
+  before_save :setup_user
+
   scope :upcoming, where("completed_at IS NULL")
   scope :completed, where("completed_at IS NOT NULL")
 
@@ -16,5 +18,11 @@ class Task < ActiveRecord::Base
 
   def completed?
     completed_at?
+  end
+
+  private
+
+  def setup_user
+    self.user_id = User.current_user
   end
 end

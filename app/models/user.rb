@@ -35,6 +35,9 @@ class User < ActiveRecord::Base
     Task.where(:assigned_to => id)
   end
 
+  def assigning_tasks
+    Task.where(:user_id => id)
+  end
   private
 
   def prepare_password

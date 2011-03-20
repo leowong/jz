@@ -2,7 +2,8 @@ class TasksController < ApplicationController
   before_filter :login_required
   
   def index
-    @tasks = current_user.assigned_tasks
+    @tasks = params[:collection] == "assigned" ?
+               current_user.assigning_tasks : current_user.assigned_tasks
     @task = Task.new
   end
 
