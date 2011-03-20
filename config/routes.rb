@@ -3,6 +3,7 @@ Jzcrm::Application.routes.draw do
 
   get "javascripts/city_mapper"
 
+  match 'reports/index' => 'reports#index', :as => :reports
   match 'dashboard' => 'users#show', :as => :dashboard
   match 'user/edit' => 'users#edit', :as => :edit_current_user
   match 'signup' => 'users#new', :as => :signup

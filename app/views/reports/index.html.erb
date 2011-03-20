@@ -1,0 +1,24 @@
+<% title "Completed orders" %>
+
+<div class="inner">
+  <table>
+    <tr>
+      <th>Contact (Order)</th>
+      <th>Created</th>
+      <th>Completed</th>
+      <th class="total_price">Total price</th>
+    </tr>
+    <% for order in @orders %>
+      <tr>
+        <td><%= link_to order.contact.name, order.contact %> (<%= link_to "##{order.number}", order %>)</td>
+        <td class="timestamp"><%= order.created_at.strftime('%Y-%m-%d') %></td>
+        <td class="timestamp"><%= order.updated_at.strftime('%Y-%m-%d') %></td>
+        <td class="total_price"><%= number_to_currency(order.total_price) %></td>
+      </tr>
+    <% end %>
+    <tr class="total_line">
+      <td colspan="3">&Sigma;</td>
+      <td class="total_cell"><%= number_to_currency(@orders.inject(0) { |sum, order| sum + order.total_price }) %></td>
+    </tr>
+  </table>
+</div>

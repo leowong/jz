@@ -185,11 +185,11 @@ table.order_details {
     padding: 10px;
 }
 
-table.order_details tr td.item_quantity, table.order_details tr td.item_price, table.order_details tr.total_line td {
+table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price {
     text-align: right;
 }
 
-table.order_details tr.total_line .total_cell {
+table.tr.total_line .total_cell {
     font-weight: bold;
 }
 

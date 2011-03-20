@@ -8,6 +8,8 @@ class Order < ActiveRecord::Base
                                 :reject_if => proc { |attrs| attrs.any? { |k, v| v.blank? } },
                                 :allow_destroy => true
 
+  scope :completed, where("state = 'completed'")
+
   def to_param
     number.to_s.parameterize.upcase
   end
