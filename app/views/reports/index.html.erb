@@ -18,7 +18,7 @@
     <% end %>
     <tr class="total_line">
       <td colspan="3">&Sigma;</td>
-      <td class="total_cell"><%= number_to_currency(@orders.inject(0) { |sum, order| sum + order.total_price }) %></td>
+      <td class="total_cell"><%= number_to_currency(@orders.all.sum(&:total_price)) %></td>
     </tr>
   </table>
 </div>
