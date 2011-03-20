@@ -13,7 +13,7 @@
   <div class="inner">
     <h2>Tasks</h2>
     <div id="upcoming_tasks">
-      <% for task in current_user.assigned_tasks.upcoming.order('updated_at') %>
+      <% for task in current_user.assigned_tasks.upcoming.order('due_at DESC') %>
         <%= render task %>
       <% end %>
     </div>

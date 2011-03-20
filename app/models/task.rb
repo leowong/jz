@@ -3,6 +3,8 @@ class Task < ActiveRecord::Base
 
   before_save :setup_user
 
+  belongs_to :user
+
   scope :upcoming, where("completed_at IS NULL")
   scope :completed, where("completed_at IS NOT NULL")
 

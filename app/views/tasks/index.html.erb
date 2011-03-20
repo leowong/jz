@@ -15,7 +15,7 @@
 <div class="inner">
   <strong>Upcoming</strong>
   <div id="upcoming_tasks">
-    <% for task in @tasks.upcoming.order('updated_at') %>
+    <% for task in @tasks.upcoming.order('due_at DESC') %>
       <%= render task %>
     <% end %>
   </div>

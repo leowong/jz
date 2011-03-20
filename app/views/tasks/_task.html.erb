@@ -1,5 +1,8 @@
 <div id="<%= "task_#{task.id}" %>">
   <%= check_box_tag "task_#{task.id}", "1", task.completed?, :class => "task", :"data-id" => task.id %>
   <span class="task_name"><%= task.name %></span>
+  <% unless task.user_id.nil? %>
+    <span class="user">by <%= link_to task.user.username, task.user %></span>
+  <% end %>
   (<%= link_to "Edit", edit_task_path(task) %>)
 </div>
