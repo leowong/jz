@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
   end
 
   def assigning_tasks
-    Task.where(:user_id => id)
+    Task.where("user_id = :current_user_id AND assigned_to <> :current_user_id", :current_user_id => User.current_user.id )
   end
   private
 
