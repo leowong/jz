@@ -266,6 +266,22 @@ input#q {
     padding: 0 60px 20px 0;
 }
 
+.add_note h2 {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 0 0 0;
+}
+
+.add_note #add_note_button {
+    color: #06C;
+    text-decoration: underline;
+}
+
+.add_note #add_note_button:hover {
+    color: #09F;
+    cursor: pointer;
+}
+
 .add_note textarea {
     width: 100%;
     height: 96px;
@@ -372,7 +388,7 @@ form table tr td.label {
     padding: 10px 0;
 }
 
-.inner .billboard .content {
+.inner .billboard > .content {
     padding: 22px 0 10px;
 }
 
@@ -381,7 +397,7 @@ form table tr td.label {
 .documents {
     border: 1px solid #CCC;
     padding: 10px;
-    margin-top: 10px;
+    margin: 0 0 25px 0;
 }
 
 .documents h2 {

@@ -1,5 +1,15 @@
 <% title "Billboard", false %>
 
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(function() {
+      $('#add_note_button').click(function() {
+        $('#add_note_form').show();
+      });
+    });
+  </script>
+<% end %>
+
 <% content_for :header do %>
   <div class="buttons">
     <ul>
@@ -33,5 +43,18 @@
         </ul>
       </div>
     <% end %>
+
+    <% unless Activity.aggregate_for(@billboard).empty? %>
+      <div id="messages">
+        <%= render Activity.aggregate_for(@billboard).order('created_at') %>
+      </div>
+    <% end %>
+
+    <div class="add_note">
+      <div id="add_note_button">Add a new note</div>
+      <div id="add_note_form" style="display:none">
+        <%= render 'notes/form' %>
+      </div>
+    </div>
   </div>
 </div>

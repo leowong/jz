@@ -5,6 +5,8 @@ class Note < Annotation
       self.annotatable.name 
     when 'Order'
       self.annotatable.contact.name + " (##{annotatable.number})"
+    when 'Billboard'
+      self.annotatable.title
     else
       "Note"
     end

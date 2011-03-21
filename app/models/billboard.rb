@@ -3,6 +3,8 @@ class Billboard < ActiveRecord::Base
 
   belongs_to :user
   has_many :documents, :as => :attachable, :dependent => :destroy
+  has_many :notes, :as => :annotatable
+  has_many :activities, :as => :topic
 
   accepts_nested_attributes_for :documents, :reject_if => :all_blank, :allow_destroy => true
 

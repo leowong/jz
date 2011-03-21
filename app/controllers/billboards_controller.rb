@@ -7,6 +7,7 @@ class BillboardsController < ApplicationController
 
   def show
     @billboard = Billboard.find(params[:id])
+    @note = @billboard.notes.build()
   end
 
   def new
