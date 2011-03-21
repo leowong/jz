@@ -54,6 +54,7 @@ namespace :shared do
         ln -sf #{shared_path}/config/$(basename $FILE) #{release_path}/config/$(basename $FILE);
       done
     }
+    run "ln -sf #{shared_path}/assets #{release_path}/public/assets"
   end
 
   desc "Setup shared directory."
@@ -61,6 +62,11 @@ namespace :shared do
     run %{
       if [ ! -d "#{shared_path}/config" ]; then
         mkdir #{shared_path}/config;
+      fi
+    }
+    run %{
+      if [ ! -d "#{shared_path}/assets" ]; then
+        mkdir #{shared_path}/assets;
       fi
     }
   end
