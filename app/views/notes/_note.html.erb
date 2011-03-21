@@ -13,7 +13,7 @@
       Created by <%= link_to activity.user.username, activity.user %>
     </div>
     <div class="body">
-      <%= note.content %>
+      <%= wrap(note.content) %>
     </div>
   </div>
 <% end %>

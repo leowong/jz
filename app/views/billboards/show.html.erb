@@ -21,7 +21,7 @@
       at <%= @billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
     </div>
     <div class="content">
-      <%= @billboard.content %>
+      <%= wrap(@billboard.content) %>
     </div>
     <% unless @billboard.documents.empty? %>
       <div class="documents">
