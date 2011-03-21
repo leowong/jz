@@ -37,11 +37,16 @@ header #user_nav {
     top: 0px;
     right: 0px;
     padding: 7px 25px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
-header #user_nav, header #user_nav a:link, header #user_nav a:visited {
+header #user_nav, header #user_nav a {
     color: #D1EEFF;
+    text-decoration: none;
+}
+
+header #user_nav a:hover {
+    text-decoration: underline;
 }
 
 /* tabs */
@@ -165,6 +170,15 @@ table.content td.side {
     padding: 0;
 }
 
+table.content td.side h2 {
+    background-color: #EDF3FE;
+    border-bottom: 1px solid gainsboro;
+    margin: 0 0 5px 0;
+    color: #333;
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
 .content table {
     width: auto;
 }
@@ -189,6 +203,10 @@ table.content td.side {
 .side .inner {
     min-width: 200px;
     padding: 0 0 0 9px;
+}
+
+.side .inner .indent {
+    padding-left: 8px;
 }
 
 table.order_details {
@@ -294,7 +312,7 @@ input#q {
 .message {
     line-height: 18px;
     border-top: 1px solid #EDEDED;
-    padding: 15px 0 15px 0;
+    padding: 18px 0 0 0;
     clear: both;
 }
 
@@ -322,7 +340,7 @@ input#q {
 
 .message .content .meta {
     color: #777;
-    margin-bottom: 5px;
+    margin-bottom: 9px;
 }
 
 .message .content .meta a {

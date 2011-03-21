@@ -25,6 +25,6 @@ class Task < ActiveRecord::Base
   private
 
   def setup_user
-    self.user_id = User.current_user
+    self.user_id = User.current_user.id
   end
 end

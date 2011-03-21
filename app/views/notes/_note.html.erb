@@ -10,7 +10,7 @@
       <%= link_to note.to_header, note.annotatable %>
     </div>
     <div class="meta">
-      Created by <%= link_to activity.user.username, activity.user %>
+      <%= t('.before_meta') %> <%= link_to activity.user.username, activity.user %> <%= t('.after_meta') %>
     </div>
     <div class="body">
       <%= wrap(note.content) %>
