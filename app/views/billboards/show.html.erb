@@ -23,5 +23,15 @@
     <div class="content">
       <%= @billboard.content %>
     </div>
+    <% unless @billboard.documents.empty? %>
+      <div class="documents">
+        <h2>Attachments:</h2>
+        <ul>
+          <% for document in @billboard.documents %>
+            <li><%= link_to document.attachment_file_name, document.attachment.url %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
   </div>
 </div>

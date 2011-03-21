@@ -375,3 +375,33 @@ form table tr td.label {
 .inner .billboard .content {
     padding: 22px 0 10px;
 }
+
+/* attachment */
+
+.documents {
+    border: 1px solid #CCC;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.documents h2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.documents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75em 0;
+}
+
+.documents ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.documents ul li a {
+    display: block;
+    padding: 2px 16px;
+    background: url(/images/document.png) left no-repeat;
+}
