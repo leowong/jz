@@ -7,6 +7,6 @@ module ApplicationHelper
   end
 
   def highlighting_billboard_tab?
-    Billboard.order("created_at").last.created_at.to_date == Time.zone.now.to_date ? true : false
+    Billboard.all.size > 0 and Billboard.order("created_at").last.created_at.to_date == Time.zone.now.to_date ? true : false
   end
 end
