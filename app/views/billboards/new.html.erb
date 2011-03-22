@@ -1,7 +1,14 @@
-<% title "New Billboard" %>
+<% title t('.new_billboard'), false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.back_to_list'), billboards_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.new_billboard') %></h1>
+<% end %>
 
 <div class="inner">
   <%= render 'form' %>
-
-  <p><%= link_to "Back to List", billboards_path %></p>
 </div>
