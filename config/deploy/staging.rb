@@ -5,6 +5,7 @@ ssh_options[:forward_agent] = true
 set :user, 'deploy'
 set :domain, 'staging.jz.ongile.com'
 set :application, 'jzcrm0'
+set :rails_env, 'staging'
 
 # using mri 1.9.2
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
