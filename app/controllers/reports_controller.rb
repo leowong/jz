@@ -17,7 +17,7 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(params[:report].merge(:user_id => current_user.id))
     if @report.save
-      redirect_to @report, :notice => "Successfully created report."
+      redirect_to @report, :notice => t('notice.create_successful')
     else
       render :action => 'new'
     end
@@ -31,7 +31,7 @@ class ReportsController < ApplicationController
     @report = Report.find(params[:id])
     params[:report].delete(:user_id) if params[:report] and params[:report][:user_id]
     if @report.update_attributes(params[:report])
-      redirect_to @report, :notice  => "Successfully updated report."
+      redirect_to @report, :notice  => t('notice.update_successful')
     else
       render :action => 'edit'
     end
@@ -40,6 +40,6 @@ class ReportsController < ApplicationController
   def destroy
     @report = Report.find(params[:id])
     @report.destroy
-    redirect_to reports_url, :notice => "Successfully destroyed report."
+    redirect_to reports_url, :notice => t('notice.destroy_successful')
   end
 end
