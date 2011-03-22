@@ -373,17 +373,17 @@ form table tr td.label {
     text-align: right;
 }
 
-/* billboard */
+/* listing */
 
-.inner .listing .billboard {
+.inner .listing .item {
     border-top: 1px solid #EDEDED;
 }
 
-.inner .listing .billboard.first  {
+.inner .listing .item.first  {
     border-top: none;
 }
 
-.inner .listing .billboard .title {
+.inner .listing .item .title {
     font-size: 22px;
     font-weight: normal;
     line-height: 18px;
@@ -392,12 +392,12 @@ form table tr td.label {
     padding: 15px 0 10px 0;
 }
 
-.inner .listing .billboard .meta {
+.inner .listing .item .meta {
     font-size: 10px;
     padding: 5px 0 10px 0;
 }
 
-.inner .billboard .title {
+.inner .item .title {
     font-size: 22px;
     font-weight: bold;
     line-height: 25px;
@@ -406,7 +406,7 @@ form table tr td.label {
     padding: 10px 0;
 }
 
-.inner .billboard > .content {
+.inner .item > .content {
     padding: 22px 0 10px;
 }
 

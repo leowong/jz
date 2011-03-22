@@ -1,24 +1,28 @@
-<% title "Report" %>
+<% title t('.report'), false %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @report.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%= @report.content %>
-</p>
-<p>
-  <strong>User:</strong>
-  <%= @report.user_id %>
-</p>
-<p>
-  <strong>Apply To:</strong>
-  <%= @report.apply_to %>
-</p>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.edit'), edit_report_path(@report) %></li>
+      <li><%= link_to t('.destroy'), @report, :confirm => t('.are_you_sure'), :method => :delete %></li>
+      <li><%= link_to t('.view_all'), reports_path %></li>
+    </ul>
+  </div>
+  <h1><%= link_to t('.report'), reports_path %></h1>
+<% end %>
 
-<p>
-  <%= link_to "Edit", edit_report_path(@report) %> |
-  <%= link_to "Destroy", @report, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", reports_path %>
-</p>
+<div class="inner">
+  <div class="item report">
+    <div class="title">
+      <%= @report.title %>
+    </div>
+    <div class="meta">
+      <%= t('.before_user') %> <%= link_to @report.user.username, @report.user %> <%= t('.after_user') %>,
+      <%= t('.applying_to') %> <%= link_to @report.applyee.username, @report.applyee %><br />
+      <%= t('.at') %> <%= @report.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+    </div>
+    <div class="content">
+      <%= wrap(@report.content) %>
+    </div>
+  </div>
+</div>

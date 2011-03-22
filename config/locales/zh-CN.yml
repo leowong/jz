@@ -169,6 +169,13 @@ zh-CN:
         even: "必须为双数"
         taken: "已经被使用"
         record_invalid: "校验失败: %{errors}"
+    models:
+      report: "报告"
+    attributes:
+      report:
+        title: "标题"
+        content: "正文"
+        apply_to: "呈交"
 
   activemodel:
     errors:
@@ -218,6 +225,7 @@ zh-CN:
       sign_out: "注销"
       dashboard: "总览"
       billboard: "公告"
+      reports: "审批"
       analytics: "统计"
       users: "用户"
       contacts: "客户"
@@ -239,3 +247,31 @@ zh-CN:
     show:
       tasks: "当前任务"
       all_done: "所有任务都已完成。"
+
+  reports:
+    index:
+      reports: "报告"
+      new_report: "新建报告"
+      before_user: "由"
+      after_user: "创建"
+      applying_to: "呈交给"
+      at: "于"
+    show:
+      report: "报告"
+      edit: "编辑报告"
+      destroy: "删除报告"
+      are_you_sure: "确定要删除吗？"
+      view_all: "返回列表"
+      before_user: "由"
+      after_user: "创建"
+      applying_to: "呈交给"
+      at: "于"
+    new:
+      new_report: "新建报告"
+      back_to_list: "返回列表"
+    edit:
+      edit_report: "编辑报告"
+      show: "查看报告"
+      view_all: "返回列表"
+    form:
+      submit_report: "提交报告"

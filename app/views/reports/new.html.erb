@@ -1,5 +1,14 @@
-<% title "New Report" %>
+<% title t('.new_report'), false %>
 
-<%= render 'form' %>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.back_to_list'), reports_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.new_report') %></h1>
+<% end %>
 
-<p><%= link_to "Back to List", reports_path %></p>
+<div class="inner">
+  <%= render 'form' %>
+</div>

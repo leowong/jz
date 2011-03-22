@@ -1,20 +1,25 @@
 <%= form_for @report do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :apply_to %><br />
-    <%= f.text_field :apply_to %>
-  </p>
-  <p><%= f.submit %></p>
+
+  <table>
+    <tr>
+      <td class="label"><%= f.label :title %></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td class="label"><%= f.label :content %></td>
+      <td><%= f.text_area :content %></td>
+    </tr>
+    <tr>
+      <td class="label"><%= f.label :apply_to %></td>
+      <td><%= f.collection_select :apply_to, User.all, :id, :username, :include_blank => true %></td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <%= f.submit t('.submit_report') %>
+      </td>
+    </tr>
+  </table>
 <% end %>

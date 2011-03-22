@@ -1,4 +1,6 @@
 class ReportsController < ApplicationController
+  before_filter :login_required
+
   def index
     @reports = Report.all
   end
@@ -12,7 +14,7 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @report = Report.new(params[:report])
+    @report = Report.new(params[:report].merge(:user_id => current_user.id))
     if @report.save
       redirect_to @report, :notice => "Successfully created report."
     else
@@ -26,6 +28,7 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
+    params[:report].delete(:user_id) if params[:report] and params[:report][:user_id]
     if @report.update_attributes(params[:report])
       redirect_to @report, :notice  => "Successfully updated report."
     else

@@ -1,8 +1,15 @@
-<% title "Edit Report" %>
+<% title t('.edit_report'), false %>
 
-<%= render 'form' %>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.show'), @report %></li>
+      <li><%= link_to t('.view_all'), reports_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.edit_report') %></h1>
+<% end %>
 
-<p>
-  <%= link_to "Show", @report %> |
-  <%= link_to "View All", reports_path %>
-</p>
+<div class="inner">
+  <%= render 'form' %>
+</div>
