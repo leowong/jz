@@ -268,7 +268,7 @@ body.session .container table.content {
 }
 
 .error_messages ul {
-  margin: 0;
+  margin: 0 0 0 10px;
 }
 
 /* search */
