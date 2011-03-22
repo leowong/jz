@@ -219,6 +219,11 @@ zh-CN:
   site:
     name: "网震客户关系管理系统"
 
+  notice:
+    create_successful: "创建成功。"
+    update_successful: "更新成功。"
+    destroy_successful: "删除成功。"
+
   layouts:
     header:
       profile: "修改个人信息"
@@ -266,6 +271,7 @@ zh-CN:
       after_user: "创建"
       applying_to: "呈交给"
       at: "于"
+      add_a_new_note: "添加批示"
     new:
       new_report: "新建报告"
       back_to_list: "返回列表"
