@@ -24,5 +24,18 @@
     <div class="content">
       <%= wrap(@report.content) %>
     </div>
+
+    <% unless Activity.aggregate_for(@report).empty? %>
+      <div id="messages">
+        <%= render Activity.aggregate_for(@report).order('created_at') %>
+      </div>
+    <% end %>
+
+    <div class="add_note">
+      <h2>Add a new note</h2>
+      <div id="add_note_form">
+        <%= render 'notes/form' %>
+      </div>
+    </div>
   </div>
 </div>
