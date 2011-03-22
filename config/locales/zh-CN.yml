@@ -259,6 +259,8 @@ zh-CN:
   users:
     index:
       listing_users: "通讯录"
+      enter_username: "输入姓名："
+      search: "搜索"
     show:
       tasks: "当前任务"
       all_done: "所有任务都已完成。"

@@ -18,3 +18,17 @@
     <% end %>
   </table>
 </div>
+
+<% content_for :side do %>
+  <div class="inner">
+    <%= form_tag users_path, :method => 'get', :id => 'users_search' do %>
+      <div>
+        <%= label_tag :q, t('.enter_username') %><br />
+        <%= text_field_tag :q, params[:q], :autocomplete => "on", :size => "54" %>
+      </div>
+      <div>
+        <%= submit_tag t('.search'), :name => nil %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

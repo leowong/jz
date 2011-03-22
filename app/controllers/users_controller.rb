@@ -2,7 +2,12 @@ class UsersController < ApplicationController
   before_filter :login_required, :except => [:new, :create]
 
   def index
-    @users = User.all
+    if params[:q].blank?
+      @users = User.all
+    else
+      query = ('%' + params[:q] + '%')
+      @users = User.where("username LIKE '#{query}'")
+    end
   end
 
   def new
