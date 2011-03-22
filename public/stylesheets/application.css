@@ -305,10 +305,6 @@ input#q {
     height: 96px;
 }
 
-.add_note input[type="submit"] {
-    padding: 0;
-}
-
 .message {
     line-height: 18px;
     border-top: 1px solid #EDEDED;

@@ -241,6 +241,8 @@ zh-CN:
     note:
       before_meta: "由"
       after_meta: "发布"
+    form:
+      add_this_note: "提交"
 
   orders:
     order:
