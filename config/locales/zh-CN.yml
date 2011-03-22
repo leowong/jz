@@ -175,6 +175,8 @@ zh-CN:
       report: "报告"
       user: "用户"
       billboard: "公告"
+      address: "地址"
+      contact: "客户"
     attributes:
       report:
         title: "标题"
@@ -188,6 +190,13 @@ zh-CN:
       billboard:
         title: "标题"
         content: "正文"
+      address:
+        province: "省"
+        city: "市"
+      contact:
+        name: "称谓"
+        company: "单位"
+        position: "职务"
 
   activemodel:
     errors:
@@ -308,3 +317,9 @@ zh-CN:
       add_an_attachment: "添加附件"
     document_fields:
       remove: "删除"
+
+  contacts:
+    index:
+      contacts: "客户"
+      new_contact: "添加客户"
+      search_label: "输入称谓、省、市、单位、职务："

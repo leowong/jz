@@ -1,20 +1,26 @@
-<% title "Listing contacts" %>
+<% title t('.contacts'), false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.new_contact'), new_contact_path %></li>
+    </ul>
+  </div>
+  <h1><%= link_to t('.contacts'), contacts_path %></h1>
+<% end %>
+
 
 <div class="inner">
   <div id="contacts">
     <%= render 'contacts' %>
   </div>
-
-  <br />
-
-  <%= link_to 'New Contact', new_contact_path %>
 </div>
 
 <% content_for :side do %>
   <div class="inner">
     <%= form_tag contacts_path, :method => 'get', :id => 'contacts_search' do %>
       <div>
-        <%= label_tag :q, "Enter name, province or city:" %><br />
+        <%= label_tag :q, t('.search_label') %><br />
         <%= text_field_tag :q, params[:q], :autocomplete => "off", :size => "54" %>
       </div>
       <div>

@@ -13,7 +13,7 @@ class Contact < ActiveRecord::Base
 
   validates_presence_of :name
 
-  SEARCH_COLUMNS = %w[contacts.name provinces.name cities.name]
+  SEARCH_COLUMNS = %w[contacts.name provinces.name cities.name contacts.company contacts.position]
   TYPE1 = [
     ["个人用户", 1],
     ["单位客户", 2],

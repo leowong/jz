@@ -1,21 +1,19 @@
-<table>
+<table style="width:100%">
   <tr>
-    <th>Name</th>
-    <th>Province</th>
-    <th>City</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><%= Contact.human_attribute_name('name') %></th>
+    <th><%= Address.human_attribute_name('province') %></th>
+    <th><%= Address.human_attribute_name('city') %></th>
+    <th><%= Contact.human_attribute_name('company') %></th>
+    <th><%= Contact.human_attribute_name('position') %></th>
   </tr>
 
   <% @contacts.each do |contact| %>
     <tr>
-      <td><%= contact.name %></td>
+      <td><%= link_to contact.name, contact %></td>
       <td><%= contact.addresses[0].try(:province).try(:name) %></td>
       <td><%= contact.addresses[0].try(:city).try(:name) %></td>
-      <td><%= link_to 'Show', contact %></td>
-      <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-      <td><%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= contact.company %></td>
+      <td><%= contact.position %></td>
     </tr>
   <% end %>
 </table>
