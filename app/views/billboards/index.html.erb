@@ -1,20 +1,26 @@
-<% title "Billboards" %>
+<% title "Billboards", false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to "New Billboard", new_billboard_path %></li>
+    </ul>
+  </div>
+  <h1><%= link_to "Billboards", billboards_path %></h1>
+<% end %>
 
 <div class="inner">
   <div class="listing">
-    <% @billboards.each_with_index do |billboard, index|  %>
-      <div class="billboard<%= " first" if index == 0 %>">
+    <% @billboards.each_with_index do |billboard, index| %>
+      <div class="item billboard<%= " first" if index == 0 %>">
         <div class="title">
           <%= link_to billboard.title, billboard %>
         </div>
         <div class="meta">
-          Posted by <%= link_to billboard.user.username, billboard.user %>,<br />
-          at <%= billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+          Posted by <%= link_to billboard.user.username, billboard.user %><br />
+          At <%= billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
         </div>
       </div>
     <% end %>
   </div>
-
-  <br />
-  <p><%= link_to "New Billboard", new_billboard_path %></p>
 </div>
