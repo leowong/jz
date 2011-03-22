@@ -140,6 +140,8 @@ zh-CN:
 
   activerecord:
     errors:
+      header: "出现错误"
+      message: "请修正以下问题后再继续。"
       template: # ~ 2.3.5 backward compatible
         header:
           one: "有 1 个错误发生导致「%{model}」无法被保存。"
@@ -171,11 +173,21 @@ zh-CN:
         record_invalid: "校验失败: %{errors}"
     models:
       report: "报告"
+      user: "用户"
+      billboard: "公告"
     attributes:
       report:
         title: "标题"
         content: "正文"
         apply_to: "呈交"
+      user:
+        username: "姓名"
+        email: "电邮"
+        mobile: "手机"
+        phone: "座机"
+      billboard:
+        title: "标题"
+        content: "正文"
 
   activemodel:
     errors:
@@ -241,6 +253,8 @@ zh-CN:
     note:
       before_meta: "由"
       after_meta: "发布"
+    form:
+      add_this_note: "提交"
 
   orders:
     order:
@@ -249,6 +263,10 @@ zh-CN:
       total: "总计"
 
   users:
+    index:
+      listing_users: "通讯录"
+      enter_username: "输入姓名："
+      search: "搜索"
     show:
       tasks: "当前任务"
       all_done: "所有任务都已完成。"
@@ -281,3 +299,12 @@ zh-CN:
       view_all: "返回列表"
     form:
       submit_report: "提交报告"
+
+  billboards:
+    new:
+      new_billboard: "新建公告"
+      back_to_list: "返回列表"
+    form:
+      add_an_attachment: "添加附件"
+    document_fields:
+      remove: "删除"
