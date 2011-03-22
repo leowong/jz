@@ -171,11 +171,17 @@ zh-CN:
         record_invalid: "校验失败: %{errors}"
     models:
       report: "报告"
+      user: "用户"
     attributes:
       report:
         title: "标题"
         content: "正文"
         apply_to: "呈交"
+      user:
+        username: "姓名"
+        email: "电邮"
+        mobile: "手机"
+        phone: "座机"
 
   activemodel:
     errors:
@@ -251,6 +257,8 @@ zh-CN:
       total: "总计"
 
   users:
+    index:
+      listing_users: "通讯录"
     show:
       tasks: "当前任务"
       all_done: "所有任务都已完成。"

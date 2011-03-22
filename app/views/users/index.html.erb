@@ -1,12 +1,12 @@
-<% title "Listing users" %>
+<% title t('.listing_users') %>
 
 <div class="inner">
-  <table>
+  <table style="width:100%">
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Mobile</th>
-      <th>Phone</th>
+      <th><%= User.human_attribute_name("username") %></th>
+      <th><%= User.human_attribute_name("email") %></th>
+      <th><%= User.human_attribute_name("mobile") %></th>
+      <th><%= User.human_attribute_name("phone") %></th>
     </tr>
     <% for user in @users %>
       <tr>
