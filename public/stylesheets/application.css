@@ -13,7 +13,7 @@ select {
 }
 
 body {
-    font-family: 'Lucida Grande',Geneva,Verdana,Arial,Helvetica,sans-serif;
+    font-family: Verdana,Helvetica,Arial,sans-serif,'Microsoft YaHei';
     font-size: 12px;
     background-color: #E5E5E5;
 }
