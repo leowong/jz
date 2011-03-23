@@ -409,6 +409,16 @@ zh-CN:
         total_price: "金额总计"
         latest_deal: "最近交易"
         no_transactions: "没有成交记录。"
+    new:
+      new_contact: "添加客户"
+      back: "返回列表"
+    edit:
+      editing_contact: "修改客户信息"
+      show: "查看客户信息"
+      back: "返回列表"
+    address_fields:
+      province_and_city: "省市"
+
   tasks:
     index:
       tasks: "任务"

@@ -1,7 +1,14 @@
-<% title "New contact" %>
+<% title t('.new_contact'), false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.back'), contacts_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.new_contact') %></h1>
+<% end %>
 
 <div class="inner">
   <%= render 'form' %>
-
-  <%= link_to 'Back', contacts_path %>
 </div>
