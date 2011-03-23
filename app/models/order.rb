@@ -40,6 +40,10 @@ class Order < ActiveRecord::Base
     line_items.to_a.sum { |item| item.total_price }
   end
 
+  def total_products
+    line_items.to_a.sum { |item| item.quantity }
+  end
+
   state_machine :state, :initial => :pending do
     event :process do
       transition :from => :pending, :to => :processing

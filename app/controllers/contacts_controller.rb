@@ -3,9 +3,9 @@ class ContactsController < ApplicationController
 
   def index
     if params[:q].blank?
-      @contacts = Contact.all
+      @contacts = Contact.order('updated_at DESC')
     else
-      @contacts = Contact.searching(params[:q])
+      @contacts = Contact.searching(params[:q]).order('contacts.updated_at DESC')
     end
   end
 
@@ -13,6 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
     @note = @contact.notes.build()
     @order = Order.new(:contact => @contact)
+    @completed_orders = @contact.orders.completed
   end
 
   def new

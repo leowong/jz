@@ -364,5 +364,12 @@ zh-CN:
       edit: "修改客户信息"
       add_a_new_note: "添加记录"
       add_a_new_order: "新建订单"
+      transaction_summary: "交易综述"
       contact_details: "详细资料"
       background_info: "备注"
+      deal:
+        total_number: "成交次数"
+        total_products: "产品总计"
+        total_price: "金额总计"
+        latest_deal: "最近交易"
+        no_transactions: "没有成交记录。"

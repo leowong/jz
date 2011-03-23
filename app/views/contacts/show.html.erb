@@ -44,6 +44,39 @@
       </div>
     </div>
 
+    <div class="block transaction_summary">
+      <h2><%= t('.transaction_summary') %></h2>
+      <div class="indent">
+        <% unless @completed_orders.empty? %>
+          <table>
+            <tr>
+              <td class="label"><%= t('.deal.latest_deal') %></td>
+              <td>
+                <%= link_to latest_order = @completed_orders.order('updated_at DESC').first do %>
+                  <%= "##{latest_order.number}" -%>
+                <% end %>
+                (<%= latest_order.updated_at.strftime('%Y-%m-%d') %>)
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><%= t('.deal.total_number') %></td>
+              <td><%= @completed_orders.size %></td>
+            </tr>
+            <tr>
+              <td class="label"><%= t('.deal.total_products') %></td>
+              <td><%= @completed_orders.all.sum(&:total_products) %></td>
+            </tr>
+            <tr>
+              <td class="label"><%= t('.deal.total_price') %></td>
+              <td><%= number_to_currency(@completed_orders.all.sum(&:total_price)) %></td>
+            </tr>
+          </table>
+        <% else %>
+          <%= t('.deal.no_transactions') %>
+        <% end %>
+      </div>
+    </div>
+
     <div class="block contact_details">
       <h2><%= t('.contact_details') %></h2>
       <table>
