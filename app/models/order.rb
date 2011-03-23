@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Order < ActiveRecord::Base
   belongs_to :contact
   has_many :line_items, :dependent => :destroy
@@ -10,6 +11,12 @@ class Order < ActiveRecord::Base
 
   scope :completed, where("state = 'completed'")
 
+  STATES = {
+    :pending => "新订单",
+    :processing => "正在处理",
+    :completed => "已完成"
+  }
+  
   def to_param
     number.to_s.parameterize.upcase
   end
@@ -60,5 +67,9 @@ class Order < ActiveRecord::Base
     event :complete do
       transition :from => :processing, :to => :completed
     end
+  end
+
+  def state_name
+    Order::STATES[self.state.to_sym]
   end
 end

@@ -1,27 +1,24 @@
-<% title "Listing orders" %>
+<% title t('.orders') %>
 
 <div class="inner">
-  <table>
+  <table class="hoverable" style="width:100%">
     <tr>
-      <th>Contact</th>
-      <th>Number</th>
-      <th>Create</th>
-      <th>State</th>
-      <th></th>
+      <th><%= Order.human_attribute_name('number') %></th>
+      <th><%= Order.human_attribute_name('contact') %></th>
+      <th><%= Order.human_attribute_name('state') %></th>
+      <th><%= Order.human_attribute_name('created_at') %></th>
+      <th class="number"><%= Order.human_attribute_name('quantity') %></th>
+      <th class="number"><%= Order.human_attribute_name('total_price') %></th>
     </tr>
 
     <% @orders.each do |order| %>
     <tr>
+      <td><%= link_to "##{order.number}", order %></td>
       <td><%= link_to order.contact.name, order.contact %></td>
-      <td><%= link_to order.number, order %></td>
+      <td><%= order.state_name %></td>
       <td><%= order.created_at.strftime('%Y-%m-%d') %></td>
-      <td><%= order.state %></td>
-      <td>
-        &nbsp;&nbsp;&nbsp;
-        <%= link_to 'Show', order %>
-        <%= link_to 'Edit', edit_order_path(order) %>
-        <%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %>
-      </td>
+      <td class="number"><%= order.total_products %></td>
+      <td class="number"><%= number_to_currency(order.total_price) %></td>
     </tr>
     <% end %>
   </table>

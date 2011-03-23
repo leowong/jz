@@ -12,6 +12,10 @@ select {
     border-style: inherit;
 }
 
+tbody tr:nth-child(even) td, tbody tr.even td {
+    background: none;
+}
+
 body {
     font-family: Verdana,Helvetica,Arial,sans-serif,'Microsoft YaHei';
     font-size: 12px;
@@ -226,7 +230,7 @@ table.order_details {
     padding: 10px;
 }
 
-table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price {
+table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price, table tr .number {
     text-align: right;
 }
 

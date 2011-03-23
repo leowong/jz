@@ -209,6 +209,13 @@ zh-CN:
         email: "电子邮箱"
         interest: "关注点"
         background_info: "备注"
+      order:
+        contact: "客户"
+        number: "编号"
+        quantity: "订购数量"
+        total_price: "总金额"
+        created_at: "创建时间"
+        state: "订单状态"
 
   activemodel:
     errors:
@@ -282,6 +289,8 @@ zh-CN:
       add_this_note: "提交"
 
   orders:
+    index:
+      orders: "订单"
     order:
       before_meta: "由"
       after_meta: "发布"

@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_filter :login_required
   
   def index
-    @orders = Order.all
+    @orders = Order.order("created_at DESC")
   end
 
   def show
