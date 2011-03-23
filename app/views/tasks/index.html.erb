@@ -1,40 +1,39 @@
-<% title "Tasks", false %>
+<% title t('.tasks'), false %>
 <% javascript "jquery-ui" %>
 
 <% content_for :header do %>
   <div class="buttons">
     <ul>
-      <li><%= link_to_unless params[:collection].nil?, "assigned to me", tasks_path %></li>
+      <li><%= link_to_unless params[:collection].nil?, t('.assigned_to_me'), tasks_path %></li>
       <li>|</li>
-      <li><%= link_to_unless params[:collection] == "assigned", "assigned by me", tasks_path(:collection => "assigned") %></li>
+      <li><%= link_to_unless params[:collection] == "assigned", t('.assigned_by_me'), tasks_path(:collection => "assigned") %></li>
     </ul>
   </div>
-  <h1><%= link_to "Tasks", tasks_path %></h1>
+  <h1><%= link_to t('.tasks'), tasks_path %></h1>
 <% end %>
 
 <div class="inner">
-  <strong>Upcoming</strong>
+  <div class="task_category"><%= t('.upcoming') %><%= t('punctuation.colon') %></div>
   <div id="upcoming_tasks">
     <% for task in @tasks.upcoming.order('due_at DESC') %>
       <%= render task %>
     <% end %>
   </div>
-  <strong>Completed</strong>
+  <div class="task_category"><%= t('.completed') %><%= t('punctuation.colon') %></div>
   <div id="completed_tasks">
     <% for task in @tasks.completed.order('completed_at DESC') %>
       <%= render task %>
     <% end %>
   </div>
-
-  <br />
-  <p><%= link_to "New Task", new_task_path %></p>
 </div>
 
 <% content_for :side do %>
   <div class="inner">
-    <div class="add_task">
-      <h2>Add a new task</h2>
-      <%= render 'tasks/form' %>
+    <div class="block add_task">
+      <h2><%= t('.add_a_new_task') %></h2>
+      <div class="indent">
+        <%= render 'tasks/form' %>
+      </div>
     </div>
   </div>
 <% end %>

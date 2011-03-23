@@ -3,16 +3,18 @@
 
 <%= form_for @task do |f| %>
   <%= f.error_messages %>
-  <p>
+  <div>
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </p>
-  <p>
+  </div>
+  <div>
     <%= f.label :due_at %><br />
     <%= f.text_field :due_at %>
-  </p>
-  <p>
+  </div>
+  <div>
     <%= f.label :assigned_to %><br />
     <%= f.collection_select :assigned_to, User.all, :id, :name %>
-  </p>
-  <p><%= f.submit %></p>
+  </div>
+  <hr class="space" style="margin-bottom:4px" />
+  <div><%= f.submit %></div>
 <% end %>

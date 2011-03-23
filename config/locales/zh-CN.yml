@@ -178,6 +178,7 @@ zh-CN:
       address: "地址"
       contact: "客户"
       order: "订单"
+      task: "任务"
     attributes:
       report:
         title: "标题"
@@ -216,6 +217,10 @@ zh-CN:
         total_price: "总金额"
         created_at: "创建时间"
         state: "订单状态"
+      task:
+        name: "内容"
+        due_at: "期限"
+        assigned_to: "分配给"
 
   activemodel:
     errors:
@@ -259,6 +264,7 @@ zh-CN:
   punctuation:
     comma: "，"
     period: "。"
+    colon: "："
 
   site:
     name: "网震客户关系管理系统"
@@ -317,6 +323,7 @@ zh-CN:
       remove: "删除"
 
   users:
+    me: "自己"
     index:
       listing_users: "通讯录"
       enter_username: "输入姓名："
@@ -388,6 +395,7 @@ zh-CN:
       contacts: "客户"
       new_contact: "添加客户"
       search_label: "输入称谓、省、市、单位、职务或电话："
+      search: "搜索"
     show:
       edit: "修改客户信息"
       add_a_new_note: "添加记录"
@@ -401,3 +409,11 @@ zh-CN:
         total_price: "金额总计"
         latest_deal: "最近交易"
         no_transactions: "没有成交记录。"
+  tasks:
+    index:
+      tasks: "任务"
+      assigned_to_me: "已接受任务"
+      assigned_by_me: "已分配任务"
+      upcoming: "待处理"
+      completed: "已完成"
+      add_a_new_task: "新建任务"

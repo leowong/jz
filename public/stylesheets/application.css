@@ -478,3 +478,10 @@ span.state.processing {
 span.state.completed {
     color: #CCC;
 }
+
+/* tasks */
+
+.task_category {
+    padding: 4px 0 4px 4px;
+    font-weight: bold;
+}

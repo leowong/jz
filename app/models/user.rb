@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def name
-    self == User.current_user ? "Me" : username
+    self == User.current_user ? I18n.t('users.me') : username
   end
 
   def assigned_tasks
