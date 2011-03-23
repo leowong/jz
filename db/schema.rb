@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110322095130) do
+ActiveRecord::Schema.define(:version => 20110323113348) do
 
   create_table "activities", :force => true do |t|
     t.integer   "user_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20110322095130) do
     t.timestamp "updated_at"
     t.integer   "topic_id"
     t.string    "topic_type"
+    t.string    "action"
   end
 
   create_table "addresses", :force => true do |t|

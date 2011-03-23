@@ -14,7 +14,14 @@
     </div>
     <div class="body">
       <p>
-        <%= t('.total') %> <%= number_to_currency(order.total_price) %>
+        <% case activity.action %>
+        <% when "process" %>
+          Start processing.
+        <% when "complete" %>
+          Completed.
+        <% else %> 
+          <%= t('.total') %> <%= number_to_currency(order.total_price) %>
+        <% end %>
       </p>
     </div>
   </div>

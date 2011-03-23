@@ -45,6 +45,14 @@ class Order < ActiveRecord::Base
   end
 
   state_machine :state, :initial => :pending do
+    after_transition :on => :process do |order, transition|
+      Activity.add(User.current_user, order.contact, order, "process")
+    end
+
+    after_transition :on => :complete do |order, transition|
+      Activity.add(User.current_user, order.contact, order, "complete")
+    end
+
     event :process do
       transition :from => :pending, :to => :processing
     end
