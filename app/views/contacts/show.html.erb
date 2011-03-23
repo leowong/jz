@@ -1,15 +1,30 @@
-<% title @contact.name %>
+<% title @contact.name, false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.edit'), edit_contact_path(@contact) %></li>
+    </ul>
+  </div>
+  <h1><%= @contact.name %></h1>
+  <hr class="space">
+  <div>
+    <div>
+      <% unless @contact.addresses.empty? %>
+        <%= @contact.addresses[0].province.try(:name) %>
+        <%= @contact.addresses[0].city.try(:name) %>
+      <% end %>
+    </div>
+    <div>
+      <%= @contact.company %>
+      <%= @contact.position %>
+    </div>
+  </div>
+<% end %>
 
 <div class="inner">
-  <% unless @contact.addresses.empty? %>
-    <h2>
-      <%= @contact.addresses[0].province.try(:name) %> -
-      <%= @contact.addresses[0].city.try(:name) %>
-    </h2>
-  <% end %>
-
   <div class="add_note">
-    <h2>Add a new note</h2>
+    <h2><%= t('.add_a_new_note') %></h2>
     <%= render 'notes/form' %>
   </div>
 
@@ -22,11 +37,82 @@
 
 <% content_for :side do %>
   <div class="inner">
-    <%= link_to 'Edit', edit_contact_path(@contact) %>
+    <div class="block add_order">
+      <h2><%= t('.add_a_new_order') %></h2>
+      <div class="indent">
+        <%= render 'orders/form' %>
+      </div>
+    </div>
 
-    <div class="add_order">
-      <h2>Add a new order</h2>
-      <%= render 'orders/form' %>
+    <div class="block contact_details">
+      <h2><%= t('.contact_details') %></h2>
+      <table>
+        <% unless @contact.mobile.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('mobile') %></td>
+            <td><%= @contact.mobile %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.phone.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('phone') %></td>
+            <td><%= @contact.phone %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.type1.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('type1') %></td>
+            <td><%= @contact.type1_name %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.type2.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('type2') %></td>
+            <td><%= @contact.type2_name %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.type3.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('type3') %></td>
+            <td><%= @contact.type3_name %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.sex.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('sex') %></td>
+            <td><%= @contact.sex_name == "Male" ? t('.sex.male') : t('.sex.female') %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.age_range.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('age_range') %></td>
+            <td><%= @contact.age_range_name %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.email.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('email') %></td>
+            <td><%= @contact.email %></td>
+          </tr>
+        <% end %>
+        <% unless @contact.interest.blank? %>
+          <tr>
+            <td class="label"><%= Contact.human_attribute_name('interest') %></td>
+            <td><%= @contact.interest_name %></td>
+          </tr>
+        <% end %>
+      </table>
     </div>
   </div>
+
+  <% unless @contact.background_info.blank? %>
+    <div class="inner">
+      <div class="block background_info">
+        <h2><%= t('.background_info') %></h2>
+        <div class="indent">
+          <%= @contact.background_info %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>

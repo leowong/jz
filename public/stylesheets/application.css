@@ -170,6 +170,19 @@ table.content td.side {
     padding: 0;
 }
 
+table.content td.side .block {
+    padding-bottom: 20px;
+}
+
+table.content td.side .block table tr td {
+    padding: 4px 2px 4px 8px;
+}
+
+table.content td.side .block table tr td.label {
+    text-align: right;
+    font-weight: bold;
+}
+
 table.content td.side h2 {
     background-color: #EDF3FE;
     border-bottom: 1px solid gainsboro;
@@ -177,6 +190,7 @@ table.content td.side h2 {
     color: #333;
     padding: 6px 8px;
     font-size: 13px;
+    font-weight: bold;
 }
 
 .content table {

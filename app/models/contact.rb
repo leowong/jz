@@ -23,7 +23,7 @@ class Contact < ActiveRecord::Base
     ["终端会所", 6]
   ]
 
-  TYPE2 = [["富贵星", "1"]]
+  TYPE2 = [["富贵星", 1]]
 
   TYPE3 = [
     ["农、林、牧、渔业", 1],
@@ -59,6 +59,30 @@ class Contact < ActiveRecord::Base
     ["效果", 2],
     ["品质", 3]
   ]
+
+  def type1_name
+    Contact::TYPE1.select { |a| a[1] == self.type1 }[0][0]
+  end
+
+  def type2_name
+    Contact::TYPE2.select { |a| a[1] == self.type2 }[0][0]
+  end
+
+  def type3_name
+    Contact::TYPE3.select { |a| a[1] == self.type3 }[0][0]
+  end
+  
+  def sex_name
+    Contact::SEX.select { |a| a[1] == self.sex }[0][0]
+  end
+
+  def age_range_name
+    Contact::AGE_RANGE.select { |a| a[1] == self.age_range }[0][0]
+  end
+
+  def interest_name
+    Contact::INTEREST.select { |a| a[1] == self.interest }[0][0]
+  end
 
   private
 

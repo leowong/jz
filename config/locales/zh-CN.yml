@@ -177,6 +177,7 @@ zh-CN:
       billboard: "公告"
       address: "地址"
       contact: "客户"
+      order: "订单"
     attributes:
       report:
         title: "标题"
@@ -197,6 +198,17 @@ zh-CN:
         name: "称谓"
         company: "单位"
         position: "职务"
+        type1: "类型"
+        type2: "客户类型"
+        type3: "行业划分"
+        sex: "性别"
+        age_range: "年龄"
+        mobile: "手机"
+        phone: "其他联系电话"
+        fax: "传真"
+        email: "电子邮箱"
+        interest: "关注点"
+        background_info: "备注"
 
   activemodel:
     errors:
@@ -233,7 +245,7 @@ zh-CN:
     select:
       prompt: "请选择"
     submit:
-      create: "新增%{model}"
+      create: "创建%{model}"
       update: "更新%{model}"
       submit: "储存%{model}"
 
@@ -270,6 +282,11 @@ zh-CN:
       before_meta: "由"
       after_meta: "发布"
       total: "总计"
+    form:
+      add_a_line_item: "添加产品"
+    line_item_fields:
+      select_a_product: "选择产品"
+      remove: "删除"
 
   users:
     index:
@@ -323,3 +340,12 @@ zh-CN:
       contacts: "客户"
       new_contact: "添加客户"
       search_label: "输入称谓、省、市、单位、职务："
+    show:
+      edit: "修改客户信息"
+      add_a_new_note: "添加记录"
+      add_a_new_order: "新建订单"
+      contact_details: "详细资料"
+      background_info: "备注"
+      sex:
+        male: "男"
+        female: "女"

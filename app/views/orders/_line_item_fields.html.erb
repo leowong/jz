@@ -1,6 +1,6 @@
 <div class="field">
-  <%= f.collection_select :product_id, Product.all, :id, :name, :prompt => "Select a product" %>
+  <%= f.collection_select :product_id, Product.all, :id, :name, :prompt => t('.select_a_product') %>
   &times;
   <%= f.text_field :quantity, :size => "2" %>
-  <%= f.link_to_remove "Remove" %>
+  <%= f.link_to_remove t('.remove') %>
 </div>
