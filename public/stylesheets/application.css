@@ -333,7 +333,7 @@ input#q {
 .message {
     line-height: 18px;
     border-top: 1px solid #EDEDED;
-    padding: 18px 0 0 0;
+    padding: 18px 0 1px 0;
     clear: both;
 }
 
@@ -350,9 +350,13 @@ input#q {
     margin-left: 63px;
 }
 
-.message .timestamp {
+#messages.hoverable .message .timestamp {
     float: right;
     color: #C0C0C0;
+}
+
+#messages.hoverable .message.hover .timestamp {
+    color: #777;
 }
 
 .message .content .header {
