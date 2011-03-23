@@ -366,7 +366,7 @@ zh-CN:
     index:
       contacts: "客户"
       new_contact: "添加客户"
-      search_label: "输入称谓、省、市、单位、职务："
+      search_label: "输入称谓、省、市、单位、职务或电话："
     show:
       edit: "修改客户信息"
       add_a_new_note: "添加记录"

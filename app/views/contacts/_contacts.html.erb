@@ -5,6 +5,8 @@
     <th><%= Address.human_attribute_name('city') %></th>
     <th><%= Contact.human_attribute_name('company') %></th>
     <th><%= Contact.human_attribute_name('position') %></th>
+    <th><%= Contact.human_attribute_name('mobile') %></th>
+    <th><%= Contact.human_attribute_name('phone') %></th>
   </tr>
 
   <% @contacts.each do |contact| %>
@@ -14,6 +16,8 @@
       <td><%= contact.addresses[0].try(:city).try(:name) %></td>
       <td><%= contact.company %></td>
       <td><%= contact.position %></td>
+      <td><%= contact.mobile %></td>
+      <td><%= contact.phone %></td>
     </tr>
   <% end %>
 </table>
