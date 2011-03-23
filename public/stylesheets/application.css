@@ -234,6 +234,14 @@ table.tr.total_line .total_cell {
     font-weight: bold;
 }
 
+table.hoverable tr {
+    background-color: none;
+}
+
+table.hoverable tr.hover {
+    background-color: #F0F0F0;
+}
+
 /* sessions */
 
 body.session {
