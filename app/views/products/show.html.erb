@@ -1,18 +1,16 @@
-<% title "Show product" %>
+<% title @product.name, false %>
+
+<% content_for :header do %>
+  <div class="buttons hide">
+    <ul>
+      <li><%= link_to 'Edit', edit_product_path(@product) %></li>
+      <li><%= link_to 'Back', products_path %></li>
+    </ul>
+  </div>
+  <h1><%= @product.name %></h1>
+<% end %>
 
 <div class="inner">
-  <p id="notice"><%= notice %></p>
-
-  <p>
-    <b>Name:</b>
-    <%= @product.name %>
-  </p>
-
-  <p>
-    <b>Price:</b>
-    <%= @product.price %>
-  </p>
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+  <strong><%= Product.human_attribute_name(:price) %><%= t('punctuation.colon') %></strong>
+  <%= number_to_currency @product.price %>
 </div>

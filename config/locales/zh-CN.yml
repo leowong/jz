@@ -179,6 +179,7 @@ zh-CN:
       contact: "客户"
       order: "订单"
       task: "任务"
+      product: "产品"
     attributes:
       report:
         title: "标题"
@@ -223,6 +224,8 @@ zh-CN:
         name: "内容"
         due_at: "期限"
         assigned_to: "分配给"
+      product:
+        price: "价格"
 
   activemodel:
     errors:
