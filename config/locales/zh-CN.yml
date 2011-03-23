@@ -346,6 +346,3 @@ zh-CN:
       add_a_new_order: "新建订单"
       contact_details: "详细资料"
       background_info: "备注"
-      sex:
-        male: "男"
-        female: "女"

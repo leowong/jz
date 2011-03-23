@@ -77,10 +77,10 @@
             <td><%= @contact.type3_name %></td>
           </tr>
         <% end %>
-        <% unless @contact.sex.blank? %>
+        <% unless @contact.sex.nil? %>
           <tr>
             <td class="label"><%= Contact.human_attribute_name('sex') %></td>
-            <td><%= @contact.sex_name == "Male" ? t('.sex.male') : t('.sex.female') %></td>
+            <td><%= @contact.sex_name %></td>
           </tr>
         <% end %>
         <% unless @contact.age_range.blank? %>

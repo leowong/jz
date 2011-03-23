@@ -37,7 +37,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
 
     if @contact.save
-      redirect_to @contact, :notice => 'Contact was successfully created.'
+      redirect_to @contact, :notice => t('notice.create_successful')
     else
       render :action => "new"
     end
@@ -47,7 +47,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     if @contact.update_attributes(params[:contact])
-      redirect_to @contact, :notice => 'Contact was successfully updated.'
+      redirect_to @contact, :notice => t('notice.update_successful')
     else
       render :action => "edit"
     end

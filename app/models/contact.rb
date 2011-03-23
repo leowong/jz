@@ -43,7 +43,7 @@ class Contact < ActiveRecord::Base
     ["国家机关、政党机关和社会团体", 15]
   ]
 
-  SEX = [["Male", false], ["Female", true]]
+  SEX = [["男", false], ["女", true]]
 
   AGE_RANGE = [
     ["21 - 30", 1],
