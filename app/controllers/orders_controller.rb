@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
       redirect_to @order
     elsif @order.update_attributes(params[:order])
       @order.combine_items
-      redirect_to @order, :notice => 'Order was successfully updated.'
+      redirect_to @order, :notice => t('notice.update_successful')
     else
       format.html { render :action => "edit" }
     end

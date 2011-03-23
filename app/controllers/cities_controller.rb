@@ -14,7 +14,7 @@ class CitiesController < ApplicationController
   def create
     @city = City.new(params[:city])
     if @city.save
-      redirect_to @city, :notice => "Successfully created city."
+      redirect_to @city, :notice => t('notice.create_successful')
     else
       render :action => 'new'
     end
@@ -36,6 +36,6 @@ class CitiesController < ApplicationController
   def destroy
     @city = City.find(params[:id])
     @city.destroy
-    redirect_to cities_url, :notice => "Successfully destroyed city."
+    redirect_to cities_url, :notice => t('notice.destroy_successful')
   end
 end

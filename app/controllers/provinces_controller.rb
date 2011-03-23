@@ -14,7 +14,7 @@ class ProvincesController < ApplicationController
   def create
     @province = Province.new(params[:province])
     if @province.save
-      redirect_to @province, :notice => "Successfully created province."
+      redirect_to @province, :notice => t('notice.create_successful')
     else
       render :action => 'new'
     end
@@ -36,6 +36,6 @@ class ProvincesController < ApplicationController
   def destroy
     @province = Province.find(params[:id])
     @province.destroy
-    redirect_to provinces_url, :notice => "Successfully destroyed province."
+    redirect_to provinces_url, :notice => t('notice.destroy_successful')
   end
 end

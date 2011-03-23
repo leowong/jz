@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(params[:activity])
     if @activity.save
-      redirect_to @activity, :notice => "Successfully created activity."
+      redirect_to @activity, :notice => t('notice.create_successful')
     else
       render :action => 'new'
     end
@@ -38,6 +38,6 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    redirect_to activities_url, :notice => "Successfully destroyed activity."
+    redirect_to activities_url, :notice => t('notice.destroy_successful')
   end
 end

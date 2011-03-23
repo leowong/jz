@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
     @product = Product.new(params[:product])
 
     if @product.save
-      redirect_to @product, :notice => 'Product was successfully created.'
+      redirect_to @product, :notice => t('notice.create_successful')
     else
       render :action => "new"
     end
@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update_attributes(params[:product])
-      redirect_to @product, :notice => 'Product was successfully updated.'
+      redirect_to @product, :notice => t('notice.update_successful')
     else
       render :action => "edit"
     end

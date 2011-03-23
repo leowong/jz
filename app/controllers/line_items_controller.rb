@@ -19,7 +19,7 @@ class LineItemsController < ApplicationController
     @line_item = LineItem.new(params[:line_item])
 
     if @line_item.save
-        redirect_to @line_item, :notice => 'Line item was successfully created.'
+        redirect_to @line_item, :notice => t('notice.create_successful')
     else
         render :action => "new"
     end
@@ -29,7 +29,7 @@ class LineItemsController < ApplicationController
     @line_item = LineItem.find(params[:id])
 
     if @line_item.update_attributes(params[:line_item])
-        redirect_to @line_item, :notice => 'Line item was successfully updated.'
+        redirect_to @line_item, :notice => t('notice.update_successful')
     else
         render :action => "edit"
     end

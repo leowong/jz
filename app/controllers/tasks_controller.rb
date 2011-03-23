@@ -18,7 +18,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(params[:task])
     if @task.save
-      redirect_to tasks_path, :notice => "Successfully created task."
+      redirect_to tasks_path, :notice => t('notice.create_successful')
     else
       render :action => 'new'
     end
@@ -46,6 +46,6 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_url, :notice => "Successfully destroyed task."
+    redirect_to tasks_url, :notice => t('notice.destroy_successful')
   end
 end

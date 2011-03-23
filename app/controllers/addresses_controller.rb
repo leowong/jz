@@ -18,7 +18,7 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(params[:address])
     if @address.save
-      redirect_to @address, :notice => "Successfully created address."
+      redirect_to @address, :notice => t('notice.create_successful')
     else
       render :action => 'new'
     end
@@ -44,6 +44,6 @@ class AddressesController < ApplicationController
   def destroy
     @address = Address.find(params[:id])
     @address.destroy
-    redirect_to addresses_url, :notice => "Successfully destroyed address."
+    redirect_to addresses_url, :notice => t('notice.destroy_successful')
   end
 end
