@@ -1,4 +1,4 @@
-<% title "Billboard", false %>
+<% title t('.billboard') + ' - ' + @billboard.title, false %>
 
 <% content_for :head do %>
   <script type="text/javascript">
@@ -13,12 +13,12 @@
 <% content_for :header do %>
   <div class="buttons">
     <ul>
-      <li><%= link_to "Edit", edit_billboard_path(@billboard) %></li>
-      <li><%= link_to "Destroy", @billboard, :confirm => 'Are you sure?', :method => :delete %></li>
-      <li><%= link_to "View All", billboards_path %></li>
+      <li><%= link_to t('.edit'), edit_billboard_path(@billboard) %></li>
+      <li><%= link_to t('.destroy'), @billboard, :confirm => t('.are_you_sure'), :method => :delete %></li>
+      <li><%= link_to t('.view_all'), billboards_path %></li>
     </ul>
   </div>
-  <h1><%= link_to "Billboard", billboards_path %></h1>
+  <h1><%= link_to t('.billboard'), billboards_path %></h1>
 <% end %>
 
 <div class="inner">
@@ -27,15 +27,15 @@
       <%= @billboard.title %>
     </div>
     <div class="meta">
-      Posted by <%= link_to @billboard.user.username, @billboard.user %>,
-      at <%= @billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+      <%= t('.before_username') %> <%= link_to @billboard.user.username, @billboard.user %>
+      <%= t('.before_timestamp') %> <%= @billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
     </div>
     <div class="content">
       <%= wrap(@billboard.content) %>
     </div>
     <% unless @billboard.documents.empty? %>
       <div class="documents">
-        <h2>Attachments:</h2>
+        <h2><%= t('.attachments') %></h2>
         <ul>
           <% for document in @billboard.documents %>
             <li><%= link_to document.attachment_file_name, document.attachment.url %></li>
@@ -51,7 +51,7 @@
     <% end %>
 
     <div class="add_note">
-      <div id="add_note_button">Add a new note</div>
+      <div id="add_note_button"><%= t('.add_a_new_note') %></div>
       <div id="add_note_form" style="display:none">
         <%= render 'notes/form' %>
       </div>

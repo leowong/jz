@@ -315,7 +315,7 @@ zh-CN:
       after_user: "创建"
       applying_to: "呈交给"
       at: "于"
-      add_a_new_note: "添加批示"
+      add_a_new_note: "添加批复"
     new:
       new_report: "新建报告"
       back_to_list: "返回列表"
@@ -327,9 +327,29 @@ zh-CN:
       submit_report: "提交报告"
 
   billboards:
+    index:
+      billboards: "公告"
+      new_billboard: "新建公告"
+      before_username: "由"
+      after_username: "创建"
+      before_timestamp: "于"
     new:
       new_billboard: "新建公告"
       back_to_list: "返回列表"
+    show:
+      billboard: "公告"
+      edit: "编辑公告"
+      destroy: "删除公告"
+      view_all: "返回列表"
+      are_you_sure: "确定要删除吗？"
+      before_username: "由"
+      before_timestamp: "发布于"
+      attachments: "附件："
+      add_a_new_note: "添加评注"
+    edit:
+      edit_billboard: "编辑公告"
+      show: "查看公告"
+      view_all: "返回列表"
     form:
       add_an_attachment: "添加附件"
     document_fields:

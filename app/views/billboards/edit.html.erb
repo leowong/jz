@@ -1,10 +1,15 @@
-<% title "Edit Billboard" %>
+<% title t('.edit_billboard'), false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.show'), @billboard %></li>
+      <li><%= link_to t('.view_all'), billboards_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.edit_billboard') %></h1>
+<% end %>
 
 <div class="inner">
   <%= render 'form' %>
-
-  <p>
-    <%= link_to "Show", @billboard %> |
-    <%= link_to "View All", billboards_path %>
-  </p>
 </div>
