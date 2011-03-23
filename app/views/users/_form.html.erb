@@ -1,11 +1,11 @@
 <%= form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label :username %> <span class="required_indicator">*</span><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :email, "Email Address" %><br />
+    <%= f.label :email %> <span class="required_indicator">*</span><br />
     <%= f.text_field :email %>
   </p>
   <p>
@@ -13,16 +13,24 @@
     <%= f.text_field :mobile %>
   </p>
   <p>
-    <%= f.label :phone, "Landline" %><br />
+    <%= f.label :phone %><br />
     <%= f.text_field :phone %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label :password %>
+    <% if @user.new_record? %>
+      <span class="required_indicator">*</span>
+    <% end %>
+    <br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation, "Confirm Password" %><br />
+    <%= f.label :password_confirmation %>
+    <% if @user.new_record? %>
+      <span class="required_indicator">*</span>
+    <% end %>
+    <br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p><%= f.submit (@user.new_record? ? "Sign up" : "Update") %></p>
+  <p><%= f.submit (@user.new_record? ? t('.sign_up') : t('.update')) %></p>
 <% end %>

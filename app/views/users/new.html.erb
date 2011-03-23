@@ -1,8 +1,7 @@
-<% title "Sign up" %>
+<% title t('.sign_up') %>
 
-<div class="inner">
-  <p>Already have an account? <%= link_to "Log in", login_path %>.</p>
+<div class="inner<%= " signup" if @user.new_record? %>">
+  <p><%= t('.already_have_an_account') %><%= link_to t('.log_in'), login_path %><%= t('punctuation.period') %></p>
 
   <%= render 'form' %>
 </div>
-

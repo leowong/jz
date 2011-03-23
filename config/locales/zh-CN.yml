@@ -186,9 +186,11 @@ zh-CN:
         apply_to: "呈交"
       user:
         username: "姓名"
-        email: "电邮"
+        email: "电子邮件"
         mobile: "手机"
-        phone: "座机"
+        phone: "其他联系电话"
+        password: "密码"
+        password_confirmation: "重复密码"
       billboard:
         title: "标题"
         content: "正文"
@@ -331,6 +333,15 @@ zh-CN:
     show:
       tasks: "当前任务"
       all_done: "所有任务都已完成。"
+    new:
+      sign_up: "注册"
+      already_have_an_account: "已经有了帐号？ 请"
+      log_in: "登录"
+    edit:
+      update_profile: "修改个人信息"
+    form:
+      sign_up: "注册"
+      update: "更新"
 
   reports:
     index:
@@ -427,3 +438,12 @@ zh-CN:
       upcoming: "待处理"
       completed: "已完成"
       add_a_new_task: "新建任务"
+
+  sessions:
+    new:
+      log_in: "登录"
+      dont_have_an_account: "没有帐号？ 请先"
+      sign_up: "注册"
+      exclamation: "！"
+      username_or_email_address: "用户名或电子邮件"
+      password: "密码"

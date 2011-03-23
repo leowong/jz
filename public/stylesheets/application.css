@@ -217,6 +217,10 @@ table.content td.side h2 {
     padding: 15px 60px 20px 23px;
 }
 
+.main .inner.signup {
+    padding: 0;
+}
+
 .side .inner {
     min-width: 200px;
     padding: 0 0 0 9px;
@@ -396,6 +400,11 @@ input#q {
 
 form table tr td.label {
     text-align: right;
+}
+
+form .required_indicator {
+    color: red;
+    font-size: smaller;
 }
 
 /* listing */

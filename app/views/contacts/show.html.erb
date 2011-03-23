@@ -125,7 +125,7 @@
         <% unless @contact.email.blank? %>
           <tr>
             <td class="label"><%= Contact.human_attribute_name('email') %></td>
-            <td><%= @contact.email %></td>
+            <td><%= mail_to @contact.email %></td>
           </tr>
         <% end %>
         <% unless @contact.interest.blank? %>
