@@ -4,7 +4,7 @@
   </div>
   <div class="content">
     <div class="timestamp">
-      <%= order.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+      <%= activity.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
     </div>
     <div class="header">
       <%= link_to order.contact.name + " (##{order.number})", order %>
@@ -16,11 +16,11 @@
       <p>
         <% case activity.action %>
         <% when "process" %>
-          Start processing.
+          <%= t('.start_processing') %><%= t('punctuation.period') %>
         <% when "complete" %>
-          Completed.
+          <%= t('.completed') %><%= t('punctuation.period') %>
         <% else %> 
-          <%= t('.total') %> <%= number_to_currency(order.total_price) %>
+          <%= t('.order_created') %><%= t('punctuation.comma') %><%= t('.total') %> <%= number_to_currency(order.total_price) %><%= t('punctuation.period') %>
         <% end %>
       </p>
     </div>

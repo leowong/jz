@@ -9,8 +9,9 @@ class Activity < ActiveRecord::Base
     case topic.class.to_s
     when "Contact"
       order_ids = %(SELECT id FROM orders WHERE contact_id = :topic_id)
-      where("(topic_id IN (#{order_ids}) AND topic_type = 'Order') OR (topic_id = :topic_id AND topic_type = :topic_type)",
-            { :topic_id => topic.id, :topic_type => topic.class.to_s })
+      where("(topic_id IN (#{order_ids}) AND topic_type = 'Order') OR (topic_id = :topic_id AND topic_type = :topic_type)", { :topic_id => topic.id, :topic_type => topic.class.to_s })
+    when "Order"
+      where("(subject_id = :topic_id AND subject_type = :topic_type) OR (topic_id = :topic_id AND topic_type = :topic_type)", { :topic_id => topic.id, :topic_type => topic.class.to_s })
     else
       topic.activities.scoped
     end

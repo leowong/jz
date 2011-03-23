@@ -249,6 +249,10 @@ zh-CN:
       update: "更新%{model}"
       submit: "储存%{model}"
 
+  punctuation:
+    comma: "，"
+    period: "。"
+
   site:
     name: "网震客户关系管理系统"
 
@@ -281,6 +285,9 @@ zh-CN:
     order:
       before_meta: "由"
       after_meta: "发布"
+      start_processing: "开始处理订单"
+      completed: "订单已完成"
+      order_created: "创建新订单"
       total: "总计"
     form:
       add_a_line_item: "添加产品"
