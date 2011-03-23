@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
   scope :completed, where("state = 'completed'")
 
   STATES = {
-    :pending => "新订单",
+    :pending => "待处理",
     :processing => "正在处理",
     :completed => "已完成"
   }

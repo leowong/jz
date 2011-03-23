@@ -1,13 +1,38 @@
-<% title "Order #{@order.number}" %>
+<% title t('.order') + " ##{@order.number}", false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <table>
+      <tr>
+        <td>
+          <ul>
+            <% if @order.state?(:pending) %>
+            <li><%= link_to t('.edit'), edit_order_path(@order) %></li>
+            <% end %>
+          </ul>
+        </td>
+        <td>
+          <% case @order.state %>
+          <% when "pending" then %>
+            <%= button_to t('.process'), order_path(@order, :e => "process"), :method => :put %>
+          <% when "processing" then %>
+            <%= button_to t('.complete'), order_path(@order, :e => "complete"), :method => :put %>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <h1><%= t('.order') + " ##{@order.number}" %></h1>
+  <br />
+  <div>
+    <div>
+      <strong><%= t('.state') %></strong>
+      <span class="state <%= @order.state %>"><%= @order.state_name %></span>
+    </div>
+  </div>
+<% end %>
 
 <div class="inner">
-  <p id="notice"><%= notice %></p>
-
-  <p>
-    <b>State:</b>
-    <%= @order.state %>
-  </p>
-
   <% unless @order.line_items.empty? %>
     <table class="order_details">
       <%= render @order.line_items %>
@@ -19,7 +44,7 @@
   <% end %>
 
   <div class="add_note">
-    <h2>Add a new note</h2>
+    <h2><%= t('.add_a_new_note') %></h2>
     <%= render 'notes/form' %>
   </div>
 
@@ -32,19 +57,18 @@
 
 <% content_for :side do %>
   <div class="inner">
-    <% if @order.state?(:pending) %>
-      <div>
-        <%= link_to 'Edit', edit_order_path(@order) %>
-      </div>
-    <% end %>
-    <div>
-      <%= link_to @order.contact.name, @order.contact %>
+    <div class="block">
+      <h2><%= t('.info') %></h2>
+      <table>
+        <tr>
+          <td class="label"><%= Order.human_attribute_name('contact') %></td>
+          <td><%= link_to @order.contact.name, @order.contact %></td>
+        </tr>
+        <tr>
+          <td class="label"><%= Order.human_attribute_name('created_at') %></td>
+          <td><%= @order.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+        </tr>
+      </table>
     </div>
-    <% case @order.state %>
-      <% when "pending" then %>
-        <%= button_to 'Process', order_path(@order, :e => "process"), :method => :put %>
-      <% when "processing" then %>
-        <%= button_to 'Complete', order_path(@order, :e => "complete"), :method => :put %>
-    <% end %>
   </div>
 <% end %>

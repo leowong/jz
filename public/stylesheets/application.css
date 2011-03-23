@@ -460,3 +460,17 @@ form table tr td.label {
     padding: 2px 16px;
     background: url(/images/document.png) left no-repeat;
 }
+
+/* orders */
+
+span.state.pending {
+    color: red;
+}
+
+span.state.processing {
+    color: green;
+}
+
+span.state.completed {
+    color: #CCC;
+}

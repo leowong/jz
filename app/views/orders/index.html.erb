@@ -15,7 +15,9 @@
     <tr>
       <td><%= link_to "##{order.number}", order %></td>
       <td><%= link_to order.contact.name, order.contact %></td>
-      <td><%= order.state_name %></td>
+      <td>
+        <span class="state <%= order.state %>"><%= order.state_name %></span>
+      </td>
       <td><%= order.created_at.strftime('%Y-%m-%d') %></td>
       <td class="number"><%= order.total_products %></td>
       <td class="number"><%= number_to_currency(order.total_price) %></td>
