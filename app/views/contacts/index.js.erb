@@ -1,1 +1,7 @@
 $("#contacts").html("<%= escape_javascript(render("contacts")) %>");
+$(function() {
+  $('table.hoverable tr').hover(
+    function() { $(this).addClass('hover'); },
+    function() { $(this).removeClass('hover');}
+  );
+});
