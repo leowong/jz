@@ -70,7 +70,8 @@ class Contact < ActiveRecord::Base
   INTEREST = [
     ["价格", 1],
     ["效果", 2],
-    ["品质", 3]
+    ["品质", 3],
+    ["是否适合", 4]
   ]
 
   def type1_name
