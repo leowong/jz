@@ -6,12 +6,6 @@ input {
     padding: 3px;
 }
 
-select {
-    background-color: inherit;
-    border-width: inherit;
-    border-style: inherit;
-}
-
 tbody tr:nth-child(even) td, tbody tr.even td {
     background: none;
 }
