@@ -15,7 +15,7 @@
 <div class="inner">
   <div class="task_category"><%= t('.upcoming') %><%= t('punctuation.colon') %></div>
   <table id="upcoming_tasks" class="tasks hoverable">
-    <% for task in @tasks.upcoming.order('due_at DESC') %>
+    <% for task in @tasks.upcoming.order('due_at') %>
       <%= render task %>
     <% end %>
   </table>

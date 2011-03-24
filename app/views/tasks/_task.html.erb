@@ -5,12 +5,12 @@
   <td class="content">
     <div class="task_name">
       <% if params and params[:collection] == "assigned" %>
-        <%= link_to task.assignee.username, task.assignee %><%= t('punctuation.colon') %><%= task.name %>
+        <%= link_to task.assignee.username, task.assignee %><%= t('punctuation.colon') %><%= wrap_task_name(task.name) %>
       <% else %>
         <% unless task.user.id == current_user.id %>
           <%= link_to task.user.username, task.user %><%= t('punctuation.colon') %>
         <% end -%>
-        <%= task.name %>
+        <%= wrap_task_name(task.name) %>
       <% end %>
     </div>
   </td>

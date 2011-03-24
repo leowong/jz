@@ -14,7 +14,7 @@
     <% unless current_user.assigned_tasks.empty? %>
       <% javascript 'jquery-ui' %>
       <table id="upcoming_tasks" class="tasks hoverable">
-        <% for task in current_user.assigned_tasks.upcoming.order('due_at DESC') %>
+        <% for task in current_user.assigned_tasks.upcoming.order('due_at') %>
           <%= render task %>
         <% end %>
       </table>
