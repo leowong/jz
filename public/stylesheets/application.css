@@ -532,3 +532,10 @@ span.state.processing {
 span.state.completed {
     color: #CCC;
 }
+
+/* users */
+
+table.name_card td.label {
+    font-weight: bold;
+    text-align: right;
+}
