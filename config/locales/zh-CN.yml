@@ -443,7 +443,10 @@ zh-CN:
       assigned_by_me: "已分配任务"
       upcoming: "待处理"
       completed: "已完成"
-      add_a_new_task: "新建任务"
+      add_a_new_task: "添加任务"
+    new:
+      new_task: "添加任务"
+      back_to_list: "返回列表"
 
   sessions:
     new:

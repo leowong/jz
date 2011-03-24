@@ -1,9 +1,16 @@
 <% javascript "jquery-ui" %>
 
-<% title "New Task" %>
+<% title t('.new_task'), false %>
+
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.back_to_list'), tasks_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.new_task') %></h1>
+<% end %>
 
 <div class="inner">
   <%= render 'form' %>
-
-  <p><%= link_to "Back to List", tasks_path %></p>
 </div>
