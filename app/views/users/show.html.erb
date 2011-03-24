@@ -13,13 +13,13 @@
     <h2><%= t('.tasks') %></h2>
     <% unless current_user.assigned_tasks.empty? %>
       <% javascript 'jquery-ui' %>
-      <div id="upcoming_tasks">
+      <table id="upcoming_tasks">
         <% for task in current_user.assigned_tasks.upcoming.order('due_at DESC') %>
           <%= render task %>
         <% end %>
-      </div>
-      <div id="completed_tasks" style="display:none">
-      </div>
+      </table>
+      <table id="completed_tasks" style="display:none">
+      </table>
     <% else %>
       <div class="indent">
         <%= t('.all_done') %>

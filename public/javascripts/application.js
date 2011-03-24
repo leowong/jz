@@ -33,18 +33,7 @@ $(function() {
 });
 
 $(function() {
-  $('table.hoverable tr').hover(
-    function() {
-      $(this).addClass('hover');
-    },
-    function() {
-      $(this).removeClass('hover');
-    }
-  );
-});
-
-$(function() {
-  $('#messages.hoverable .message').hover(
+  $('table.hoverable tr, #messages.hoverable .message').hover(
     function() {
       $(this).addClass('hover');
     },

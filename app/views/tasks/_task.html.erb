@@ -1,4 +1,18 @@
-<div id="<%= "task_#{task.id}" %>">
-  <%= check_box_tag "task_#{task.id}", "1", task.completed?, :class => "task", :"data-id" => task.id %>
-  <span class="task_name"><%= task.name %></span>
-</div>
+<tr id="<%= "task_#{task.id}" %>">
+  <td>
+    <%= check_box_tag "task_#{task.id}", "1", task.completed?, :class => "task", :"data-id" => task.id %>
+    <span class="task_name">
+      <% if params and params[:collection] == "assigned" %>
+        <%= link_to task.assignee.username, task.assignee %><%= t('punctuation.colon') %><%= task.name %>
+      <% else %>
+        <% unless task.user.id == current_user.id %>
+          <%= link_to task.user.username, task.user %><%= t('punctuation.colon') %>
+        <% end -%>
+        <%= task.name %>
+      <% end %>
+    </span>
+  </td>
+  <td class="timestamp">
+    <%= task.due_at.strftime('%Y-%m-%d') %>
+  </td>
+</tr>

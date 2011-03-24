@@ -14,17 +14,18 @@
 
 <div class="inner">
   <div class="task_category"><%= t('.upcoming') %><%= t('punctuation.colon') %></div>
-  <div id="upcoming_tasks">
+  <table id="upcoming_tasks" class="hoverable">
     <% for task in @tasks.upcoming.order('due_at DESC') %>
       <%= render task %>
     <% end %>
-  </div>
+  </table>
+
   <div class="task_category"><%= t('.completed') %><%= t('punctuation.colon') %></div>
-  <div id="completed_tasks">
+  <table id="completed_tasks" class="hoverable">
     <% for task in @tasks.completed.order('completed_at DESC') %>
       <%= render task %>
     <% end %>
-  </div>
+  </table>
 </div>
 
 <% content_for :side do %>

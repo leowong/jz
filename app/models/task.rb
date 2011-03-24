@@ -1,9 +1,10 @@
 class Task < ActiveRecord::Base
   attr_accessible :user_id, :assigned_to, :completed_by, :name, :subject_id, :subject_type, :due_at, :completed_at, :deleted_at
 
-  before_save :setup_user
+  before_create :setup_user
 
   belongs_to :user
+  belongs_to :assignee, :class_name => "User", :foreign_key => "assigned_to"
 
   scope :upcoming, where("completed_at IS NULL")
   scope :completed, where("completed_at IS NOT NULL")
