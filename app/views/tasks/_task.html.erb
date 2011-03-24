@@ -1,7 +1,9 @@
 <tr id="<%= "task_#{task.id}" %>">
-  <td>
+  <td class="checkbox">
     <%= check_box_tag "task_#{task.id}", "1", task.completed?, :class => "task", :"data-id" => task.id %>
-    <span class="task_name">
+  </td>
+  <td class="content">
+    <div class="task_name">
       <% if params and params[:collection] == "assigned" %>
         <%= link_to task.assignee.username, task.assignee %><%= t('punctuation.colon') %><%= task.name %>
       <% else %>
@@ -10,9 +12,9 @@
         <% end -%>
         <%= task.name %>
       <% end %>
-    </span>
+    </div>
   </td>
   <td class="timestamp">
-    <%= task.due_at.strftime('%Y-%m-%d') %>
+    <span><%= task.due_at.strftime('%Y-%m-%d') %></span>
   </td>
 </tr>

@@ -392,31 +392,59 @@ input#q {
 
 /* tasks */
 
-#upcoming_tasks, #completed_tasks {
+table.tasks {
     width: 100%;
     margin-bottom: 0.75em;
 }
 
-#upcoming_tasks td, #completed_tasks td {
-    padding: 0 5px 0 0;
+table.tasks td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0 1em 0 0;
 }
 
-#upcoming_tasks .timestamp, #completed_tasks .timestamp {
+table.tasks td.checkbox {
+    width: 13px;
+    padding-right: 5px;
+}
+
+table.tasks td.timestamp {
     color: #C0C0C0;
     text-align: right;
+    white-space: nowrap;
 }
 
-#upcoming_tasks .hover .timestamp, #completed_tasks .hover .timestamp {
+table.tasks tr.hover td.timestamp {
     color: #777;
 }
 
-.side #upcoming_tasks .timestamp, .side #completed_tasks .timestamp {
+.side table.tasks td.timestamp {
     color: #777;
 }
 
+.side table.tasks tr.hover td.timestamp {
+    color: #333;
+}
+
+table.tasks .task_name {
+    max-width: 768px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.side table.tasks .task_name {
+    max-width: 256px;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 #upcoming_tasks .busy {
     text-decoration: line-through;
+}
+
+.task_category {
+    padding: 4px 0 4px 4px;
+    font-weight: bold;
 }
 
 /* form */
@@ -509,11 +537,4 @@ span.state.processing {
 
 span.state.completed {
     color: #CCC;
-}
-
-/* tasks */
-
-.task_category {
-    padding: 4px 0 4px 4px;
-    font-weight: bold;
 }
