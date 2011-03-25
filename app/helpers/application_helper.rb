@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def wrap_task_name(name)
-    name.gsub! /#[0-9a-e]{7}/i do |match|
+    name.gsub! /#[0-9a-f]{7}/i do |match|
         link_to match, order_path(:id => match[1..7])
     end
     name = auto_link(name)
