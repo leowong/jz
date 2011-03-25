@@ -15,6 +15,8 @@
     </div>
   </td>
   <td class="timestamp">
-    <span><%= task.due_at.strftime('%Y-%m-%d') %></span>
+    <span class="due_date">
+      <%= friendly_date(task.due_at, :style => true) %>
+    </span>
   </td>
 </tr>

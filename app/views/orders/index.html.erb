@@ -6,7 +6,7 @@
       <th><%= Order.human_attribute_name('number') %></th>
       <th><%= Order.human_attribute_name('contact') %></th>
       <th><%= Order.human_attribute_name('state') %></th>
-      <th><%= Order.human_attribute_name('created_at') %></th>
+      <th class="timestamp"><%= Order.human_attribute_name('created_at') %></th>
       <th class="number"><%= Order.human_attribute_name('quantity') %></th>
       <th class="number"><%= Order.human_attribute_name('total_price') %></th>
     </tr>
@@ -18,7 +18,7 @@
       <td>
         <span class="state <%= order.state %>"><%= order.state_name %></span>
       </td>
-      <td><%= order.created_at.strftime('%Y-%m-%d') %></td>
+      <td class="timestamp"><%= friendly_date(order.created_at) %></td>
       <td class="number"><%= order.total_products %></td>
       <td class="number"><%= number_to_currency(order.total_price) %></td>
     </tr>

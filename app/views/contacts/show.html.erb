@@ -55,7 +55,7 @@
                 <%= link_to latest_order = @completed_orders.order('updated_at DESC').first do %>
                   <%= "##{latest_order.number}" -%>
                 <% end %>
-                (<%= latest_order.updated_at.strftime('%Y-%m-%d') %>)
+                (<%= friendly_date(latest_order.updated_at) %>)
               </td>
             </tr>
             <tr>

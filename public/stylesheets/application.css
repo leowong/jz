@@ -228,7 +228,7 @@ table.order_details {
     padding: 10px;
 }
 
-table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price, table tr .number {
+table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price, table tr .timestamp, table tr .number {
     text-align: right;
 }
 
@@ -538,4 +538,30 @@ span.state.completed {
 table.name_card td.label {
     font-weight: bold;
     text-align: right;
+}
+
+/* timestamps */
+
+.timestamp.today {
+    font-weight: bold;
+}
+
+#upcoming_tasks .timestamp.today {
+    font-weight: bold;
+}
+
+#completed_tasks .timestamp.today {
+    font-weight: normal;
+}
+
+#upcoming_tasks .due_date .timestamp.this_year, #upcoming_tasks .due_date .timestamp.before_this_year {
+    color: red;
+}
+
+#completed_tasks .due_date .timestamp {
+    color: #C0C0C0;
+}
+
+#completed_tasks .hover .due_date .timestamp {
+    color: #777;
 }

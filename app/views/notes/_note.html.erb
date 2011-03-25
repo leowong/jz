@@ -4,7 +4,7 @@
   </div>
   <div class="content">
     <div class="timestamp">
-      <%= note.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+      <%= friendly_datetime(note.created_at, :style => true) %>
     </div>
     <div class="header">
       <%= link_to note.to_header, note.annotatable %>

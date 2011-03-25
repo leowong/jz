@@ -22,7 +22,7 @@ class Task < ActiveRecord::Base
   def completed?
     completed_at?
   end
-
+  
   private
 
   def setup_user

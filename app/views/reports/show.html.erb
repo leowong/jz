@@ -19,7 +19,7 @@
     <div class="meta">
       <%= t('.before_user') %> <%= link_to @report.user.username, @report.user %> <%= t('.after_user') %>,
       <%= t('.applying_to') %> <%= link_to @report.applyee.username, @report.applyee %><br />
-      <%= t('.at') %> <%= @report.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+      <%= t('.at') %> <%= friendly_datetime(@report.created_at) %>
     </div>
     <div class="content">
       <%= wrap(@report.content) %>

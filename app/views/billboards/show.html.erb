@@ -28,7 +28,7 @@
     </div>
     <div class="meta">
       <%= t('.before_username') %> <%= link_to @billboard.user.username, @billboard.user %>
-      <%= t('.before_timestamp') %> <%= @billboard.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+      <%= t('.before_timestamp') %> <%= friendly_datetime(@billboard.created_at) %>
     </div>
     <div class="content">
       <%= wrap(@billboard.content) %>

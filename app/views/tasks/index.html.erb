@@ -22,7 +22,7 @@
 
   <div class="task_category"><%= t('.completed') %><%= t('punctuation.colon') %></div>
   <table id="completed_tasks" class="tasks hoverable">
-    <% for task in @tasks.completed.order('completed_at DESC') %>
+    <% for task in @tasks.completed.order('due_at DESC') %>
       <%= render task %>
     <% end %>
   </table>
