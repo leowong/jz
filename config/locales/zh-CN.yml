@@ -336,9 +336,6 @@ zh-CN:
       listing_users: "通讯录"
       enter_username: "输入姓名："
       search: "搜索"
-    show:
-      tasks: "当前任务"
-      all_done: "所有任务都已完成。"
     new:
       sign_up: "注册"
       already_have_an_account: "已经有了帐号？ 请"
@@ -456,3 +453,8 @@ zh-CN:
       exclamation: "！"
       username_or_email_address: "用户名或电子邮件"
       password: "密码"
+
+  dashboard:
+    index:
+      tasks: "当前任务"
+      all_done: "所有任务都已完成。"

@@ -11,10 +11,10 @@
 <% content_for :side do %>
   <div class="inner">
     <h2><%= t('.tasks') %></h2>
-    <% unless current_user.assigned_tasks.empty? %>
+    <% unless @user.assigned_tasks.upcoming.empty? %>
       <% javascript 'jquery-ui' %>
       <table id="upcoming_tasks" class="tasks hoverable">
-        <% for task in current_user.assigned_tasks.upcoming.order('due_at') %>
+        <% for task in @user.assigned_tasks.upcoming.order('due_at') %>
           <%= render task %>
         <% end %>
       </table>
