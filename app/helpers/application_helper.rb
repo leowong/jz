@@ -12,15 +12,22 @@ module ApplicationHelper
 
   def wrap(content)
     content = simple_format(h(content))
-    content = wrap_task_name(content)
+    content = auto_link_order_number(content)
     content = auto_link(content)
   end
 
   def wrap_task_name(name)
-    name.gsub! /#[0-9a-f]{7}/i do |match|
-        link_to match, order_path(:id => match[1..7])
-    end
+    name = auto_link_order_number(name)
     name = auto_link(name)
+    raw name
+  end
+
+  private
+
+  def auto_link_order_number(name)
+    name.gsub! /#[0-9a-f]{7}/i do |match|
+      Order.find_by_number(number = match[1..-1]) ? link_to(match, order_path(:id => number)) : match
+    end
     raw name
   end
 end
