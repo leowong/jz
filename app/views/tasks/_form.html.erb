@@ -13,7 +13,7 @@
   </div>
   <div>
     <%= f.label :assigned_to %><br />
-    <%= f.collection_select :assigned_to, User.all, :id, :name %>
+    <%= f.collection_select :assigned_to, User.options_for_select, :id, :name %>
   </div>
   <hr class="space" style="margin-bottom:4px" />
   <div><%= f.submit %></div>

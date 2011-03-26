@@ -40,6 +40,11 @@ class User < ActiveRecord::Base
   def assigning_tasks
     Task.where("user_id = :current_user_id AND assigned_to <> :current_user_id", :current_user_id => User.current_user.id )
   end
+
+  def self.options_for_select(opt={:include_me => true})
+    (opt[:include_me] ? [current_user] : []) + where("id <> :user_id", :user_id => current_user.id)
+  end
+
   private
 
   def prepare_password

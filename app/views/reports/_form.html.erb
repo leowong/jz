@@ -12,7 +12,7 @@
     </tr>
     <tr>
       <td class="label"><%= f.label :apply_to %></td>
-      <td><%= f.collection_select :apply_to, User.all, :id, :username, :include_blank => true %></td>
+      <td><%= f.collection_select :apply_to, User.options_for_select(:include_me => false), :id, :username, :include_blank => true %></td>
     </tr>
     <tr>
       <td>

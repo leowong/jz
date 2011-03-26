@@ -237,7 +237,7 @@ table.tr.total_line .total_cell {
 }
 
 table.hoverable tr {
-    background-color: none;
+    background: none;
 }
 
 table.hoverable tr.hover {
