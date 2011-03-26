@@ -16,8 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = params[:id] ? User.find(params[:id]) : current_user
-    @activities = Activity.order('created_at DESC') unless params[:id]
+    @user = User.find(params[:id])
   end
 
   def create

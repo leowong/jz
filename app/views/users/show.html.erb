@@ -1,53 +1,24 @@
 <% title @user.username %>
 
-<% if params[:id] %>
-  <div class="inner">
-    <table class="name_card">
-      <% unless @user.email.blank? %>
-        <tr>
-          <td class="label"><%= User.human_attribute_name(:email) %></td>
-          <td><%= @user.email %></td>
-        </tr>
-      <% end %>
-      <% unless @user.mobile.blank? %>
-        <tr>
-          <td class="label"><%= User.human_attribute_name(:mobile) %></td>
-          <td><%= @user.mobile %></td>
-        </tr>
-      <% end %>
-      <% unless @user.phone.blank? %>
-        <tr>
-          <td class="label"><%= User.human_attribute_name(:phone) %></td>
-          <td><%= @user.phone %></td>
-        </tr>
-      <% end %>
-    </table>
-  </div>
-<% else %>
-  <div class="inner">
-    <% unless @activities.empty? %>
-      <div id="messages" class="hoverable">
-        <%= render @activities %>
-      </div>
+<div class="inner">
+  <table class="name_card">
+    <% unless @user.email.blank? %>
+      <tr>
+        <td class="label"><%= User.human_attribute_name(:email) %></td>
+        <td><%= @user.email %></td>
+      </tr>
     <% end %>
-  </div>
-  <% content_for :side do %>
-    <div class="inner">
-      <h2><%= t('.tasks') %></h2>
-      <% unless current_user.assigned_tasks.empty? %>
-        <% javascript 'jquery-ui' %>
-        <table id="upcoming_tasks" class="tasks hoverable">
-          <% for task in current_user.assigned_tasks.upcoming.order('due_at') %>
-            <%= render task %>
-          <% end %>
-        </table>
-        <table id="completed_tasks" class="tasks" style="display:none">
-        </table>
-      <% else %>
-        <div class="indent">
-          <%= t('.all_done') %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-<% end %>
+    <% unless @user.mobile.blank? %>
+      <tr>
+        <td class="label"><%= User.human_attribute_name(:mobile) %></td>
+        <td><%= @user.mobile %></td>
+      </tr>
+    <% end %>
+    <% unless @user.phone.blank? %>
+      <tr>
+        <td class="label"><%= User.human_attribute_name(:phone) %></td>
+        <td><%= @user.phone %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

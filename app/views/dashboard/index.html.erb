@@ -1,0 +1,29 @@
+<% title @user.username %>
+
+<div class="inner">
+  <% unless @activities.empty? %>
+    <div id="messages" class="hoverable">
+      <%= render @activities %>
+    </div>
+  <% end %>
+</div>
+
+<% content_for :side do %>
+  <div class="inner">
+    <h2><%= t('.tasks') %></h2>
+    <% unless current_user.assigned_tasks.empty? %>
+      <% javascript 'jquery-ui' %>
+      <table id="upcoming_tasks" class="tasks hoverable">
+        <% for task in current_user.assigned_tasks.upcoming.order('due_at') %>
+          <%= render task %>
+        <% end %>
+      </table>
+      <table id="completed_tasks" class="tasks" style="display:none">
+      </table>
+    <% else %>
+      <div class="indent">
+        <%= t('.all_done') %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
