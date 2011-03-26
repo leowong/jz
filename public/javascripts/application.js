@@ -21,8 +21,8 @@ $(function() {
 });
 
 $(function() {
-  $(".task").live("click", function() {
-    $(this).next("span.task_name").addClass("busy");
+  $("input[type=checkbox].task").live("click", function() {
+    $(this).parent().next(".content").children(".task_name").addClass("busy");
     $.ajax({
       url: "/tasks/" + this.getAttribute("data-id"),
       type: 'PUT',
