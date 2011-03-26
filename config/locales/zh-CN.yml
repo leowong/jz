@@ -270,6 +270,8 @@ zh-CN:
     comma: "，"
     period: "。"
     colon: "："
+    left_double_angle_bracket: "«"
+    right_double_angle_bracket: "»"
 
   site:
     name: "网震客户关系管理系统"
