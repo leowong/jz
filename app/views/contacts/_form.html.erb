@@ -57,6 +57,10 @@
     <% end %>
 
     <tr>
+      <td class="label"><%= f.label :source_id %></td>
+      <td><%= f.collection_select :source_id, Source.all, :id, :name, :include_blank => true %></td>
+    </tr>
+    <tr>
       <td class="label"><%= f.label :interest %></td>
       <td><%= f.select :interest, Contact::INTEREST, :include_blank => true %></td>
     </tr>

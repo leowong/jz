@@ -1,5 +1,6 @@
 # encoding: utf-8
 class Contact < ActiveRecord::Base
+  belongs_to :source
   has_many :orders
   has_many :addresses
   has_many :provinces, :through => :addresses

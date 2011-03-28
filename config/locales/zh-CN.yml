@@ -211,6 +211,7 @@ zh-CN:
         phone: "其他联系电话"
         fax: "传真"
         email: "电子邮箱"
+        source_id: "获知渠道"
         interest: "关注点"
         background_info: "备注"
       order:
