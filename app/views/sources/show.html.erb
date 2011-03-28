@@ -1,0 +1,12 @@
+<% title "Source" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @source.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_source_path(@source) %> |
+  <%= link_to "Destroy", @source, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sources_path %>
+</p>

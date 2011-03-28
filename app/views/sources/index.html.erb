@@ -1,0 +1,17 @@
+<% title "Sources" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for source in @sources %>
+    <tr>
+      <td><%= source.name %></td>
+      <td><%= link_to "Show", source %></td>
+      <td><%= link_to "Edit", edit_source_path(source) %></td>
+      <td><%= link_to "Destroy", source, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Source", new_source_path %></p>
