@@ -1,8 +1,15 @@
-<% title "Edit Source" %>
+<% title t('.edit_source'), false %>
 
-<%= render 'form' %>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.show'), @source %></li>
+      <li><%= link_to t('.view_all'), sources_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.edit_source') %></h1>
+<% end %>
 
-<p>
-  <%= link_to "Show", @source %> |
-  <%= link_to "View All", sources_path %>
-</p>
+<div class="inner">
+  <%= render 'form' %>
+</div>

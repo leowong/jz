@@ -180,6 +180,7 @@ zh-CN:
       order: "订单"
       task: "任务"
       product: "产品"
+      source: "渠道"
     attributes:
       report:
         title: "标题"
@@ -227,6 +228,8 @@ zh-CN:
         assigned_to: "分配给"
       product:
         price: "价格"
+      source:
+        name: "渠道名称"
 
   activemodel:
     errors:
@@ -461,3 +464,21 @@ zh-CN:
     index:
       tasks: "当前任务"
       all_done: "所有任务都已完成。"
+
+  sources:
+    index:
+      sources: "获知渠道"
+      new_source: "添加渠道"
+    new:
+      new_source: "添加渠道"
+      back_to_list: "返回列表"
+    show:
+      source: "渠道"
+      edit: "编辑渠道"
+      destroy: "删除渠道"
+      view_all: "返回列表"
+      are_you_sure: "确定要删除吗？"
+    edit:
+      edit_source: "编辑渠道"
+      show: "查看渠道"
+      view_all: "返回列表"

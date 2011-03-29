@@ -1,17 +1,23 @@
-<% title "Sources" %>
+<% title t('.sources'), false %>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
-  <% for source in @sources %>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.new_source'), new_source_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.sources') %></h1>
+<% end %>
+    
+<div class="inner">
+  <table>
     <tr>
-      <td><%= source.name %></td>
-      <td><%= link_to "Show", source %></td>
-      <td><%= link_to "Edit", edit_source_path(source) %></td>
-      <td><%= link_to "Destroy", source, :confirm => 'Are you sure?', :method => :delete %></td>
+      <th><%= Source.human_attribute_name(:name) %></th>
     </tr>
-  <% end %>
-</table>
-
-<p><%= link_to "New Source", new_source_path %></p>
+    <% for source in @sources %>
+      <tr>
+        <td><%= link_to source.name, source %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,12 +1,19 @@
-<% title "Source" %>
+<% title "Source", false %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @source.name %>
-</p>
+<% content_for :header do %>
+  <div class="buttons">
+    <ul>
+      <li><%= link_to t('.edit'), edit_source_path(@source) %></li>
+      <li><%= link_to t('.destroy'), @source, :confirm => t('.are_you_sure'), :method => :delete %></li>
+      <li><%= link_to t('.view_all'), sources_path %></li>
+    </ul>
+  </div>
+  <h1><%= t('.source') %></h1>
+<% end %>
 
-<p>
-  <%= link_to "Edit", edit_source_path(@source) %> |
-  <%= link_to "Destroy", @source, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", sources_path %>
-</p>
+<div class="inner">
+  <p>
+    <strong><%= Source.human_attribute_name(:name) %><%= t('punctuation.colon') %></strong>
+    <%= @source.name %>
+  </p>
+</div>
