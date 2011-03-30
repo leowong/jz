@@ -36,9 +36,9 @@ module FriendlyDatetimeHelper
       end
     elsif datetime < Time.zone.now.beginning_of_year
       if opt[:style]
-        raw('<span class="timestamp before_this_year">' + datetime.strftime("%m-%d") + '</span>')
+        raw('<span class="timestamp before_this_year">' + datetime.strftime("%Y-%m-%d") + '</span>')
       else
-        datetime.strftime("%m-%d")
+        datetime.strftime("%Y-%m-%d")
       end
     elsif datetime > Time.zone.now.to_date and datetime.to_date < Time.zone.now.next_year.beginning_of_year.next_year.to_date
       if opt[:style]
