@@ -1,4 +1,4 @@
-<% title t('.editing_order'), false %>
+<% title t('.editing_order') + " ##{@order.number}", false %>
 
 <% content_for :header do %>
   <div class="buttons">
@@ -7,7 +7,7 @@
       <li><%= link_to t('.back'), orders_path %></li>
     </ul>
   </div>
-  <h1><%= t('.editing_order') %></h1>
+  <h1><%= t('.editing_order') + " ##{@order.number}" %></h1>
 <% end %>
 
 <div class="inner">

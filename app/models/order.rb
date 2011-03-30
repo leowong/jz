@@ -1,5 +1,7 @@
 # encoding: utf-8
 class Order < ActiveRecord::Base
+  attr_accessible :contact, :contact_id, :shipping_method, :line_items_attributes
+
   belongs_to :contact
   has_many :line_items, :dependent => :destroy
   has_many :notes, :as => :annotatable
@@ -16,7 +18,12 @@ class Order < ActiveRecord::Base
     :processing => "正在处理",
     :completed => "已完成"
   }
-  
+
+  SHIPPING_METHOD = [
+    ["送货上门", 1],
+    ["邮寄", 2]
+  ]
+
   def to_param
     number.to_s.parameterize.upcase
   end
@@ -71,5 +78,9 @@ class Order < ActiveRecord::Base
 
   def state_name
     Order::STATES[self.state.to_sym]
+  end
+
+  def shipping_method_name
+    Order::SHIPPING_METHOD.select { |a| a[1] == self.shipping_method }[0][0]
   end
 end

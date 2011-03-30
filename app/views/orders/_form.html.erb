@@ -1,28 +1,29 @@
 <% javascript "nested_form" %>
 
 <%= nested_form_for(@order) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
-      <ul>
-      <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.error_messages %>
 
   <div>
     <%= f.hidden_field :contact_id %>
   </div>
 
-  <%= f.fields_for :line_items do |builder| %>
-    <%= render "orders/line_item_fields", :f => builder %>
-  <% end %>
-  <div>
-    <%= f.link_to_add t('.add_a_line_item'), :line_items %>
-  </div>
+  <table>
+    <tr>
+      <td class="label" style="vertical-align:top"><%= f.label :line_items %></td>
+      <td>
+        <%= f.fields_for :line_items do |builder| %>
+          <%= render "orders/line_item_fields", :f => builder %>
+        <% end %>
+        <div>
+          <%= f.link_to_add t('.add_a_line_item'), :line_items %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="label"><%= f.label :shipping_method %></td>
+      <td><%= f.select :shipping_method, Order::SHIPPING_METHOD %></td>
+    </tr>
+  </table>
 
   <hr class="space" style="margin-bottom:5px"/>
   <div class="actions">

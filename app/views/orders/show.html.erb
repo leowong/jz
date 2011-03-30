@@ -33,6 +33,9 @@
 <% end %>
 
 <div class="inner">
+  <div>
+    <h2><%= t('.order_details') %></h2>
+  </div>
   <% unless @order.line_items.empty? %>
     <table class="order_details">
       <%= render @order.line_items %>
@@ -67,6 +70,10 @@
         <tr>
           <td class="label"><%= Order.human_attribute_name('created_at') %></td>
           <td><%= friendly_datetime(@order.created_at) %></td>
+        </tr>
+        <tr>
+          <td class="label"><%= Order.human_attribute_name(:shipping_method) %></td>
+          <td><%= @order.shipping_method_name %></td>
         </tr>
       </table>
     </div>

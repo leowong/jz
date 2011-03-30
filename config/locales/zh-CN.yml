@@ -222,6 +222,8 @@ zh-CN:
         total_price: "总金额"
         created_at: "创建时间"
         state: "订单状态"
+        line_items: "产品"
+        shipping_method: "配送方式"
       task:
         name: "内容"
         due_at: "期限"
@@ -318,6 +320,7 @@ zh-CN:
       process: "处理订单"
       complete: "完成订单"
       info: "相关信息"
+      order_details: "订单明细"
       add_a_new_note: "添加记录"
     edit:
       editing_order: "修改订单"

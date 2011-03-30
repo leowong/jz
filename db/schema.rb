@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110330054622) do
+ActiveRecord::Schema.define(:version => 20110330075652) do
 
   create_table "activities", :force => true do |t|
     t.integer   "user_id"
@@ -129,6 +129,7 @@ ActiveRecord::Schema.define(:version => 20110330054622) do
     t.string    "state"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.integer   "shipping_method"
   end
 
   add_index "orders", ["contact_id"], :name => "index_orders_on_contact_id"
