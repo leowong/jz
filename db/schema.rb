@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110328221416) do
+ActiveRecord::Schema.define(:version => 20110330054622) do
 
   create_table "activities", :force => true do |t|
     t.integer   "user_id"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.string    "action"
   end
 
+  add_index "activities", ["action"], :name => "index_activities_on_action"
+  add_index "activities", ["subject_id"], :name => "index_activities_on_subject_id"
+  add_index "activities", ["subject_type"], :name => "index_activities_on_subject_type"
+  add_index "activities", ["topic_id"], :name => "index_activities_on_topic_id"
+  add_index "activities", ["topic_type"], :name => "index_activities_on_topic_type"
+  add_index "activities", ["user_id"], :name => "index_activities_on_user_id"
+
   create_table "addresses", :force => true do |t|
     t.integer   "province_id"
     t.integer   "city_id"
@@ -30,6 +37,10 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "updated_at"
     t.integer   "contact_id"
   end
+
+  add_index "addresses", ["city_id"], :name => "index_addresses_on_city_id"
+  add_index "addresses", ["contact_id"], :name => "index_addresses_on_contact_id"
+  add_index "addresses", ["province_id"], :name => "index_addresses_on_province_id"
 
   create_table "annotations", :force => true do |t|
     t.text      "content"
@@ -39,6 +50,9 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
+
+  add_index "annotations", ["annotatable_id"], :name => "index_annotations_on_annotatable_id"
+  add_index "annotations", ["annotatable_type", "type"], :name => "index_annotations_on_annotatable_type_and_type"
 
   create_table "assets", :force => true do |t|
     t.integer   "attachable_id"
@@ -51,6 +65,9 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
+
+  add_index "assets", ["attachable_id"], :name => "index_assets_on_attachable_id"
+  add_index "assets", ["attachable_type", "type"], :name => "index_assets_on_attachable_type_and_type"
 
   create_table "billboards", :force => true do |t|
     t.string    "title"
@@ -66,6 +83,9 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
+
+  add_index "cities", ["name"], :name => "index_cities_on_name"
+  add_index "cities", ["province_id"], :name => "index_cities_on_province_id"
 
   create_table "contacts", :force => true do |t|
     t.string    "name"
@@ -87,6 +107,12 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.text      "background_info"
   end
 
+  add_index "contacts", ["company"], :name => "index_contacts_on_company"
+  add_index "contacts", ["mobile"], :name => "index_contacts_on_mobile"
+  add_index "contacts", ["name"], :name => "index_contacts_on_name"
+  add_index "contacts", ["phone"], :name => "index_contacts_on_phone"
+  add_index "contacts", ["position"], :name => "index_contacts_on_position"
+
   create_table "line_items", :force => true do |t|
     t.integer   "order_id"
     t.integer   "product_id"
@@ -95,6 +121,8 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.integer   "quantity",   :default => 1
   end
 
+  add_index "line_items", ["order_id"], :name => "index_line_items_on_order_id"
+
   create_table "orders", :force => true do |t|
     t.integer   "contact_id"
     t.string    "number"
@@ -102,6 +130,9 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
+
+  add_index "orders", ["contact_id"], :name => "index_orders_on_contact_id"
+  add_index "orders", ["state"], :name => "index_orders_on_state"
 
   create_table "products", :force => true do |t|
     t.string    "name"
@@ -117,6 +148,8 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "updated_at"
   end
 
+  add_index "provinces", ["name"], :name => "index_provinces_on_name"
+
   create_table "reports", :force => true do |t|
     t.string    "title"
     t.text      "content"
@@ -125,6 +158,9 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
+
+  add_index "reports", ["apply_to"], :name => "index_reports_on_apply_to"
+  add_index "reports", ["user_id"], :name => "index_reports_on_user_id"
 
   create_table "sessions", :force => true do |t|
     t.string    "session_id", :null => false
@@ -156,6 +192,13 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.timestamp "updated_at"
   end
 
+  add_index "tasks", ["assigned_to"], :name => "index_tasks_on_assigned_to"
+  add_index "tasks", ["completed_at"], :name => "index_tasks_on_completed_at"
+  add_index "tasks", ["due_at"], :name => "index_tasks_on_due_at"
+  add_index "tasks", ["subject_id"], :name => "index_tasks_on_subject_id"
+  add_index "tasks", ["subject_type"], :name => "index_tasks_on_subject_type"
+  add_index "tasks", ["user_id"], :name => "index_tasks_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string    "username"
     t.string    "email"
@@ -166,5 +209,7 @@ ActiveRecord::Schema.define(:version => 20110328221416) do
     t.string    "mobile"
     t.string    "phone"
   end
+
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end
