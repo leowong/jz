@@ -40,7 +40,7 @@ module FriendlyDatetimeHelper
       else
         datetime.strftime("%Y-%m-%d")
       end
-    elsif datetime > Time.zone.now.to_date and datetime.to_date < Time.zone.now.next_year.beginning_of_year.next_year.to_date
+    elsif datetime > Time.zone.now.to_date and datetime.to_date < Time.zone.now.next_year.beginning_of_year.to_date
       if opt[:style]
         raw('<span class="timestamp this_year_but_beyond_today">' + datetime.strftime("%m-%d") + '</span>')
       else
