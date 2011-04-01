@@ -7,16 +7,21 @@
       <td><%= f.select :type1, Contact::TYPE1, :include_blank => true %></td>
     </tr>
     <tr>
-      <td class="label"><%= f.label :name %></td>
-      <td><%= f.text_field :name %></td>
-    </tr>
-    <tr>
       <td class="label"><%= f.label :type2 %></td>
       <td><%= f.select :type2, Contact::TYPE2, :include_blank => true %></td>
     </tr>
     <tr>
       <td class="label"><%= f.label :type3 %></td>
       <td><%= f.select :type3, Contact::TYPE3, :include_blank => true %></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td class="label"><%= f.label :name %></td>
+      <td><%= f.text_field :name %></td>
     </tr>
     <tr>
       <td class="label"><%= f.label :sex %></td>
@@ -42,7 +47,6 @@
       <td class="label"><%= f.label :email %></td>
       <td><%= f.text_field :email %></td>
     </tr>
-
     <tr>
       <td class="label"><%= f.label :company %></td>
       <td><%= f.text_field :company %></td>
@@ -51,11 +55,6 @@
       <td class="label"><%= f.label :position %></td>
       <td><%= f.text_field :position %></td>
     </tr>
-
-    <%= f.fields_for :addresses do |builder| %>
-    <%= render "address_fields", :f => builder %>
-    <% end %>
-
     <tr>
       <td class="label"><%= f.label :source_id %></td>
       <td><%= f.collection_select :source_id, Source.all, :id, :name, :include_blank => true %></td>
@@ -64,17 +63,31 @@
       <td class="label"><%= f.label :interest %></td>
       <td><%= f.select :interest, Contact::INTEREST, :include_blank => true %></td>
     </tr>
+
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <%= f.fields_for :addresses do |builder| %>
+      <%= render "address_fields", :f => builder %>
+    <% end %>
+
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+
     <tr>
       <td class="label"><%= f.label :background_info %></td>
       <td><%= f.text_area :background_info %></td>
     </tr>
+
     <tr>
       <td>
       </td>
       <td>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
       </td>
     </tr>      
   </table>

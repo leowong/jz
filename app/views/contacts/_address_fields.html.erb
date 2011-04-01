@@ -6,9 +6,27 @@
 <% end %>
 
 <tr>
+  <td class="label"><%= f.label :firstname %></td>
+  <td>
+    <%= f.text_field :firstname %>
+  </td>
+</tr>
+<tr>
   <td class="label"><%= f.label :province_id, t('.province_and_city') %></td>
   <td>
     <span id="province_select"><%= f.collection_select :province_id, Province.all, :id, :name, :include_blank => true %></span>
     <span id="city_select"><%= f.collection_select :city_id, @contact.addresses[0].province.try(:cities) || [], :id, :name, :include_blank => true %></span>
+  </td>
+</tr>
+<tr>
+  <td class="label"><%= f.label :zipcode %></td>
+  <td>
+    <%= f.text_field :zipcode, :size => 10  %>
+  </td>
+</tr>
+<tr>
+  <td class="label"><%= f.label :address1 %></td>
+  <td>
+    <%= f.text_field :address1, :size => 60 %>
   </td>
 </tr>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110401032802) do
+ActiveRecord::Schema.define(:version => 20110401063147) do
 
   create_table "activities", :force => true do |t|
     t.integer   "user_id"
@@ -37,6 +37,11 @@ ActiveRecord::Schema.define(:version => 20110401032802) do
     t.datetime "updated_at"
     t.integer  "addressable_id"
     t.string   "addressable_type"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "zipcode"
   end
 
   add_index "addresses", ["addressable_id"], :name => "index_addresses_on_addressable_id"

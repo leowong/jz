@@ -199,6 +199,9 @@ zh-CN:
       address:
         province: "省"
         city: "市"
+        firstname: "收件人"
+        address1: "配送地址"
+        zipcode: "邮编"
       contact:
         name: "称谓"
         company: "单位"
