@@ -1,15 +1,18 @@
 # encoding: utf-8
 class Order < ActiveRecord::Base
-  attr_accessible :contact, :contact_id, :shipping_method, :line_items_attributes
+  attr_accessible :contact, :contact_id, :shipping_method, :line_items_attributes, :addresses_attributes
 
   belongs_to :contact
   has_many :line_items, :dependent => :destroy
   has_many :notes, :as => :annotatable
   has_many :activities, :as => :topic
-
+  has_many :addresses, :as => :addressable
+  
   accepts_nested_attributes_for :line_items,
                                 :reject_if => proc { |attrs| attrs.any? { |k, v| v.blank? } },
                                 :allow_destroy => true
+
+  accepts_nested_attributes_for :addresses, :reject_if => :all_blank
 
   scope :completed, where("state = 'completed'")
 

@@ -1,0 +1,18 @@
+<tr>
+  <td class="label"><%= f.label :firstname, Address.human_attribute_name(:firstname) %></td>
+  <td>
+    <%= f.text_field :firstname %>
+  </td>
+</tr>
+<tr>
+  <td class="label"><%= f.label :zipcode, Address.human_attribute_name(:zipcode) %></td>
+  <td>
+    <%= f.text_field :zipcode, :size => 6 %>
+  </td>
+</tr>
+<tr>
+  <td class="label"><%= f.label :address1, Address.human_attribute_name(:address1) %></td>
+  <td>
+    <%= f.text_area :address1, :style => "width:210px;height:32px" %>
+  </td>
+</tr>

@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
     @note = @contact.notes.build()
     @order = Order.new(:contact => @contact)
     @completed_orders = @contact.orders.completed
+    @order.addresses.build()
   end
 
   def new

@@ -23,6 +23,11 @@
       <td class="label"><%= f.label :shipping_method %></td>
       <td><%= f.select :shipping_method, Order::SHIPPING_METHOD %></td>
     </tr>
+
+    <%= f.fields_for :addresses do |builder| %>
+      <%= render "orders/address_fields", :f => builder %>
+    <% end %>
+
   </table>
 
   <hr class="space" style="margin-bottom:5px"/>
