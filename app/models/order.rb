@@ -87,4 +87,12 @@ class Order < ActiveRecord::Base
     shipping_method ?
       Order::SHIPPING_METHOD.select { |a| a[1] == shipping_method }[0][0] : nil
   end
+
+  def clone_address_from(contact)
+    unless contact.addresses.empty?
+      addresses.build(contact.addresses[0].attributes.except("id", "updated_at", "created_at", "addressable_id", "addressable_tye"))
+    else
+      addresses.build()
+    end
+  end
 end
