@@ -88,12 +88,19 @@
             <td><%= @order.addresses[0].firstname %></td>
           </tr>
           <tr>
-            <td class="label"><%= Address.human_attribute_name(:zipcode) %></td>
-            <td><%= @order.addresses[0].zipcode %></td>
+            <td class="label"><%= t('.province_and_city') %></td>
+            <td>
+              <%= @order.addresses[0].province.try(:name) %>
+              <%= @order.addresses[0].city.try(:name) %>
+            </td>
           </tr>
           <tr>
             <td class="label"><%= Address.human_attribute_name(:address1) %></td>
             <td><%= @order.addresses[0].address1 %></td>
+          </tr>
+          <tr>
+            <td class="label"><%= Address.human_attribute_name(:zipcode) %></td>
+            <td><%= @order.addresses[0].zipcode %></td>
           </tr>
         <% end %>
       </table>

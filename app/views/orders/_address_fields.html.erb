@@ -1,3 +1,10 @@
+<% javascript "address_selector" %>
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    var city_mapper = <%= raw @cities.to_json %>
+  <% end %>
+<% end %>
+
 <tr>
   <td class="label"><%= f.label :firstname, Address.human_attribute_name(:firstname) %></td>
   <td>
@@ -5,14 +12,21 @@
   </td>
 </tr>
 <tr>
-  <td class="label"><%= f.label :zipcode, Address.human_attribute_name(:zipcode) %></td>
+  <td class="label"><%= f.label :province_id, t('.province_and_city') %></td>
   <td>
-    <%= f.text_field :zipcode, :size => 6 %>
+    <span id="province_select"><%= f.collection_select :province_id, Province.all, :id, :name, :include_blank => true %></span>
+    <span id="city_select"><%= f.collection_select :city_id, @contact.addresses[0].province.try(:cities) || [], :id, :name, :include_blank => true %></span>
   </td>
 </tr>
 <tr>
   <td class="label"><%= f.label :address1, Address.human_attribute_name(:address1) %></td>
   <td>
     <%= f.text_area :address1, :style => "width:210px;height:32px" %>
+  </td>
+</tr>
+<tr>
+  <td class="label"><%= f.label :zipcode, Address.human_attribute_name(:zipcode) %></td>
+  <td>
+    <%= f.text_field :zipcode, :size => 6 %>
   </td>
 </tr>

@@ -15,6 +15,10 @@ class ContactsController < ApplicationController
     @order = Order.new(:contact => @contact)
     @completed_orders = @contact.orders.completed
     @order.clone_address_from(@contact)
+    @cities = Hash.new { |h, k| h[k] = [] }
+    City.all.each do |city|
+      @cities[city.province_id.to_s].push([city.id, city.name])
+    end
   end
 
   def new

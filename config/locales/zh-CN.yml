@@ -326,6 +326,7 @@ zh-CN:
       order_details: "订单明细"
       add_a_new_note: "添加记录"
       shipping_info: "配送信息"
+      province_and_city: "省市"
     edit:
       editing_order: "修改订单"
       show: "查看订单"
