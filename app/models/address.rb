@@ -1,5 +1,5 @@
 class Address < ActiveRecord::Base
-  attr_accessible :province_id, :city_id
+  attr_accessible :province_id, :city_id, :addressable_id, :addressable_type
 
   belongs_to :province
   belongs_to :city

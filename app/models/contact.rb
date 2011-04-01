@@ -2,7 +2,7 @@
 class Contact < ActiveRecord::Base
   belongs_to :source
   has_many :orders
-  has_many :addresses
+  has_many :addresses, :as => :addressable
   has_many :provinces, :through => :addresses
   has_many :cities, :through => :addresses
   has_many :notes, :as => :annotatable
