@@ -76,11 +76,13 @@
     <div class="block">
       <h2><%= t('.shipping_info') %></h2>
       <table class="shipping_info">
-        <tr>
-          <td class="label"><%= Order.human_attribute_name(:shipping_method) %></td>
-          <td><%= @order.shipping_method_name %></td>
-        </tr>
-        <% if @order.addresses %>
+        <% if @order.shipping_method %>
+          <tr>
+            <td class="label"><%= Order.human_attribute_name(:shipping_method) %></td>
+            <td><%= @order.shipping_method_name %></td>
+          </tr>
+        <% end %>
+        <% unless @order.addresses.empty? %>
           <tr>
             <td class="label"><%= Address.human_attribute_name(:firstname) %></td>
             <td><%= @order.addresses[0].firstname %></td>

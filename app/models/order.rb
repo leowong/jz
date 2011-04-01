@@ -84,6 +84,7 @@ class Order < ActiveRecord::Base
   end
 
   def shipping_method_name
-    Order::SHIPPING_METHOD.select { |a| a[1] == self.shipping_method }[0][0]
+    shipping_method ?
+      Order::SHIPPING_METHOD.select { |a| a[1] == shipping_method }[0][0] : nil
   end
 end
