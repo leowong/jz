@@ -28,10 +28,15 @@
       <%= render "orders/address_fields", :f => builder %>
     <% end %>
 
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </td>
+    </tr>
   </table>
-
-  <hr class="space" style="margin-bottom:5px"/>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

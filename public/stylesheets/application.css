@@ -384,6 +384,57 @@ input#q {
     text-decoration: underline;
 }
 
+/* buttons */
+
+div.button {
+    overflow: hidden;
+    margin-left: -1px;
+    margin-top: -1px;
+    padding: 1px;
+}
+
+div.button a {
+    background: url(/images/sprites.png) no-repeat left -966px;
+    display: block;
+    float:left;
+    font-size: 13px;
+    font-weight: bold;
+    height: 31px;
+    margin-right: 0.4em;
+    padding: 0 0 0 30px;
+    text-decoration: none;
+    text-shadow: 0 0 1px #FFF;
+    white-space: nowrap;
+}
+
+div.button a span {
+    background: url(/images/sprites.png) no-repeat right -1030px;
+    color: #000;
+    display: block;
+    padding: 0 12px 3px 0;
+    line-height: 29px;
+}
+
+div.button a:active {
+    background-position: 0 -998px;
+}
+
+div.button a:active span {
+    background-position: 100% -1062px;
+}
+
+div.button a.disabled {
+    background-position: left -1094px;
+}
+
+div.button a.disabled:active {
+    background-position:left -1126px;
+}
+
+div.button a.disabled span {
+    color:#555;
+}
+
 /* tasks */
 
 table.tasks {
@@ -530,6 +581,10 @@ span.state.processing {
 
 span.state.completed {
     color: #CCC;
+}
+
+div#create_order {
+    margin: 0 0 15px 0;
 }
 
 /* users */

@@ -1,4 +1,22 @@
 <% title @contact.name, false %>
+<% stylesheet "jquery-ui/jquery-ui", :media => "screen" %>
+<% javascript "jquery-ui" %>
+
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    $(function() {
+      $("#add_order").dialog({
+        autoOpen: false,
+        width: 480,
+        height: 400,
+        modal: true
+      });
+      $("#create_order .button a").click(function() {
+        $("#add_order").dialog("open");
+      });
+    });
+  <% end %>
+<% end %>
 
 <% content_for :header do %>
   <div class="buttons">
@@ -37,8 +55,14 @@
 
 <% content_for :side do %>
   <div class="inner">
-    <div class="block add_order">
-      <h2><%= t('.add_a_new_order') %></h2>
+    <div id="create_order">
+      <div class="button">
+        <%= link_to "javascript:void(0)" do %>
+          <span><%= t('.add_a_new_order') %></span>
+        <% end %>
+      </div>
+    </div>
+    <div id="add_order" class="block add_order" title="<%= t('.add_a_new_order') %>" style="display:none">
       <div class="indent">
         <%= render 'orders/form' %>
       </div>
