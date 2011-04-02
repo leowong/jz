@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class User < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :username, :email, :password, :password_confirmation, :mobile, :phone
@@ -30,7 +31,11 @@ class User < ActiveRecord::Base
   end
 
   def name
-    self == User.current_user ? I18n.t('users.me') : username
+    if self == User.current_user
+      I18n.t('users.me') + I18n.t('punctuation.left_parenthesis') + current_user.username + I18n.t('punctuation.right_parenthesis')
+    else
+      username
+    end
   end
 
   def assigned_tasks

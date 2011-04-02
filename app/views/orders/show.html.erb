@@ -62,48 +62,52 @@
   <div class="inner">
     <div class="block">
       <h2><%= t('.info') %></h2>
-      <table>
-        <tr>
-          <td class="label"><%= Order.human_attribute_name('contact') %></td>
-          <td><%= link_to @order.contact.name, @order.contact %></td>
-        </tr>
-        <tr>
-          <td class="label"><%= Order.human_attribute_name('created_at') %></td>
-          <td><%= friendly_datetime(@order.created_at) %></td>
-        </tr>
-      </table>
+      <div class="indent">
+        <table>
+          <tr>
+            <td class="label"><%= Order.human_attribute_name('contact') %></td>
+            <td><%= link_to @order.contact.name, @order.contact %></td>
+          </tr>
+          <tr>
+            <td class="label"><%= Order.human_attribute_name('created_at') %></td>
+            <td><%= friendly_datetime(@order.created_at) %></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <div class="block">
       <h2><%= t('.shipping_info') %></h2>
-      <table class="shipping_info">
-        <% if @order.shipping_method %>
-          <tr>
-            <td class="label"><%= Order.human_attribute_name(:shipping_method) %></td>
-            <td><%= @order.shipping_method_name %></td>
-          </tr>
-        <% end %>
-        <% unless @order.addresses.empty? %>
-          <tr>
-            <td class="label"><%= Address.human_attribute_name(:firstname) %></td>
-            <td><%= @order.addresses[0].firstname %></td>
-          </tr>
-          <tr>
-            <td class="label"><%= t('.province_and_city') %></td>
-            <td>
-              <%= @order.addresses[0].province.try(:name) %>
-              <%= @order.addresses[0].city.try(:name) %>
-            </td>
-          </tr>
-          <tr>
-            <td class="label"><%= Address.human_attribute_name(:address1) %></td>
-            <td><%= @order.addresses[0].address1 %></td>
-          </tr>
-          <tr>
-            <td class="label"><%= Address.human_attribute_name(:zipcode) %></td>
-            <td><%= @order.addresses[0].zipcode %></td>
-          </tr>
-        <% end %>
-      </table>
+      <div class="indent">
+        <table class="shipping_info">
+          <% if @order.shipping_method %>
+            <tr>
+              <td class="label"><%= Order.human_attribute_name(:shipping_method) %></td>
+              <td><%= @order.shipping_method_name %></td>
+            </tr>
+          <% end %>
+          <% unless @order.addresses.empty? %>
+            <tr>
+              <td class="label"><%= Address.human_attribute_name(:firstname) %></td>
+              <td><%= @order.addresses[0].firstname %></td>
+            </tr>
+            <tr>
+              <td class="label"><%= t('.province_and_city') %></td>
+              <td>
+                <%= @order.addresses[0].province.try(:name) %>
+                <%= @order.addresses[0].city.try(:name) %>
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><%= Address.human_attribute_name(:address1) %></td>
+              <td><%= @order.addresses[0].address1 %></td>
+            </tr>
+            <tr>
+              <td class="label"><%= Address.human_attribute_name(:zipcode) %></td>
+              <td><%= @order.addresses[0].zipcode %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
   </div>
 <% end %>

@@ -281,6 +281,8 @@ zh-CN:
     colon: "："
     left_double_angle_bracket: "«"
     right_double_angle_bracket: "»"
+    left_parenthesis: "（"
+    right_parenthesis: "）"
 
   site:
     name: "网震客户关系管理系统"

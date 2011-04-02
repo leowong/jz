@@ -12,19 +12,21 @@
 <% content_for :side do %>
   <div class="inner">
     <h2><%= t('.tasks') %></h2>
-    <% unless @user.assigned_tasks.upcoming.empty? %>
-      <% javascript 'jquery-ui' %>
-      <table id="upcoming_tasks" class="tasks hoverable">
-        <% for task in @user.assigned_tasks.upcoming.order('due_at') %>
-          <%= render task %>
-        <% end %>
-      </table>
-      <table id="completed_tasks" class="tasks" style="display:none">
-      </table>
-    <% else %>
-      <div class="indent">
-        <%= t('.all_done') %>
-      </div>
-    <% end %>
+    <div class="indent">
+      <% unless @user.assigned_tasks.upcoming.empty? %>
+        <% javascript 'jquery-ui' %>
+        <table id="upcoming_tasks" class="tasks hoverable">
+          <% for task in @user.assigned_tasks.upcoming.order('due_at') %>
+            <%= render task %>
+          <% end %>
+        </table>
+        <table id="completed_tasks" class="tasks" style="display:none">
+        </table>
+      <% else %>
+        <div class="indent">
+          <%= t('.all_done') %>
+        </div>
+      <% end %>
+    </div>
   </div>
 <% end %>
