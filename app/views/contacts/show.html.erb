@@ -108,68 +108,70 @@
 
     <div class="block contact_details">
       <h2><%= t('.contact_details') %></h2>
-      <table>
-        <% unless @contact.mobile.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('mobile') %></td>
-            <td><%= @contact.mobile %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.phone.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('phone') %></td>
-            <td><%= @contact.phone %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.type1.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('type1') %></td>
-            <td><%= @contact.type1_name %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.type2.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('type2') %></td>
-            <td><%= @contact.type2_name %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.type3.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('type3') %></td>
-            <td><%= @contact.type3_name %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.sex.nil? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('sex') %></td>
-            <td><%= @contact.sex_name %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.age_range.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('age_range') %></td>
-            <td><%= @contact.age_range_name %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.email.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('email') %></td>
-            <td><%= mail_to @contact.email %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.source_id.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('source_id') %></td>
-            <td><%= @contact.source.name %></td>
-          </tr>
-        <% end %>
-        <% unless @contact.interest.blank? %>
-          <tr>
-            <td class="label"><%= Contact.human_attribute_name('interest') %></td>
-            <td><%= @contact.interest_name %></td>
-          </tr>
-        <% end %>
-      </table>
+      <div class="indent">
+        <table>
+          <% unless @contact.type1.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('type1') %></td>
+              <td><%= @contact.type1_name %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.type2.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('type2') %></td>
+              <td><%= @contact.type2_name %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.type3.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('type3') %></td>
+              <td><%= @contact.type3_name %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.mobile.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('mobile') %></td>
+              <td><%= @contact.mobile %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.phone.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('phone') %></td>
+              <td><%= @contact.phone %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.sex.nil? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('sex') %></td>
+              <td><%= @contact.sex_name %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.age_range.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('age_range') %></td>
+              <td><%= @contact.age_range_name %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.email.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('email') %></td>
+              <td><%= mail_to @contact.email %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.source_id.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('source_id') %></td>
+              <td><%= @contact.source.name %></td>
+            </tr>
+          <% end %>
+          <% unless @contact.interest.blank? %>
+            <tr>
+              <td class="label"><%= Contact.human_attribute_name('interest') %></td>
+              <td><%= @contact.interest_name %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
   </div>
 

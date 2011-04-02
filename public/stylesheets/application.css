@@ -112,7 +112,25 @@ header #user_nav a:hover {
     display: inline;
     list-style-type: none;
     border: none;
+    font-weight: bold;
     padding-left: 5px;
+}
+
+.title .buttons li a {
+    color: #03C;
+    font-weight: normal;
+    padding: 1px;
+}
+
+.title .buttons li a:hover {
+    color: #FFF;
+    background-color: #03C;
+    text-decoration: none;
+}
+
+.title .buttons li.separator {
+    font-weight: normal;
+    color: #CCC;
 }
 
 #wrapper {
@@ -168,10 +186,6 @@ table.content td.side {
     padding: 0;
 }
 
-table.content td.side .block {
-    padding-bottom: 20px;
-}
-
 table.content td.side .block table tr td {
     padding: 4px 2px 4px 8px;
 }
@@ -184,7 +198,7 @@ table.content td.side .block table tr td.label {
 table.content td.side h2 {
     background-color: #EDF3FE;
     border-bottom: 1px solid gainsboro;
-    margin: 0 0 5px 0;
+    margin: 0;
     color: #333;
     padding: 6px 8px;
     font-size: 13px;
@@ -209,7 +223,7 @@ table.content td.side h2 {
 }
 
 .main .inner {
-    padding: 15px 60px 20px 23px;
+    padding: 15px 28px 20px 23px;
 }
 
 .main .inner.signup {
@@ -227,7 +241,11 @@ table.content td.side h2 {
 }
 
 .side .inner .indent {
-    padding-left: 8px;
+    padding: 12px 8px;
+}
+
+.side .inner .indent table {
+    margin-bottom: 0;
 }
 
 table.order_details {
@@ -457,6 +475,10 @@ table.tasks td.timestamp {
     color: #C0C0C0;
     text-align: right;
     white-space: nowrap;
+    padding-right: 0;
+}
+
+table.tasks td.timestamp span.timestamp {
     width: 78px;
 }
 
