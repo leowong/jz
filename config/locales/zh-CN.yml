@@ -435,6 +435,7 @@ zh-CN:
       transaction_summary: "交易综述"
       contact_details: "详细资料"
       background_info: "备注"
+      submit: "创建订单"
       deal:
         total_number: "成交次数"
         total_products: "产品总计"
@@ -459,6 +460,7 @@ zh-CN:
       upcoming: "待处理"
       completed: "已完成"
       add_a_new_task: "添加任务"
+      submit: "提交"
     new:
       new_task: "添加任务"
       back_to_list: "返回列表"

@@ -1,6 +1,27 @@
 <% title t('.tasks'), false %>
 <% javascript "resize_task_name.js", "jquery-ui" %>
 
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    $(function() {
+      $("#add_task").dialog({
+        autoOpen: false,
+        width: 300,
+        height: 280,
+        modal: true,
+        buttons: {
+          "<%= escape_javascript(t('.submit')) %>": function() {
+            $('form#new_task').submit();
+          }
+        }
+      });
+      $("#create_task .button a").click(function() {
+        $("#add_task").dialog("open");
+      });
+    });
+  <% end %>
+<% end %>
+
 <% content_for :header do %>
   <div class="buttons">
     <ul>
@@ -30,8 +51,14 @@
 
 <% content_for :side do %>
   <div class="inner">
-    <div class="block add_task">
-      <h2><%= t('.add_a_new_task') %></h2>
+    <div id="create_task">
+      <div class="button">
+        <%= link_to "javascript:void(0)" do %>
+          <span><%= t('.add_a_new_task') %></span>
+        <% end %>
+      </div>
+    </div>
+    <div id="add_task" class="block add_task popup" title="<%= t('.add_a_new_task') %>" style="display:none">
       <div class="indent">
         <%= render 'tasks/form' %>
       </div>
