@@ -47,6 +47,19 @@ header #user_nav a:hover {
     text-decoration: underline;
 }
 
+footer .about {
+    padding: 8px 2px;
+}
+
+footer .about a {
+    color: #AAA;
+    text-decoration: none;
+}
+
+footer .about a:hover {
+    color: #777;
+}
+
 /* tabs */
 
 #tabs {

@@ -286,6 +286,7 @@ zh-CN:
 
   site:
     name: "网震客户关系管理系统"
+    about: "Ongile.com 网震敏捷开发"
 
   notice:
     create_successful: "创建成功。"
