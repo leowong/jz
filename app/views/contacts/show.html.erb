@@ -93,7 +93,7 @@
             <tr>
               <td class="label"><%= t('.deal.latest_deal') %></td>
               <td>
-                <%= link_to latest_order = @completed_orders.order('updated_at DESC').first do %>
+                <%= link_to latest_order = @completed_orders.order('completed_at DESC').first do %>
                   <%= "##{latest_order.number}" -%>
                 <% end %>
                 (<%= friendly_date(latest_order.created_at) %> - <%= time_ago_in_words(latest_order.created_at) %><%= t('datetime.distance_in_words.ago') %>)
