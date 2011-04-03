@@ -1,9 +1,8 @@
 class OrdersController < ApplicationController
   before_filter :login_required
-  helper_method :sort_column, :sort_direction
   
   def index
-    @orders = Order.order(sort_column + " " + sort_direction)
+    @orders = Order.order("created_at DESC")
   end
 
   def show
@@ -55,15 +54,5 @@ class OrdersController < ApplicationController
     @order.destroy
 
     redirect_to orders_url
-  end
-
-  private
-
-  def sort_column
-    Order.column_names.include?(params[:sort]) ? params[:sort] : "created_at"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
   end
 end
