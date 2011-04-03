@@ -3,10 +3,10 @@
 <div class="inner">
   <table class="hoverable" style="width:100%">
     <tr>
-      <th><%= Order.human_attribute_name('number') %></th>
-      <th><%= Order.human_attribute_name('contact') %></th>
-      <th><%= Order.human_attribute_name('state') %></th>
-      <th class="timestamp"><%= Order.human_attribute_name('created_at') %></th>
+      <th><%= sortable "number", Order.human_attribute_name('number') %></th>
+      <th><%= sortable "contact_id", Order.human_attribute_name('contact') %></th>
+      <th><%= sortable "state", Order.human_attribute_name('state') %></th>
+      <th class="timestamp"><%= sortable "created_at", Order.human_attribute_name('created_at') %></th>
       <th class="number"><%= Order.human_attribute_name('quantity') %></th>
       <th class="number"><%= Order.human_attribute_name('total_price') %></th>
     </tr>
