@@ -444,7 +444,7 @@ zh-CN:
         total_number: "成交次数"
         total_products: "产品总计"
         total_price: "金额总计"
-        latest_deal: "最近交易"
+        latest_deal: "最近订单"
         no_transactions: "没有成交记录。"
     new:
       new_contact: "添加客户"
