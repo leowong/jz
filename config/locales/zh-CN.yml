@@ -225,6 +225,7 @@ zh-CN:
         quantity: "订购数量"
         total_price: "总金额"
         created_at: "创建时间"
+        completed_at: "完成时间"
         state: "订单状态"
         line_items: "产品"
         shipping_method: "配送方式"

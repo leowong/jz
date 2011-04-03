@@ -1,5 +1,7 @@
 module FriendlyDatetimeHelper
   def friendly_datetime(datetime, opt={:style => false})
+    return nil if datetime.nil?
+    
     if datetime.today?
       if opt[:style]
         raw('<span class="timestamp today">' + datetime.strftime("%H:%M") + '</span>')
@@ -22,6 +24,8 @@ module FriendlyDatetimeHelper
   end
 
   def friendly_date(datetime, opt={:style => false})
+    return nil if datetime.nil?
+    
     if datetime.today?
       if opt[:style]
         raw('<span class="timestamp today">' + datetime.strftime("%m/%d") + '</span>')

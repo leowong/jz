@@ -67,6 +67,7 @@ class Order < ActiveRecord::Base
     end
 
     after_transition :on => :complete do |order, transition|
+      order.update_attribute(:completed_at, Time.zone.now)
       Activity.add(User.current_user, order.contact, order, "complete")
     end
 

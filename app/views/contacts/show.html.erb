@@ -96,7 +96,7 @@
                 <%= link_to latest_order = @completed_orders.order('updated_at DESC').first do %>
                   <%= "##{latest_order.number}" -%>
                 <% end %>
-                (<%= friendly_date(latest_order.updated_at) %> - <%= time_ago_in_words(latest_order.updated_at) %><%= t('datetime.distance_in_words.ago') %>)
+                (<%= friendly_date(latest_order.created_at) %> - <%= time_ago_in_words(latest_order.created_at) %><%= t('datetime.distance_in_words.ago') %>)
               </td>
             </tr>
             <tr>
