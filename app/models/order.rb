@@ -24,7 +24,8 @@ class Order < ActiveRecord::Base
 
   SHIPPING_METHOD = [
     ["送货上门", 1],
-    ["邮寄", 2]
+    ["物流配送", 2],
+    ["客户自提", 3]
   ]
 
   def to_param
