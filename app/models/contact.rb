@@ -12,7 +12,7 @@ class Contact < ActiveRecord::Base
                                 :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } },
                                 :allow_destroy => true
 
-  validates_presence_of :name
+  validates :name, :presence => true, :uniqueness => true
 
   SEARCH_COLUMNS = %w[
     contacts.name

@@ -18,7 +18,7 @@ class Order < ActiveRecord::Base
 
   STATES = {
     :pending => "待处理",
-    :processing => "正在处理",
+    :processing => "处理中",
     :completed => "已完成"
   }
 

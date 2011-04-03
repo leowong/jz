@@ -27,6 +27,8 @@ class UsersController < ApplicationController
     else
       render :action => 'new'
     end
+  rescue ActiveRecord::StatementInvalid
+    redirect_to root_url
   end
 
   def edit
@@ -40,5 +42,7 @@ class UsersController < ApplicationController
     else
       render :action => 'edit'
     end
+  rescue ActiveRecord::StatementInvalid
+    redirect_to root_url
   end
 end

@@ -265,7 +265,7 @@ table.order_details {
     padding: 10px;
 }
 
-table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price, table tr .timestamp, table tr .number {
+table.order_details tr td.item_quantity, table.order_details tr td.item_price, table tr.total_line td, table tr .total_price, table tr .timestamp, table tr .number, table th .state, table td .state {
     text-align: right;
 }
 

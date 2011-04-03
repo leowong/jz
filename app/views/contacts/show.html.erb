@@ -79,7 +79,14 @@
     </div>
 
     <div class="block transaction_summary">
-      <h2><%= t('.transaction_summary') %></h2>
+      <h2>
+        <% unless @completed_orders.empty? %>
+          <div style="float:right;font-size:12px;font-weight:normal">
+            <%= link_to t('.transaction_details'), orders_path(:contact_id => @contact.id) %>
+          </div>
+        <% end %>
+        <%= t('.transaction_summary') %>
+      </h2>
       <div class="indent">
         <% unless @completed_orders.empty? %>
           <table>
@@ -89,7 +96,7 @@
                 <%= link_to latest_order = @completed_orders.order('updated_at DESC').first do %>
                   <%= "##{latest_order.number}" -%>
                 <% end %>
-                (<%= friendly_date(latest_order.updated_at) %>)
+                (<%= friendly_date(latest_order.updated_at) %> - <%= time_ago_in_words(latest_order.updated_at) %><%= t('datetime.distance_in_words.ago') %>)
               </td>
             </tr>
             <tr>

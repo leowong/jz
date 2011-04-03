@@ -1,8 +1,13 @@
 class OrdersController < ApplicationController
   before_filter :login_required
+  helper_method :contact
   
   def index
-    @orders = Order.order("created_at DESC")
+    if contact
+      @orders = Order.includes(:contact).where("contacts.id = ?", contact.id).order("orders.created_at DESC")
+    else
+      @orders = Order.order("created_at DESC")
+    end
   end
 
   def show
@@ -54,5 +59,13 @@ class OrdersController < ApplicationController
     @order.destroy
 
     redirect_to orders_url
+  end
+
+  private
+
+  def contact
+    if params[:contact_id]
+      Contact.find_by_id(params[:contact_id])
+    end
   end
 end
