@@ -4,6 +4,8 @@ class LineItem < ActiveRecord::Base
   belongs_to :order
   belongs_to :product
 
+  default_scope order("product_id, quantity, price")
+
   validates :order_id, :product_id, :quantity, :presence => true
   validates_associated :product
   validates :quantity, :numericality => { :only_integer => true, :greater_than => 0 }
