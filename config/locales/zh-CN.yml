@@ -297,6 +297,7 @@ zh-CN:
     signup_successful: "感谢您注册！您已自动登录。"
     login_successful: "登录成功。"
     logout_successful: "注销成功。"
+    cannot_modify_completed_orders: "本订单已完成。"
 
   layouts:
     header:

@@ -6,7 +6,7 @@
       <tr>
         <td>
           <ul>
-            <% if @order.state?(:pending) %>
+            <% unless @order.state?(:completed) %>
             <li><%= link_to t('.edit'), edit_order_path(@order) %></li>
             <% end %>
           </ul>

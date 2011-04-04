@@ -23,7 +23,11 @@ class OrdersController < ApplicationController
 
   def edit
     @order = Order.find_by_number(params[:id])
-    @order.addresses.build() if @order.addresses.blank?
+    unless @order.state? :completed
+      @order.addresses.build() if @order.addresses.blank?
+    else
+      redirect_to @order, :notice => t('notice.cannot_modify_completed_orders')
+    end
   end
 
   def create
