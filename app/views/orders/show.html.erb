@@ -38,7 +38,7 @@
   </div>
   <% unless @order.line_items.empty? %>
     <table class="order_details">
-      <%= render @order.line_items %>
+      <%= render @order.line_items.order("product_id, quantity, price") %>
       <tr class="total_line">
         <td colspan="5">&Sigma;</td>
         <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
