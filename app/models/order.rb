@@ -46,10 +46,20 @@ class Order < ActiveRecord::Base
   def combine_items
     sums = line_items.group(:product_id, :price).sum(:quantity)
 
-    sums.each do |product_id_and_price, quantity|
-      if quantity > 1
-        line_items.where(:product_id => product_id_and_price[0], :price => product_id_and_price[1]).delete_all
-        line_items.create(:product_id => product_id_and_price[0], :price => product_id_and_price[1], :quantity => quantity)
+    pending_create = []
+
+    sums.each do |a, quantity|
+      product_id = a[0]
+      price = a[1]
+      if quantity > 0 #OPTIMIZE delete all for reordering
+        line_items.where(:product_id => product_id, :price => price).delete_all
+        pending_create << [product_id, quantity, price]
+      end
+    end
+
+    unless pending_create.empty?
+      pending_create.sort.each do |b|
+        line_items.create(:product_id => b[0], :price => b[2], :quantity => b[1])
       end
     end
   end
