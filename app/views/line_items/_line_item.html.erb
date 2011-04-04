@@ -1,6 +1,8 @@
 <tr>
   <td><%= link_to line_item.product.name, line_item.product %></td>
+  <td class="price"><%= number_to_currency(line_item.price) %></td>
   <td>&times;</td>
   <td class="item_quantity"><%= line_item.quantity %></td>
+  <td>=</td>
   <td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
 </tr>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110403171506) do
+ActiveRecord::Schema.define(:version => 20110404043022) do
 
   create_table "activities", :force => true do |t|
     t.integer   "user_id"
@@ -121,11 +121,12 @@ ActiveRecord::Schema.define(:version => 20110403171506) do
   add_index "contacts", ["position"], :name => "index_contacts_on_position"
 
   create_table "line_items", :force => true do |t|
-    t.integer   "order_id"
-    t.integer   "product_id"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "quantity",   :default => 1
+    t.integer  "order_id"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "quantity",   :default => 1
+    t.decimal  "price"
   end
 
   add_index "line_items", ["order_id"], :name => "index_line_items_on_order_id"

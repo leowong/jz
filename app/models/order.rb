@@ -44,12 +44,12 @@ class Order < ActiveRecord::Base
   end
 
   def combine_items
-    sums = line_items.group(:product_id).sum(:quantity)
+    sums = line_items.group(:product_id, :price).sum(:quantity)
 
-    sums.each do |product_id, quantity|
+    sums.each do |product_id_and_price, quantity|
       if quantity > 1
-        line_items.where(:product_id => product_id).delete_all
-        line_items.create(:product_id => product_id, :quantity => quantity)
+        line_items.where(:product_id => product_id_and_price[0], :price => product_id_and_price[1]).delete_all
+        line_items.create(:product_id => product_id_and_price[0], :price => product_id_and_price[1], :quantity => quantity)
       end
     end
   end

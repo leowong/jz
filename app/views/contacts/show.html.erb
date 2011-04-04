@@ -25,6 +25,8 @@
         $("#add_order").dialog("open");
       });
     });
+
+    var price_mapper = <%= raw @prices.to_json %>
   <% end %>
 <% end %>
 

@@ -1,5 +1,11 @@
 <% title t('.editing_order') + " ##{@order.number}", false %>
 
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    var price_mapper = <%= raw @prices.to_json %>
+  <% end %>
+<% end %>
+
 <% content_for :header do %>
   <div class="buttons">
     <ul>

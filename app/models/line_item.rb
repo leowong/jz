@@ -1,5 +1,5 @@
 class LineItem < ActiveRecord::Base
-  attr_accessible :order, :product_id, :quantity
+  attr_accessible :order, :product_id, :quantity, :price
   
   belongs_to :order
   belongs_to :product
@@ -9,6 +9,6 @@ class LineItem < ActiveRecord::Base
   validates :quantity, :numericality => { :only_integer => true, :greater_than => 0 }
 
   def total_price
-    product.price * quantity
+    price * quantity
   end
 end

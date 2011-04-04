@@ -1,4 +1,6 @@
 class SourcesController < ApplicationController
+  before_filter :login_required
+  
   def index
     @sources = Source.all
   end

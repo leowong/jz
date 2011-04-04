@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
   before_filter :login_required
+  before_filter :cities, :only => [:show, :new, :edit]
+  before_filter :prices, :only => :show
 
   def index
     if params[:q].blank?
@@ -15,28 +17,16 @@ class ContactsController < ApplicationController
     @order = Order.new(:contact => @contact)
     @completed_orders = @contact.orders.completed
     @order.clone_address_from(@contact)
-    @cities = Hash.new { |h, k| h[k] = [] }
-    City.all.each do |city|
-      @cities[city.province_id.to_s].push([city.id, city.name])
-    end
   end
 
   def new
     @contact = Contact.new
     @contact.addresses.build()
-    @cities = Hash.new { |h, k| h[k] = [] }
-    City.all.each do |city|
-      @cities[city.province_id.to_s].push([city.id, city.name])
-    end
   end
 
   def edit
     @contact = Contact.find(params[:id])
     @contact.addresses.build() if @contact.addresses.blank?
-    @cities = Hash.new { |h, k| h[k] = [] }
-    City.all.each do |city|
-      @cities[city.province_id.to_s].push([city.id, city.name])
-    end
   end
 
   def create

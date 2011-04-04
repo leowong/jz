@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_filter :login_required
+  before_filter :cities, :prices, :only => [:edit]
   helper_method :contact
   
   def index
@@ -23,10 +24,6 @@ class OrdersController < ApplicationController
   def edit
     @order = Order.find_by_number(params[:id])
     @order.addresses.build() if @order.addresses.blank?
-    @cities = Hash.new { |h, k| h[k] = [] }
-    City.all.each do |city|
-      @cities[city.province_id.to_s].push([city.id, city.name])
-    end
   end
 
   def create
@@ -37,7 +34,7 @@ class OrdersController < ApplicationController
       @order.combine_items
       Activity.add(current_user, @order.contact, @order)
     end
-    redirect_to @order.contact
+    redirect_to @order
   end
 
   def update

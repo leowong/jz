@@ -40,7 +40,7 @@
     <table class="order_details">
       <%= render @order.line_items %>
       <tr class="total_line">
-        <td colspan="3">&Sigma;</td>
+        <td colspan="5">&Sigma;</td>
         <td class="total_cell"><%= number_to_currency(@order.total_price) %></td>
       </tr>
     </table>

@@ -1,4 +1,7 @@
 class AddressesController < ApplicationController
+  before_filter :login_required
+  before_filter :cities, :only => [:new, :edit]
+
   def index
     @addresses = Address.all
   end
@@ -9,10 +12,6 @@ class AddressesController < ApplicationController
 
   def new
     @address = Address.new
-    @cities = Hash.new { |h, k| h[k] = [] }
-    City.all.each do |city|
-      @cities[city.province_id.to_s].push([city.id, city.name])
-    end
   end
 
   def create
@@ -26,10 +25,6 @@ class AddressesController < ApplicationController
 
   def edit
     @address = Address.find(params[:id])
-    @cities = Hash.new { |h, k| h[k] = [] }
-    City.all.each do |city|
-      @cities[city.province_id.to_s].push([city.id, city.name])
-    end
   end
 
   def update
